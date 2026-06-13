@@ -3,31 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Katalog Produk</title>
+    <title>Toko Kosmetik H. Saifullah — Katalog</title>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..700;1,9..144,400&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <!-- Header -->
     <header class="header">
         <div class="header-container">
-            <div class="logo">
-                <h1>Toko Kosmetik H. SAIFULLAH Pasar Harian</h1>
+            <div class="brand">
+                <span class="brand-mark">HS</span>
+                <div class="brand-text">
+                    <h1>Toko Kosmetik H. Saifullah</h1>
+                    <span class="brand-tagline">Pasar Harian · Kosmetik &middot; Parfum &middot; Perawatan</span>
+                </div>
             </div>
             <nav class="nav-menu">
                 <a href="index.html" class="nav-link active">Katalog</a>
-                <button class="nav-link tutorial-btn" onclick="startTutorial()">
-                    <span></span> Tutorial
-                </button>
+                <button class="nav-link tutorial-btn" onclick="startTutorial()">Tutorial</button>
             </nav>
         </div>
     </header>
 
     <!-- Floating Cart Button -->
-    <button class="floating-cart-btn" id="cartBtn" onclick="toggleCart()">
-        <span class="cart-icon">🛒</span>
+    <button class="floating-cart-btn" id="cartBtn" onclick="toggleCart()" aria-label="Buka keranjang">
+        <span class="cart-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="20" r="1.3"/><circle cx="17.5" cy="20" r="1.3"/><path d="M3 4h2l2.2 11.1a1.5 1.5 0 0 0 1.5 1.2h7.8a1.5 1.5 0 0 0 1.47-1.18L21 7.5H6.1"/></svg>
+        </span>
         <span class="cart-badge" id="cartBadge">0</span>
     </button>
 
@@ -35,15 +39,19 @@
     <section class="filter-section">
         <div class="filter-row">
             <button class="category-select-btn" id="categorySelectBtn" onclick="openCategoryModal()">
-                <span class="category-icon">📁</span>
                 <span class="category-text" id="categoryText">Semua Kategori</span>
-                <span class="category-arrow">▼</span>
+                <span class="category-arrow">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+                </span>
             </button>
             <div class="search-container">
-                <input type="text" id="searchInput" class="search-input" placeholder="🔍 Cari produk...">
+                <span class="search-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.2-4.2"/></svg>
+                </span>
+                <input type="text" id="searchInput" class="search-input" placeholder="Cari produk…">
             </div>
-            <button class="view-toggle-btn" id="viewToggleBtn" onclick="toggleViewMode()" title="Ubah Tampilan">
-                <span class="view-icon" id="viewIcon">📋</span>
+            <button class="view-toggle-btn" id="viewToggleBtn" onclick="toggleViewMode()" title="Ubah Tampilan" aria-label="Ubah tampilan">
+                <span class="view-icon" id="viewIcon"></span>
             </button>
         </div>
     </section>
@@ -51,9 +59,12 @@
     <!-- Category Modal -->
     <div class="modal-overlay" id="categoryModal">
         <div class="modal-content category-modal-content">
-            <button class="modal-close" onclick="closeCategoryModal()">✕</button>
+            <button class="modal-close" onclick="closeCategoryModal()" aria-label="Tutup">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M6 6l12 12M18 6 6 18"/></svg>
+            </button>
             <div class="modal-header">
-                <h2>📁 Pilih Kategori</h2>
+                <span class="modal-eyebrow">Telusuri</span>
+                <h2>Pilih Kategori</h2>
             </div>
             <div class="modal-body">
                 <div class="category-grid" id="categoryGrid">
@@ -72,7 +83,9 @@
             <!-- Products will be generated dynamically -->
         </div>
         <div class="no-products" id="noProducts" style="display: none;">
-            <span class="no-products-icon">😕</span>
+            <span class="no-products-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.2-4.2"/></svg>
+            </span>
             <p>Produk tidak ditemukan</p>
             <button onclick="resetFilters()" class="reset-btn">Reset Filter</button>
         </div>
@@ -81,21 +94,23 @@
     <!-- Variant Modal -->
     <div class="modal-overlay" id="variantModal">
         <div class="modal-content">
-            <button class="modal-close" onclick="closeVariantModal()">✕</button>
+            <button class="modal-close" onclick="closeVariantModal()" aria-label="Tutup">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M6 6l12 12M18 6 6 18"/></svg>
+            </button>
             <div class="modal-header">
-                <div class="modal-product-image">📦</div>
+                <div class="modal-product-image"></div>
                 <h2 class="modal-product-name" id="modalProductName"></h2>
                 <span class="modal-product-category" id="modalProductCategory"></span>
             </div>
             <div class="modal-body">
-                <p class="variant-label">Pilih Varian:</p>
+                <p class="variant-label">Pilih Varian</p>
                 <div class="variant-options" id="variantOptions">
                     <!-- Variants will be generated dynamically -->
                 </div>
             </div>
             <div class="modal-footer">
                 <button class="modal-btn cart-add-btn" id="modalCartBtn" onclick="addToCartFromModal()">
-                    <span>🛒</span> Tambah ke Keranjang
+                    Tambah ke Keranjang
                 </button>
             </div>
         </div>
@@ -104,9 +119,11 @@
     <!-- Add to Cart Modal (Quantity & Notes) -->
     <div class="modal-overlay" id="addCartModal">
         <div class="modal-content add-cart-modal-content">
-            <button class="modal-close" onclick="closeAddCartModal()">✕</button>
+            <button class="modal-close" onclick="closeAddCartModal()" aria-label="Tutup">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M6 6l12 12M18 6 6 18"/></svg>
+            </button>
             <div class="modal-header">
-                <div class="modal-product-image" id="addCartModalImage">📦</div>
+                <div class="modal-product-image" id="addCartModalImage"></div>
                 <h2 class="modal-product-name" id="addCartModalName"></h2>
                 <span class="modal-product-category" id="addCartModalCategory"></span>
                 <span class="modal-product-variant" id="addCartModalVariant"></span>
@@ -114,22 +131,22 @@
             <div class="modal-body">
                 <!-- Quantity Section -->
                 <div class="qty-section">
-                    <p class="qty-label">Jumlah:</p>
+                    <p class="qty-label">Jumlah</p>
                     <div class="qty-controls">
-                        <button class="qty-ctrl-btn" onclick="decreaseModalQty()">−</button>
+                        <button class="qty-ctrl-btn" onclick="decreaseModalQty()" aria-label="Kurangi">&minus;</button>
                         <span class="qty-display" id="modalQtyDisplay">1</span>
-                        <button class="qty-ctrl-btn" onclick="increaseModalQty()">+</button>
+                        <button class="qty-ctrl-btn" onclick="increaseModalQty()" aria-label="Tambah">+</button>
                     </div>
                 </div>
                 <!-- Notes Section -->
                 <div class="notes-section">
-                    <p class="notes-label">📝 Catatan (boleh tidak diisi):</p>
-                    <textarea id="productNotes" class="notes-input" placeholder="Contoh: Warna Merah, Ukuran XL, dll..."></textarea>
+                    <p class="notes-label">Catatan <span class="notes-optional">(opsional)</span></p>
+                    <textarea id="productNotes" class="notes-input" placeholder="Contoh: warna merah, ukuran XL, dll."></textarea>
                 </div>
             </div>
             <div class="modal-footer">
                 <button class="modal-btn cart-add-btn" onclick="confirmAddToCart()">
-                    <span>🛒</span> Tambahkan ke Keranjang
+                    Tambahkan ke Keranjang
                 </button>
             </div>
         </div>
@@ -139,26 +156,30 @@
     <div class="cart-overlay" id="cartOverlay" onclick="toggleCart()"></div>
     <div class="cart-sidebar" id="cartSidebar">
         <div class="cart-header">
-            <h2>🛒 Keranjang Belanja</h2>
-            <button class="cart-close" onclick="toggleCart()">✕</button>
+            <h2>Keranjang Belanja</h2>
+            <button class="cart-close" onclick="toggleCart()" aria-label="Tutup keranjang">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M6 6l12 12M18 6 6 18"/></svg>
+            </button>
         </div>
         <div class="cart-items" id="cartItems">
             <!-- Cart items will be generated dynamically -->
         </div>
         <div class="cart-empty" id="cartEmpty">
-            <span class="cart-empty-icon">🛒</span>
+            <span class="cart-empty-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="20" r="1.3"/><circle cx="17.5" cy="20" r="1.3"/><path d="M3 4h2l2.2 11.1a1.5 1.5 0 0 0 1.5 1.2h7.8a1.5 1.5 0 0 0 1.47-1.18L21 7.5H6.1"/></svg>
+            </span>
             <p>Keranjang masih kosong</p>
             <span class="cart-empty-hint">Tambahkan produk untuk mulai belanja</span>
         </div>
         <div class="cart-footer" id="cartFooter">
             <div class="cart-total">
-                <span>Total Item:</span>
+                <span>Total Item</span>
                 <span id="cartTotalItems">0 item</span>
             </div>
-            
+
             <!-- Pickup Time Selection -->
             <div class="pickup-time-section">
-                <p class="pickup-label">📅 Kapan pesanan diambil?</p>
+                <p class="pickup-label">Kapan pesanan diambil?</p>
                 <div class="pickup-options">
                     <label class="pickup-option">
                         <input type="radio" name="pickupTime" value="Hari Ini" checked>
@@ -176,21 +197,22 @@
                         <span>Tentukan Sendiri</span>
                     </label>
                 </div>
-                <input type="text" id="customPickupTime" class="custom-pickup-input" placeholder="Contoh: Jumat sore, Minggu pagi..." style="display: none;">
+                <input type="text" id="customPickupTime" class="custom-pickup-input" placeholder="Contoh: Jumat sore, Minggu pagi…" style="display: none;">
             </div>
-            
+
             <button class="checkout-btn" onclick="checkoutWhatsApp()">
-                <span>📱</span> Kirim Pesanan ke WA
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.53 15.2L2 22l4.94-1.43A10 10 0 1 0 12 2Zm0 18.13a8.1 8.1 0 0 1-4.13-1.13l-.3-.18-2.93.85.86-2.86-.19-.3A8.13 8.13 0 1 1 12 20.13Zm4.47-6.08c-.24-.12-1.45-.72-1.68-.8-.22-.08-.39-.12-.55.12s-.63.8-.78.96-.29.18-.53.06a6.66 6.66 0 0 1-1.96-1.21 7.36 7.36 0 0 1-1.36-1.69c-.14-.24 0-.37.11-.49s.24-.29.36-.43a1.7 1.7 0 0 0 .24-.4.44.44 0 0 0 0-.42c-.06-.12-.55-1.32-.75-1.81s-.4-.41-.55-.42h-.47a.9.9 0 0 0-.65.3 2.74 2.74 0 0 0-.85 2.04 4.76 4.76 0 0 0 1 2.53 10.9 10.9 0 0 0 4.2 3.71c.59.25 1.04.4 1.4.52a3.37 3.37 0 0 0 1.55.1 2.53 2.53 0 0 0 1.66-1.17 2.06 2.06 0 0 0 .14-1.17c-.06-.1-.22-.16-.46-.28Z"/></svg>
+                Kirim Pesanan ke WhatsApp
             </button>
-            <button class="clear-cart-btn" onclick="clearCart()">
-                🗑️ Kosongkan Keranjang
-            </button>
+            <button class="clear-cart-btn" onclick="clearCart()">Kosongkan Keranjang</button>
         </div>
     </div>
 
     <!-- Toast Notification -->
     <div class="toast" id="toast">
-        <span class="toast-icon">✓</span>
+        <span class="toast-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+        </span>
         <span class="toast-message" id="toastMessage">Produk ditambahkan ke keranjang</span>
     </div>
 
@@ -243,9 +265,13 @@
         </div>
     </div>
 
+    <!-- Back to Top -->
+    <button class="back-to-top" id="backToTop" aria-label="Kembali ke atas" title="Kembali ke atas">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+    </button>
+
     <!-- Scripts -->
     <script src="products.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
-

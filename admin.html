@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    <title>Panel Admin — Toko Kosmetik H. Saifullah</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="admin.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..700;1,9..144,400&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="admin-body">
+
+    <!-- App -->
+    <div class="admin-app" id="adminApp">
+        <header class="admin-header">
+            <div class="admin-header-inner">
+                <div class="brand">
+                    <span class="brand-mark">HS</span>
+                    <div class="brand-text">
+                        <h1>Panel Admin</h1>
+                        <span class="brand-tagline">Kelola Produk Katalog</span>
+                    </div>
+                </div>
+                <a href="index.html" class="nav-link" target="_blank" rel="noopener">Lihat Katalog ↗</a>
+            </div>
+        </header>
+
+        <!-- Publish reminder -->
+        <div class="publish-bar" id="publishBar">
+            <div class="publish-bar-inner">
+                <span class="publish-text">
+                    <strong>Perubahan belum dipublikasikan.</strong>
+                    Perubahan hanya tersimpan di browser ini. Agar tampil di katalog: klik
+                    <em>Unduh products.js</em>, lalu upload file itu ke Netlify (timpa yang lama).
+                </span>
+                <span class="dirty-dot" id="dirtyDot" title="Ada perubahan yang belum diunduh"></span>
+            </div>
+        </div>
+
+        <main class="admin-main">
+            <!-- Toolbar -->
+            <div class="toolbar">
+                <div class="admin-search">
+                    <span class="search-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.2-4.2"/></svg>
+                    </span>
+                    <input type="text" id="searchInput" class="search-input" placeholder="Cari nama atau kategori…">
+                </div>
+                <div class="toolbar-actions">
+                <div class="toolbar-left">
+                    <span class="count-pill" id="countPill">0 produk</span>
+                    <button class="filter-chip" id="noImageChip" title="Tampilkan hanya produk tanpa foto">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2.5"/><circle cx="8.5" cy="9" r="1.4"/><path d="m21 15-4.5-4.5L5 21"/></svg>
+                        <span id="noImageCount">0</span> tanpa foto
+                    </button>
+                    <button class="filter-chip broken" id="brokenChip" title="Tampilkan hanya produk dengan link foto rusak" hidden>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0Z"/><path d="M12 9v4m0 4h.01"/></svg>
+                        <span id="brokenCount">0</span> foto rusak
+                    </button>
+                </div>
+                <div class="toolbar-right">
+                    <button class="btn btn-ghost" id="importBtn">Impor</button>
+                    <button class="btn btn-ghost" id="resetBtn">Muat ulang dari file</button>
+                    <button class="btn btn-ghost" id="checkImagesBtn">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a9 9 0 1 1-2.64-6.36M21 3v5h-5"/></svg>
+                        <span id="checkLabel">Cek link foto</span>
+                    </button>
+                    <button class="btn btn-download" id="exportBtn">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12m0 0 4-4m-4 4-4-4M4 21h16"/></svg>
+                        Unduh products.js
+                    </button>
+                    <button class="btn btn-primary" id="addBtn">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14"/></svg>
+                        Tambah Produk
+                    </button>
+                    <input type="file" id="importFile" accept=".js,.json,application/json,text/javascript" hidden>
+                </div>
+                </div>
+            </div>
+
+            <!-- Product list -->
+            <div class="product-list" id="productList"></div>
+            <div class="empty-state" id="emptyState" hidden>
+                <p>Tidak ada produk yang cocok.</p>
+            </div>
+        </main>
+    </div>
+
+    <!-- Editor Modal -->
+    <div class="modal-overlay" id="editorModal">
+        <div class="modal-content editor-content">
+            <button class="modal-close" id="editorClose" aria-label="Tutup">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M6 6l12 12M18 6 6 18"/></svg>
+            </button>
+            <div class="editor-header">
+                <span class="modal-eyebrow" id="editorEyebrow">Produk Baru</span>
+                <h2 id="editorTitle">Tambah Produk</h2>
+            </div>
+            <div class="editor-body">
+                <div class="field">
+                    <label for="fieldName">Nama produk <span class="req">*</span></label>
+                    <input type="text" id="fieldName" placeholder="Contoh: Air Mawar">
+                </div>
+
+                <div class="field">
+                    <label for="fieldCategory">Kategori <span class="req">*</span></label>
+                    <input type="text" id="fieldCategory" list="categoryOptions" placeholder="Contoh: Kosmetik">
+                    <datalist id="categoryOptions"></datalist>
+                    <span class="field-hint">Pilih dari daftar atau ketik kategori baru.</span>
+                </div>
+
+                <div class="field">
+                    <label for="fieldImage">Gambar (URL atau path lokal)</label>
+                    <div class="image-field">
+                        <div class="image-preview" id="imagePreview"></div>
+                        <div class="image-input-wrap">
+                            <input type="text" id="fieldImage" placeholder="https://… atau img/nama-file.jpg">
+                            <span class="field-hint">Boleh dikosongkan. Tempel link gambar, atau path file yang ada di folder <code>img/</code>.</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="field">
+                    <label>Varian</label>
+                    <span class="field-hint">Kosongkan jika produk tidak punya varian. Tambahkan beberapa varian (mis. 100ml, 200ml) jika ada.</span>
+                    <div class="variant-rows" id="variantRows"></div>
+                    <button type="button" class="btn btn-ghost btn-sm" id="addVariantBtn">+ Tambah Varian</button>
+                </div>
+            </div>
+            <div class="editor-footer">
+                <button class="btn btn-ghost" id="editorCancel">Batal</button>
+                <button class="btn btn-primary" id="editorSave">Simpan</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Confirm Modal -->
+    <div class="modal-overlay" id="confirmModal">
+        <div class="modal-content confirm-content">
+            <div class="editor-header">
+                <h2 id="confirmTitle">Hapus produk?</h2>
+            </div>
+            <div class="editor-body">
+                <p id="confirmText" class="confirm-text"></p>
+            </div>
+            <div class="editor-footer">
+                <button class="btn btn-ghost" id="confirmCancel">Batal</button>
+                <button class="btn btn-danger" id="confirmOk">Hapus</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Toast -->
+    <div class="toast" id="toast">
+        <span class="toast-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+        </span>
+        <span class="toast-message" id="toastMessage"></span>
+    </div>
+
+    <!-- Back to Top -->
+    <button class="back-to-top" id="backToTop" aria-label="Kembali ke atas" title="Kembali ke atas">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+    </button>
+
+    <!-- Data source: same file the catalog uses -->
+    <script src="products.js"></script>
+    <script src="admin.js"></script>
+</body>
+</html>

@@ -42,6 +42,23 @@ let tutorialStep = 0;
 const TUTORIAL_SEEN_KEY = 'tutorialSeen';
 
 // ============================================================
+// ICONS (inline SVG, inherit color via currentColor)
+// ============================================================
+const ICONS = {
+    cart: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="20" r="1.3"/><circle cx="17.5" cy="20" r="1.3"/><path d="M3 4h2l2.2 11.1a1.5 1.5 0 0 0 1.5 1.2h7.8a1.5 1.5 0 0 0 1.47-1.18L21 7.5H6.1"/></svg>`,
+    layers: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 21 8l-9 5-9-5 9-5Z"/><path d="m3 13 9 5 9-5"/></svg>`,
+    trash: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7h16M9 7V5a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v2m-9 0 .9 12.1a1 1 0 0 0 1 .9h6.2a1 1 0 0 0 1-.9L17 7"/></svg>`,
+    grid: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7.5" height="7.5" rx="1.4"/><rect x="13.5" y="3" width="7.5" height="7.5" rx="1.4"/><rect x="3" y="13.5" width="7.5" height="7.5" rx="1.4"/><rect x="13.5" y="13.5" width="7.5" height="7.5" rx="1.4"/></svg>`,
+    list: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M8 6h13M8 12h13M8 18h13M3.5 6h.01M3.5 12h.01M3.5 18h.01"/></svg>`,
+    placeholder: `<svg class="img-placeholder" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2.5"/><circle cx="8.5" cy="9" r="1.6"/><path d="m21 16-4.5-4.5L5 21"/></svg>`
+};
+
+// Image load failure -> show the line-art placeholder
+function imgError(img) {
+    img.parentElement.innerHTML = ICONS.placeholder;
+}
+
+// ============================================================
 // INITIALIZATION
 // ============================================================
 document.addEventListener('DOMContentLoaded', function() {
@@ -72,6 +89,9 @@ function initializeApp() {
     
     // Setup scroll detection for alphabet sidebar
     setupScrollDetection();
+
+    // Setup back-to-top button
+    setupBackToTop();
     
     // Check URL hash for cart
     if (window.location.hash === '#openCart') {
@@ -290,13 +310,13 @@ function renderProducts() {
     let html = '';
     filteredProducts.forEach(product => {
         const hasVariants = product.variants.length > 0;
-        const imageHtml = product.gambar 
-            ? `<img src="${escapeHtml(product.gambar)}" alt="${escapeHtml(product.nama)}" onerror="this.parentElement.innerHTML='📦'">`
-            : '📦';
-        
+        const imageHtml = product.gambar
+            ? `<img src="${escapeHtml(product.gambar)}" alt="${escapeHtml(product.nama)}" onerror="imgError(this)">`
+            : ICONS.placeholder;
+
         // Variants text for list view
-        const variantsText = hasVariants ? `(${product.variants.length} varian)` : '';
-        
+        const variantsText = hasVariants ? `${product.variants.length} varian` : '';
+
         if (viewMode === 'grid') {
             html += `
                 <div class="product-card" data-name="${escapeHtml(product.nama)}">
@@ -306,12 +326,12 @@ function renderProducts() {
                         <h3 class="product-name">${escapeHtml(product.nama)}</h3>
                         ${hasVariants ? `
                             <button class="variant-btn" onclick="openVariantModal('${escapeJs(product.nama)}')">
-                                📋 Pilih Varian (${product.variants.length})
+                                ${ICONS.layers} ${product.variants.length} varian
                             </button>
                         ` : ''}
                         <div class="product-actions">
                             <button class="action-btn add-cart-btn" onclick="openAddCartModal('${escapeJs(product.nama)}', ${hasVariants})">
-                                🛒+
+                                ${ICONS.cart}<span>Tambah</span>
                             </button>
                         </div>
                     </div>
@@ -326,8 +346,8 @@ function renderProducts() {
                         <h3 class="product-name">${escapeHtml(product.nama)}</h3>
                         ${hasVariants ? `<span class="product-variants-text">${variantsText}</span>` : ''}
                         <div class="product-actions">
-                            <button class="action-btn add-cart-btn" onclick="openAddCartModal('${escapeJs(product.nama)}', ${hasVariants})">
-                                🛒
+                            <button class="action-btn add-cart-btn" onclick="openAddCartModal('${escapeJs(product.nama)}', ${hasVariants})" aria-label="Tambah ke keranjang">
+                                ${ICONS.cart}
                             </button>
                         </div>
                     </div>
@@ -382,12 +402,12 @@ function openVariantModal(productName) {
     document.getElementById('modalProductCategory').textContent = product.kategori;
     
     // Update modal image
-    const modalImage = document.querySelector('.modal-product-image');
+    const modalImage = document.querySelector('#variantModal .modal-product-image');
     if (modalImage) {
         if (product.gambar) {
-            modalImage.innerHTML = `<img src="${product.gambar}" alt="${product.nama}" onerror="this.parentElement.innerHTML='📦'">`;
+            modalImage.innerHTML = `<img src="${escapeHtml(product.gambar)}" alt="${escapeHtml(product.nama)}" onerror="imgError(this)">`;
         } else {
-            modalImage.innerHTML = '📦';
+            modalImage.innerHTML = ICONS.placeholder;
         }
     }
     
@@ -579,18 +599,18 @@ function renderCart() {
         const notesText = item.notes ? item.notes : '';
         html += `
             <div class="cart-item">
-                <div class="cart-item-image">📦</div>
+                <div class="cart-item-image">${ICONS.placeholder}</div>
                 <div class="cart-item-details">
                     <div class="cart-item-name">${escapeHtml(item.nama)}</div>
                     ${variantText ? `<div class="cart-item-variant">${escapeHtml(variantText)}</div>` : ''}
-                    ${notesText ? `<div class="cart-item-notes">📝 ${escapeHtml(notesText)}</div>` : ''}
+                    ${notesText ? `<div class="cart-item-notes">${escapeHtml(notesText)}</div>` : ''}
                     <div class="cart-item-qty">
-                        <button class="qty-btn" onclick="updateQty(${index}, -1)">-</button>
+                        <button class="qty-btn" onclick="updateQty(${index}, -1)" aria-label="Kurangi">&minus;</button>
                         <span class="qty-value">${item.qty}</span>
-                        <button class="qty-btn" onclick="updateQty(${index}, 1)">+</button>
+                        <button class="qty-btn" onclick="updateQty(${index}, 1)" aria-label="Tambah">+</button>
                     </div>
                 </div>
-                <button class="cart-item-remove" onclick="removeFromCart(${index})">🗑️</button>
+                <button class="cart-item-remove" onclick="removeFromCart(${index})" aria-label="Hapus">${ICONS.trash}</button>
             </div>
         `;
     });
@@ -611,8 +631,14 @@ function quickAddToCart(productName, hasVariants) {
 
 function addToCartFromModal() {
     if (!selectedProduct) return;
-    
-    // If has variant selected, open add cart modal with that variant
+
+    // Produk bervarian wajib memilih salah satu varian dulu
+    if (selectedProduct.variants.length > 0 && !selectedVariant) {
+        showToast('Silakan pilih varian terlebih dahulu');
+        return;
+    }
+
+    // Lanjut ke modal jumlah & catatan dengan varian yang dipilih
     openAddCartModalWithData(selectedProduct.nama, selectedVariant, selectedProduct.gambar);
     closeVariantModal();
 }
@@ -654,9 +680,9 @@ function openAddCartModalWithData(productName, variant, imageUrl) {
     // Update image
     const imageEl = document.getElementById('addCartModalImage');
     if (imageUrl) {
-        imageEl.innerHTML = `<img src="${imageUrl}" alt="${productName}" onerror="this.parentElement.innerHTML='📦'">`;
+        imageEl.innerHTML = `<img src="${escapeHtml(imageUrl)}" alt="${escapeHtml(productName)}" onerror="imgError(this)">`;
     } else {
-        imageEl.innerHTML = '📦';
+        imageEl.innerHTML = ICONS.placeholder;
     }
     
     // Find and set category
@@ -734,8 +760,8 @@ function loadViewMode() {
     const savedMode = localStorage.getItem('viewMode');
     if (savedMode) {
         viewMode = savedMode;
-        updateViewToggleIcon();
     }
+    updateViewToggleIcon();
 }
 
 function toggleViewMode() {
@@ -748,7 +774,8 @@ function toggleViewMode() {
 function updateViewToggleIcon() {
     const icon = document.getElementById('viewIcon');
     if (icon) {
-        icon.textContent = viewMode === 'grid' ? '📋' : '🗄️';
+        // Show the icon for the view you'll switch TO
+        icon.innerHTML = viewMode === 'grid' ? ICONS.list : ICONS.grid;
     }
 }
 
@@ -859,32 +886,32 @@ function debounce(func, wait) {
 const tutorialSteps = [
     {
         target: '.category-select-btn',
-        title: '📁 Filter Kategori',
+        title: 'Filter Kategori',
         desc: 'Tekan tombol ini untuk memilih kategori produk yang ingin Anda lihat.',
         position: 'bottom'
     },
     {
         target: '.search-input',
-        title: '🔍 Cari Produk',
+        title: 'Cari Produk',
         desc: 'Ketik nama produk di sini untuk mencari barang dengan cepat.',
         position: 'bottom'
     },
     {
         target: '.view-toggle-btn',
-        title: '📋 Ubah Tampilan',
+        title: 'Ubah Tampilan',
         desc: 'Tekan untuk mengubah tampilan katalog: Grid (dengan gambar) atau List (daftar).',
         position: 'bottom'
     },
     {
         target: '.product-card',
-        title: '🛒 Tambah ke Keranjang',
+        title: 'Tambah ke Keranjang',
         desc: 'Tekan tombol keranjang untuk menambah produk. Anda bisa atur jumlah dan tambahkan catatan (warna/ukuran).',
         position: 'bottom'
     },
     {
         target: '.floating-cart-btn',
-        title: '🛒 Keranjang Belanja',
-        desc: 'Tekan tombol ini untuk melihat keranjang belanja Anda dan Kirim Pesanan anda ke WA kami secara cepat tanpa ribet.',
+        title: 'Keranjang Belanja',
+        desc: 'Tekan tombol ini untuk melihat keranjang belanja Anda dan kirim pesanan ke WhatsApp kami secara cepat tanpa ribet.',
         position: 'left'
     }
 ];
@@ -1054,6 +1081,18 @@ function setupAlphabetSidebar() {
             scrollToLetter(targetLetter);
         });
     });
+}
+
+// ============================================================
+// BACK TO TOP
+// ============================================================
+function setupBackToTop() {
+    const backBtn = document.getElementById('backToTop');
+    if (!backBtn) return;
+    window.addEventListener('scroll', () => {
+        backBtn.classList.toggle('visible', window.scrollY > 400);
+    });
+    backBtn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
 }
 
 function setupScrollDetection() {

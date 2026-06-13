@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    <title>Pembanding Katalog vs Kasir — Toko Kosmetik H. Saifullah</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="compare.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..700;1,9..144,400&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="admin-body">
+
+    <header class="admin-header">
+        <div class="admin-header-inner">
+            <div class="brand">
+                <span class="brand-mark">HS</span>
+                <div class="brand-text">
+                    <h1>Pembanding Data</h1>
+                    <span class="brand-tagline">Katalog vs Database Kasir</span>
+                </div>
+            </div>
+            <nav class="cmp-nav">
+                <a href="admin.html" class="nav-link">Panel Admin</a>
+                <a href="index.html" class="nav-link" target="_blank" rel="noopener">Katalog ↗</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="info-bar">
+        <div class="info-bar-inner">
+            Membandingkan berdasarkan <strong>nama produk + varian</strong>. Data katalog dimuat otomatis dari
+            <code>products.js</code>; data kasir kamu pilih dari file <code>.sql</code> di bawah.
+            File <code>.sql</code> hanya dibaca di browser ini — tidak ke mana-mana. <strong>Jangan ikutkan file .sql saat deploy.</strong>
+        </div>
+    </div>
+
+    <main class="cmp-main-content">
+
+        <!-- Upload -->
+        <div class="dropzone" id="dropzone">
+            <div class="dropzone-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 16V4m0 0 4 4m-4-4-4 4"/><path d="M4 16v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-2"/></svg>
+            </div>
+            <p class="dropzone-title">Pilih atau seret file <code>.sql</code> database kasir ke sini</p>
+            <p class="dropzone-sub" id="dropzoneSub">Katalog: memuat…</p>
+            <button class="btn btn-primary" id="pickBtn">Pilih File .sql</button>
+            <input type="file" id="fileInput" accept=".sql,text/plain,application/sql" hidden>
+        </div>
+
+        <!-- Results -->
+        <div id="resultsArea" hidden>
+            <!-- Summary -->
+            <div class="summary">
+                <div class="sum-card">
+                    <span class="sum-num" id="sumPos">0</span>
+                    <span class="sum-label">Unit di kasir</span>
+                </div>
+                <div class="sum-card">
+                    <span class="sum-num" id="sumCat">0</span>
+                    <span class="sum-label">Unit di katalog</span>
+                </div>
+                <div class="sum-card highlight">
+                    <span class="sum-num" id="sumMissing">0</span>
+                    <span class="sum-label">Perlu ditambah ke katalog</span>
+                </div>
+                <div class="sum-card">
+                    <span class="sum-num" id="sumOnlyCat">0</span>
+                    <span class="sum-label">Hanya di katalog</span>
+                </div>
+            </div>
+
+            <div class="cmp-search">
+                <span class="search-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.2-4.2"/></svg>
+                </span>
+                <input type="text" id="searchInput" class="search-input" placeholder="Cari nama produk…">
+            </div>
+
+            <!-- Missing in catalog (main) -->
+            <section class="result-block">
+                <div class="result-head">
+                    <h2>Ada di kasir, belum di katalog</h2>
+                    <div class="result-head-right">
+                        <span class="result-count" id="missingCount">0</span>
+                        <button class="btn btn-ghost btn-sm" id="copyMissingBtn">Salin daftar</button>
+                    </div>
+                </div>
+                <p class="result-hint">Inilah produk/varian yang perlu kamu tambahkan lewat Panel Admin.</p>
+                <div class="missing-controls">
+                    <span class="breakdown" id="missingBreakdown"></span>
+                    <label class="check"><input type="checkbox" id="hideMaybe"> Sembunyikan kemungkinan duplikat</label>
+                </div>
+                <div class="cmp-list" id="missingList"></div>
+                <p class="block-empty" id="missingEmpty" hidden>Tidak ada — semua produk kasir sudah ada di katalog. 🎉</p>
+            </section>
+
+            <!-- Only in catalog (secondary) -->
+            <section class="result-block">
+                <button class="result-head collapsible" id="onlyCatToggle" aria-expanded="false">
+                    <h2>Hanya di katalog (tidak ada di kasir)</h2>
+                    <div class="result-head-right">
+                        <span class="result-count muted" id="onlyCatCount">0</span>
+                        <span class="chevron">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+                        </span>
+                    </div>
+                </button>
+                <p class="result-hint">Untuk cek typo penulisan nama atau produk yang sudah tidak dijual di kasir.</p>
+                <div class="cmp-list" id="onlyCatList" hidden></div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Toast -->
+    <div class="toast" id="toast">
+        <span class="toast-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+        </span>
+        <span class="toast-message" id="toastMessage"></span>
+    </div>
+
+    <!-- Back to Top -->
+    <button class="back-to-top" id="backToTop" aria-label="Kembali ke atas" title="Kembali ke atas">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+    </button>
+
+    <script src="products.js"></script>
+    <script src="compare.js"></script>
+</body>
+</html>
