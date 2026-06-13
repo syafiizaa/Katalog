@@ -1159,11 +1159,7 @@ body:not(.admin-body) .back-to-top { bottom: 5.75rem; right: 1.6rem; }
 
 /* Pickup Time Section */
 .pickup-time-section {
-    background: var(--cream);
-    border-radius: var(--radius-sm);
-    padding: 0.8rem;
     margin-bottom: 0.8rem;
-    border: 1px solid var(--line);
 }
 
 .pickup-label {
@@ -1278,22 +1274,21 @@ body:not(.admin-body) .back-to-top { bottom: 5.75rem; right: 1.6rem; }
 
 .clear-cart-btn {
     width: 100%;
-    padding: 0.6rem;
-    background: var(--danger-soft);
+    padding: 0.35rem;
+    background: transparent;
     color: var(--danger);
-    border: 1px solid var(--danger);
-    border-radius: var(--radius-sm);
-    font-size: 0.85rem;
+    border: none;
+    font-size: 0.82rem;
     font-family: inherit;
     font-weight: 600;
     cursor: pointer;
-    transition: all 0.25s var(--ease);
+    transition: opacity 0.2s var(--ease);
 }
 
 .clear-cart-btn:hover {
-    background: var(--danger);
-    color: #fff;
-    border-color: var(--danger);
+    text-decoration: underline;
+    text-underline-offset: 2px;
+    opacity: 0.85;
 }
 
 /* Di HP: sedikit lebih rapat lagi agar daftar produk makin lega */
