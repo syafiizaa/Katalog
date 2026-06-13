@@ -50,7 +50,8 @@ const ICONS = {
     trash: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7h16M9 7V5a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v2m-9 0 .9 12.1a1 1 0 0 0 1 .9h6.2a1 1 0 0 0 1-.9L17 7"/></svg>`,
     grid: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7.5" height="7.5" rx="1.4"/><rect x="13.5" y="3" width="7.5" height="7.5" rx="1.4"/><rect x="3" y="13.5" width="7.5" height="7.5" rx="1.4"/><rect x="13.5" y="13.5" width="7.5" height="7.5" rx="1.4"/></svg>`,
     list: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M8 6h13M8 12h13M8 18h13M3.5 6h.01M3.5 12h.01M3.5 18h.01"/></svg>`,
-    placeholder: `<svg class="img-placeholder" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2.5"/><circle cx="8.5" cy="9" r="1.6"/><path d="m21 16-4.5-4.5L5 21"/></svg>`
+    placeholder: `<svg class="img-placeholder" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2.5"/><circle cx="8.5" cy="9" r="1.6"/><path d="m21 16-4.5-4.5L5 21"/></svg>`,
+    note: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4Z"/></svg>`
 };
 
 // Image load failure -> show the line-art placeholder
@@ -603,7 +604,11 @@ function renderCart() {
                 <div class="cart-item-details">
                     <div class="cart-item-name">${escapeHtml(item.nama)}</div>
                     ${variantText ? `<div class="cart-item-variant">${escapeHtml(variantText)}</div>` : ''}
-                    ${notesText ? `<div class="cart-item-notes">${escapeHtml(notesText)}</div>` : ''}
+                    <div class="cart-item-notearea" data-index="${index}">
+                        ${notesText
+                            ? `<button class="cart-note-view" onclick="editNote(${index})" title="Ubah catatan">${ICONS.note}<span>${escapeHtml(notesText)}</span></button>`
+                            : `<button class="cart-note-add" onclick="editNote(${index})">${ICONS.note}<span>Tambah catatan</span></button>`}
+                    </div>
                     <div class="cart-item-qty">
                         <button class="qty-btn" onclick="updateQty(${index}, -1)" aria-label="Kurangi">&minus;</button>
                         <span class="qty-value">${item.qty}</span>
@@ -751,6 +756,40 @@ function addToCartWithDetails(productName, variant, qty, notes) {
     
     const variantText = variant ? ` - ${variant}` : '';
     showToast(`${productName}${variantText} (${qty}x) ditambahkan ke keranjang`);
+}
+
+// ============================================================
+// EDIT CATATAN ITEM DI KERANJANG
+// ============================================================
+function editNote(index) {
+    const area = document.querySelector(`.cart-item-notearea[data-index="${index}"]`);
+    if (!area || !cart[index]) return;
+
+    area.innerHTML = `
+        <input type="text" class="cart-note-input" placeholder="Catatan (warna/ukuran/dll)…">
+        <div class="cart-note-actions">
+            <button class="cart-note-save" onclick="saveNote(${index})">Simpan</button>
+            <button class="cart-note-cancel" onclick="renderCart()">Batal</button>
+        </div>`;
+
+    const input = area.querySelector('.cart-note-input');
+    input.value = cart[index].notes || '';   // set via property -> tidak perlu escape atribut
+    input.focus();
+    input.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter') { e.preventDefault(); saveNote(index); }
+        if (e.key === 'Escape') { e.preventDefault(); renderCart(); }
+    });
+}
+
+function saveNote(index) {
+    if (!cart[index]) return;
+    const area = document.querySelector(`.cart-item-notearea[data-index="${index}"]`);
+    const input = area ? area.querySelector('.cart-note-input') : null;
+    const val = input ? input.value.trim() : '';
+    cart[index].notes = val || null;
+    saveCart();
+    renderCart();
+    showToast(val ? 'Catatan disimpan' : 'Catatan dihapus');
 }
 
 // ============================================================

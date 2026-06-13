@@ -1049,6 +1049,72 @@ body:not(.admin-body) .back-to-top { bottom: 5.75rem; right: 1.6rem; }
     display: inline-block;
 }
 
+/* Catatan per item di dalam keranjang (lihat / tambah / ubah) */
+.cart-item-notearea { margin: 0.3rem 0 0.45rem; }
+
+.cart-note-view,
+.cart-note-add {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+    max-width: 100%;
+    border: none;
+    background: none;
+    font-family: inherit;
+    cursor: pointer;
+    padding: 0;
+    text-align: left;
+    transition: color 0.2s var(--ease);
+}
+.cart-note-view svg,
+.cart-note-add svg { width: 13px; height: 13px; flex-shrink: 0; }
+.cart-note-view span,
+.cart-note-add span { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+
+.cart-note-view {
+    font-size: 0.74rem;
+    color: var(--accent-deep);
+    background: var(--accent-tint);
+    padding: 0.25rem 0.5rem;
+    border-radius: 6px;
+}
+.cart-note-add { font-size: 0.74rem; color: var(--muted); }
+.cart-note-view:hover,
+.cart-note-add:hover { color: var(--accent); }
+
+.cart-note-input {
+    width: 100%;
+    padding: 0.4rem 0.6rem;
+    border: 1px solid var(--line-strong);
+    border-radius: 7px;
+    font-family: inherit;
+    font-size: 0.8rem;
+    color: var(--ink);
+    background: var(--surface);
+}
+.cart-note-input:focus {
+    outline: none;
+    border-color: var(--accent);
+    box-shadow: 0 0 0 3px var(--accent-soft);
+}
+
+.cart-note-actions { display: flex; gap: 0.4rem; margin-top: 0.35rem; }
+.cart-note-save,
+.cart-note-cancel {
+    font-family: inherit;
+    font-size: 0.75rem;
+    font-weight: 600;
+    padding: 0.3rem 0.7rem;
+    border-radius: 6px;
+    cursor: pointer;
+    border: 1px solid transparent;
+    transition: all 0.2s var(--ease);
+}
+.cart-note-save { background: var(--ink); color: #fff; }
+.cart-note-save:hover { background: var(--accent); }
+.cart-note-cancel { background: transparent; color: var(--muted); border-color: var(--line-strong); }
+.cart-note-cancel:hover { color: var(--ink); border-color: var(--accent); }
+
 .cart-item-qty {
     display: flex;
     align-items: center;
