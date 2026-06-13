@@ -741,13 +741,17 @@ function confirmAddToCart() {
 }
 
 function addToCartWithDetails(productName, variant, qty, notes) {
-    // Create unique key including notes
-    const existingIndex = cart.findIndex(item => 
-        item.nama === productName && 
-        item.variant === variant && 
-        item.notes === notes
+    // Normalkan catatan: '' dan null dianggap sama (tanpa catatan)
+    const cleanNotes = (notes && notes.trim()) ? notes.trim() : null;
+
+    // Gabungkan jika nama + varian + catatan sama.
+    // Varian berbeda (atau catatan berbeda) tetap menjadi baris terpisah.
+    const existingIndex = cart.findIndex(item =>
+        item.nama === productName &&
+        item.variant === variant &&
+        (item.notes || null) === cleanNotes
     );
-    
+
     if (existingIndex > -1) {
         cart[existingIndex].qty += qty;
     } else {
@@ -755,7 +759,7 @@ function addToCartWithDetails(productName, variant, qty, notes) {
             nama: productName,
             variant: variant,
             qty: qty,
-            notes: notes || null
+            notes: cleanNotes
         });
     }
     
