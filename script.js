@@ -594,13 +594,21 @@ function renderCart() {
     cartEmpty.classList.remove('show');
     cartFooter.style.display = 'block';
     
+    // Ambil gambar produk berdasarkan nama (sumber sama dengan katalog)
+    const imageByName = {};
+    getProcessedProducts().forEach(p => { imageByName[p.nama] = p.gambar; });
+
     let html = '';
     cart.forEach((item, index) => {
         const variantText = item.variant ? item.variant : '';
         const notesText = item.notes ? item.notes : '';
+        const gambar = imageByName[item.nama];
+        const imageHtml = gambar
+            ? `<img src="${escapeHtml(gambar)}" alt="" onerror="imgError(this)">`
+            : ICONS.placeholder;
         html += `
             <div class="cart-item">
-                <div class="cart-item-image">${ICONS.placeholder}</div>
+                <div class="cart-item-image">${imageHtml}</div>
                 <div class="cart-item-details">
                     <div class="cart-item-name">${escapeHtml(item.nama)}</div>
                     ${variantText ? `<div class="cart-item-variant">${escapeHtml(variantText)}</div>` : ''}
