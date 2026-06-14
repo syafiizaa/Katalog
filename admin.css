@@ -66,6 +66,13 @@
     gap: 1rem;
 }
 
+.admin-nav {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    flex-shrink: 0;
+}
+
 /* Publish reminder bar -------------------------------------- */
 .publish-bar {
     background: var(--accent-tint);
