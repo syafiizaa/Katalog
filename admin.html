@@ -107,9 +107,14 @@
 
                 <div class="field">
                     <label for="fieldCategory">Kategori <span class="req">*</span></label>
-                    <input type="text" id="fieldCategory" list="categoryOptions" placeholder="Contoh: Kosmetik">
-                    <datalist id="categoryOptions"></datalist>
-                    <span class="field-hint">Pilih dari daftar atau ketik kategori baru.</span>
+                    <div class="cat-select" id="catSelect">
+                        <input type="text" id="fieldCategory" placeholder="Pilih atau ketik kategori baru" autocomplete="off">
+                        <button type="button" class="cat-toggle" id="catToggle" aria-label="Tampilkan daftar kategori">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+                        </button>
+                        <div class="cat-options" id="catOptions" hidden></div>
+                    </div>
+                    <span class="field-hint">Klik panah untuk memilih kategori yang sudah ada, atau ketik kategori baru.</span>
                 </div>
 
                 <div class="field">

@@ -150,6 +150,18 @@ function setupEvents() {
     document.getElementById('addVariantBtn').addEventListener('click', () => addVariantRow(''));
     document.getElementById('fieldImage').addEventListener('input', updateImagePreview);
 
+    // Dropdown kategori kustom
+    const catInput = document.getElementById('fieldCategory');
+    document.getElementById('catToggle').addEventListener('click', () => {
+        const panel = document.getElementById('catOptions');
+        if (panel.hidden) { openCatDropdown(); catInput.focus(); } else { closeCatDropdown(); }
+    });
+    catInput.addEventListener('focus', openCatDropdown);
+    catInput.addEventListener('input', () => openCatDropdown());
+    document.addEventListener('click', (e) => {
+        if (!document.getElementById('catSelect').contains(e.target)) closeCatDropdown();
+    });
+
     // Confirm
     document.getElementById('confirmCancel').addEventListener('click', closeConfirm);
     document.getElementById('confirmOk').addEventListener('click', doDelete);
@@ -196,7 +208,6 @@ function renderList() {
     const search = document.getElementById('searchInput').value.toLowerCase().trim();
 
     countPill.textContent = `${products.length} produk`;
-    refreshCategoryOptions();
 
     // Hitung & tampilkan jumlah produk tanpa foto (dari seluruh data)
     const noImgCount = products.filter(p => !hasImage(p)).length;
@@ -263,9 +274,32 @@ function renderList() {
     }).join('');
 }
 
-function refreshCategoryOptions() {
-    const dl = document.getElementById('categoryOptions');
-    dl.innerHTML = getCategories().map(c => `<option value="${escapeAttr(c)}">`).join('');
+// ---- Dropdown kategori kustom (pilih lama / ketik baru) ----
+function buildCatOptions(filter) {
+    const panel = document.getElementById('catOptions');
+    const q = (filter || '').toLowerCase().trim();
+    const cats = getCategories().filter(c => !q || c.toLowerCase().includes(q));
+    if (cats.length === 0) { panel.innerHTML = ''; panel.hidden = true; return; }
+    panel.innerHTML = cats.map(c =>
+        `<button type="button" class="cat-option" data-cat="${escapeAttr(c)}">${escapeHtml(c)}</button>`
+    ).join('');
+    panel.querySelectorAll('.cat-option').forEach(btn => {
+        btn.addEventListener('click', () => {
+            document.getElementById('fieldCategory').value = btn.dataset.cat;
+            closeCatDropdown();
+        });
+    });
+}
+
+function openCatDropdown() {
+    buildCatOptions(document.getElementById('fieldCategory').value);
+    const panel = document.getElementById('catOptions');
+    if (panel.innerHTML.trim()) panel.hidden = false;
+}
+
+function closeCatDropdown() {
+    const panel = document.getElementById('catOptions');
+    if (panel) panel.hidden = true;
 }
 
 // ============================================================
@@ -349,7 +383,7 @@ function saveEditor() {
     closeEditor();
 }
 
-function closeEditor() { closeModal('editorModal'); editingIndex = null; }
+function closeEditor() { closeCatDropdown(); closeModal('editorModal'); editingIndex = null; }
 
 // ============================================================
 // DELETE

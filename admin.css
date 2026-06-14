@@ -316,6 +316,58 @@
     margin-top: 0.4rem;
     line-height: 1.45;
 }
+
+/* Dropdown kategori kustom */
+.cat-select { position: relative; }
+.cat-select input { width: 100%; padding-right: 2.4rem; }
+
+.cat-toggle {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 2.4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--muted);
+    transition: color 0.2s var(--ease);
+}
+.cat-toggle svg { width: 16px; height: 16px; }
+.cat-toggle:hover { color: var(--accent-deep); }
+
+.cat-options {
+    position: absolute;
+    top: calc(100% + 4px);
+    left: 0;
+    right: 0;
+    background: var(--surface);
+    border: 1px solid var(--line-strong);
+    border-radius: var(--radius-sm);
+    box-shadow: var(--shadow);
+    max-height: 200px;
+    overflow-y: auto;
+    z-index: 20;
+    padding: 0.3rem;
+}
+
+.cat-option {
+    display: block;
+    width: 100%;
+    text-align: left;
+    padding: 0.5rem 0.6rem;
+    border: none;
+    background: none;
+    font-family: inherit;
+    font-size: 0.9rem;
+    color: var(--ink);
+    border-radius: 7px;
+    cursor: pointer;
+}
+.cat-option:hover { background: var(--accent-soft); color: var(--accent-deep); }
 .field-hint code {
     background: var(--cream-deep);
     padding: 0.05rem 0.35rem;
