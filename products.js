@@ -13,6 +13,18 @@
 
 const productsData = [
   {
+    "nama": "aa",
+    "varian": "cc",
+    "kategori": "bb",
+    "gambar": null
+  },
+  {
+    "nama": "aa",
+    "varian": "dd",
+    "kategori": "bb",
+    "gambar": null
+  },
+  {
     "nama": "Air Mawar L",
     "varian": "100m",
     "kategori": "Bab",
