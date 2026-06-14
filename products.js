@@ -4915,6 +4915,18 @@ const productsData = [
     "gambar": "https://img.lazcdn.com/g/p/d537e960398f127c5f9a854e8b43f8f2.jpg_720x720q80.jpg"
   },
   {
+    "nama": "Wardah Bright Now C.foam",
+    "varian": "100ml",
+    "kategori": "Kosmetik",
+    "gambar": null
+  },
+  {
+    "nama": "Wardah Bright Now C.foam",
+    "varian": "50ml",
+    "kategori": "Kosmetik",
+    "gambar": null
+  },
+  {
     "nama": "Wardah C-defense creamy wash",
     "varian": "100ml",
     "kategori": "Kosmetik",
@@ -5177,18 +5189,6 @@ const productsData = [
     "varian": null,
     "kategori": "Kosmetik",
     "gambar": "https://www.static-src.com/wcsstore/Indraprastha/images/catalog/full/catalog-image/101/MTA-153145379/br-m036969-03522_wardah-everyday-luminous-liquid-foundation-40ml-alas-bedak-untuk-kulit-berminyak_full02-908b096e.jpg"
-  },
-  {
-    "nama": "Wardah perfect bright C.Foam",
-    "varian": "100ml",
-    "kategori": "Kosmetik",
-    "gambar": "https://img.lazcdn.com/g/p/6394fa82c7ded22c521172b7c692e4e0.jpg_960x960q80.jpg_.webp"
-  },
-  {
-    "nama": "Wardah perfect bright C.Foam",
-    "varian": "50ml",
-    "kategori": "Kosmetik",
-    "gambar": "https://img.lazcdn.com/g/p/6394fa82c7ded22c521172b7c692e4e0.jpg_960x960q80.jpg_.webp"
   },
   {
     "nama": "Wardah Perfect Bright Cream",
