@@ -226,6 +226,23 @@
     white-space: nowrap;
 }
 
+.rowname-inner { display: inline-block; will-change: transform; }
+
+/* Nama yang tidak muat -> bergerak bolak-balik (marquee), dengan jeda baca di tiap ujung */
+.product-row-name.marquee { text-overflow: clip; }
+.product-row-name.marquee .rowname-inner {
+    animation: rowname-marquee var(--marquee-duration, 6s) ease-in-out infinite alternate;
+}
+
+@keyframes rowname-marquee {
+    0%, 12%   { transform: translateX(0); }
+    88%, 100% { transform: translateX(var(--marquee-shift, 0)); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .product-row-name.marquee .rowname-inner { animation: none; }
+}
+
 .product-meta { display: flex; align-items: center; gap: 0.4rem; flex-wrap: wrap; }
 
 .cat-chip {

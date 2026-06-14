@@ -121,6 +121,10 @@ function initApp() {
     renderList();
     updateDirtyIndicator();
     setupEvents();
+    // Ukur ulang marquee setelah font (Fraunces) selesai dimuat
+    if (document.fonts && document.fonts.ready) {
+        document.fonts.ready.then(applyNameMarquee);
+    }
 }
 
 // ============================================================
@@ -258,7 +262,7 @@ function renderList() {
             <div class="product-row">
                 <div class="product-thumb">${thumb}</div>
                 <div class="product-main">
-                    <div class="product-row-name">${escapeHtml(p.nama)}</div>
+                    <div class="product-row-name"><span class="rowname-inner">${escapeHtml(p.nama)}</span></div>
                     <div class="product-meta">
                         <span class="cat-chip">${escapeHtml(p.kategori || '—')}</span>
                         ${brokenBadge}
@@ -272,6 +276,32 @@ function renderList() {
             </div>
         `;
     }).join('');
+
+    applyNameMarquee();
+}
+
+// Buat nama produk yang terlalu panjang bergerak otomatis (marquee) — hanya yang tidak muat
+function applyNameMarquee() {
+    const names = document.querySelectorAll('#productList .product-row-name');
+    // Baca dulu semua ukuran (hindari layout thrashing), lalu tulis
+    const data = [];
+    names.forEach(el => {
+        const inner = el.querySelector('.rowname-inner');
+        if (inner) data.push({ el, overflow: inner.scrollWidth - el.clientWidth });
+    });
+    data.forEach(({ el, overflow }) => {
+        if (overflow > 4) {
+            const moveTime = overflow / 45;                 // ~45 px/detik saat bergerak
+            const total = Math.max(4, moveTime / 0.76);     // sisakan jeda baca di tiap ujung
+            el.style.setProperty('--marquee-shift', `-${overflow}px`);
+            el.style.setProperty('--marquee-duration', `${total.toFixed(1)}s`);
+            el.classList.add('marquee');
+        } else {
+            el.classList.remove('marquee');
+            el.style.removeProperty('--marquee-shift');
+            el.style.removeProperty('--marquee-duration');
+        }
+    });
 }
 
 // ---- Dropdown kategori kustom (pilih lama / ketik baru) ----
