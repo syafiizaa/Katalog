@@ -169,6 +169,16 @@
     border-radius: var(--radius-sm);
     padding: 0.75rem 0.95rem;
 }
+.cmp-row.is-added { opacity: 0.55; }
+
+.cmp-pick { display: flex; align-items: flex-start; padding-top: 0.15rem; }
+.cmp-check {
+    width: 18px;
+    height: 18px;
+    accent-color: var(--accent);
+    cursor: pointer;
+    flex-shrink: 0;
+}
 .cmp-row-main { flex: 1; min-width: 0; }
 .cmp-row-name {
     font-family: 'Fraunces', serif;
@@ -202,6 +212,7 @@
 .tag.new-product { background: var(--accent-soft); color: var(--accent-deep); }
 .tag.new-variant { background: var(--cream-deep); color: var(--ink-soft); }
 .tag.maybe-same { background: #f3e8cf; color: #876214; }
+.tag.added { background: #e2efe1; color: #356b39; }
 
 .cmp-suggest {
     font-size: 0.78rem;
@@ -224,6 +235,19 @@
 }
 .breakdown { font-size: 0.8rem; color: var(--muted); }
 .breakdown strong { color: var(--ink); font-weight: 600; }
+
+.missing-tools { display: flex; align-items: center; gap: 0.9rem; flex-wrap: wrap; }
+.linkbtn {
+    background: none;
+    border: none;
+    font-family: inherit;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--accent-deep);
+    cursor: pointer;
+    padding: 0;
+}
+.linkbtn:hover { text-decoration: underline; }
 .check {
     display: inline-flex;
     align-items: center;

@@ -7,13 +7,21 @@
 
 // Skema tabel POS (sesuaikan di sini bila struktur kasir berubah)
 const SCHEMA = {
-    productTable: 'barang',
-    productId:    'id',
-    productName:  'nama',
-    variantTable: 'barang_varian',
-    variantFk:    'barang_id',
-    variantName:  'nama_varian'
+    productTable:      'barang',
+    productId:         'id',
+    productName:       'nama',
+    productCategoryId: 'kategori_id',
+    variantTable:      'barang_varian',
+    variantFk:         'barang_id',
+    variantName:       'nama_varian',
+    categoryTable:     'kategori',
+    categoryId:        'id',
+    categoryName:      'nama'
 };
+
+// localStorage key milik Panel Admin (untuk kirim produk ke draft-nya)
+const ADMIN_DRAFT_KEY = 'adminProductsDraft';
+const ADMIN_DIRTY_KEY = 'adminProductsDirty';
 
 // Ambang kemiripan nama untuk dianggap "mungkin sama" (0–1)
 const FUZZY_THRESHOLD = 0.84;
@@ -22,6 +30,7 @@ const FUZZY_THRESHOLD = 0.84;
 let catalogUnits = [];   // { nama, varian }
 let catalogNameSet = new Set();
 let catalogNameList = []; // nama produk unik di katalog (untuk pencocokan mirip)
+let posCategoryByName = {}; // norm(nama POS) -> nama kategori (untuk auto-isi kategori)
 let missingGroups = [];   // ada di kasir, tidak di katalog
 let onlyCatGroups = [];   // ada di katalog, tidak di kasir
 
@@ -185,6 +194,12 @@ function buildPosUnits(sql) {
     const varian = tableRows(sql, SCHEMA.variantTable);
     if (barang.length === 0) return null; // tabel tidak ditemukan
 
+    // Peta kategori id -> nama (untuk auto-isi kategori saat kirim ke admin)
+    const catById = {};
+    tableRows(sql, SCHEMA.categoryTable).forEach(c => {
+        catById[c[SCHEMA.categoryId]] = c[SCHEMA.categoryName];
+    });
+
     const vmap = {};
     varian.forEach(v => {
         const fk = v[SCHEMA.variantFk];
@@ -193,15 +208,31 @@ function buildPosUnits(sql) {
         (vmap[fk] = vmap[fk] || []).push(String(name).trim());
     });
 
+    posCategoryByName = {};
     const units = [];
     barang.forEach(b => {
         const nama = (b[SCHEMA.productName] || '').trim();
         if (!nama) return;
+        posCategoryByName[norm(nama)] = catById[b[SCHEMA.productCategoryId]] || '';
         const vs = vmap[b[SCHEMA.productId]] || [];
         if (vs.length === 0) units.push({ nama, varian: null });
         else vs.forEach(v => units.push({ nama, varian: v }));
     });
     return units;
+}
+
+// Kelompokkan baris datar products.js menjadi model admin {nama, kategori, gambar, variants}
+function groupCatalogFromFlat(flat) {
+    const map = new Map();
+    flat.forEach(item => {
+        const nama = (item.nama || '').trim();
+        if (!nama) return;
+        if (!map.has(nama)) map.set(nama, { nama, kategori: (item.kategori || '').trim(), gambar: item.gambar || null, variants: [] });
+        const g = map.get(nama);
+        if (item.gambar && !g.gambar) g.gambar = item.gambar;
+        if (item.varian) g.variants.push(String(item.varian).trim());
+    });
+    return Array.from(map.values());
 }
 
 // Kelompokkan unit per nama produk -> { nama, variants:[], hasNoVariantUnit }
@@ -232,9 +263,18 @@ function compare(sql) {
     const onlyCat = catalogUnits.filter(u => !posKeys.has(unitKey(u.nama, u.varian)));
 
     // Untuk tiap nama yang "baru", cari kandidat mirip di data satunya (beda penulisan)
-    missingGroups = groupByName(missing).map(g => {
+    missingGroups = groupByName(missing).map((g, i) => {
         const isNewProduct = !catalogNameSet.has(norm(g.nama));
-        return { ...g, isNewProduct, maybe: isNewProduct ? bestMatch(g.nama, catalogNameList) : null };
+        const maybe = isNewProduct ? bestMatch(g.nama, catalogNameList) : null;
+        return {
+            ...g,
+            isNewProduct,
+            maybe,
+            kategori: posCategoryByName[norm(g.nama)] || '',
+            selected: !(isNewProduct && maybe),  // "mungkin sama" tidak dicentang otomatis
+            added: false,
+            _id: i
+        };
     });
     onlyCatGroups = groupByName(onlyCat).map(g => {
         const isNewProduct = !posNameSet.has(norm(g.nama));
@@ -278,10 +318,16 @@ function rowHtml(g, kind) {
         variantsHtml = `<span class="cmp-variant-chip none">tanpa varian</span>`;
     }
 
+    const checkbox = (kind === 'missing')
+        ? `<label class="cmp-pick"><input type="checkbox" class="cmp-check" data-mg="${g._id}" ${g.selected ? 'checked' : ''} ${g.added ? 'disabled' : ''}></label>`
+        : '';
+    const addedBadge = (kind === 'missing' && g.added) ? `<span class="tag added">✓ ditambahkan</span>` : '';
+
     return `
-        <div class="cmp-row">
+        <div class="cmp-row${g.added ? ' is-added' : ''}">
+            ${checkbox}
             <div class="cmp-row-main">
-                <div class="cmp-row-name">${escapeHtml(g.nama)} ${tag}</div>
+                <div class="cmp-row-name">${escapeHtml(g.nama)} ${tag} ${addedBadge}</div>
                 <div class="cmp-variants">${variantsHtml}</div>
                 ${suggestion}
             </div>
@@ -311,6 +357,60 @@ function renderResults() {
     missingList.hidden = missing.length === 0;
 
     document.getElementById('onlyCatList').innerHTML = onlyCat.map(g => rowHtml(g, 'onlycat')).join('');
+
+    updateSelectionUI();
+}
+
+// ============================================================
+// KIRIM PRODUK TERPILIH KE DRAFT PANEL ADMIN
+// ============================================================
+function updateSelectionUI() {
+    const btn = document.getElementById('addToAdminBtn');
+    if (!btn) return;
+    const n = missingGroups.filter(g => g.selected && !g.added).length;
+    btn.textContent = n > 0 ? `Tambahkan ${n} ke Admin` : 'Tambahkan ke Admin';
+    btn.disabled = n === 0;
+}
+
+function addSelectedToAdmin() {
+    const selected = missingGroups.filter(g => g.selected && !g.added);
+    if (selected.length === 0) { showToast('Belum ada produk yang dicentang.'); return; }
+
+    // Sumber: draft admin kalau ada (agar tidak menimpa kerja admin yang belum diekspor),
+    // kalau tidak ada, mulai dari products.js
+    let base = null;
+    const draft = localStorage.getItem(ADMIN_DRAFT_KEY);
+    if (draft) { try { base = JSON.parse(draft); } catch (e) { base = null; } }
+    if (!base) base = groupCatalogFromFlat(typeof productsData !== 'undefined' ? productsData : []);
+
+    const byName = new Map(base.map(p => [norm(p.nama), p]));
+    let addedProducts = 0, addedVariants = 0;
+
+    selected.forEach(g => {
+        const key = norm(g.nama);
+        if (byName.has(key)) {
+            // Produk sudah ada -> tambah varian yang belum ada
+            const p = byName.get(key);
+            p.variants = p.variants || [];
+            const have = new Set(p.variants.map(v => norm(v)));
+            g.variants.forEach(v => {
+                if (!have.has(norm(v))) { p.variants.push(v); have.add(norm(v)); addedVariants++; }
+            });
+        } else {
+            // Produk baru
+            base.push({ nama: g.nama, kategori: g.kategori || '', gambar: null, variants: g.variants.slice() });
+            byName.set(key, base[base.length - 1]);
+            addedProducts++;
+        }
+        g.added = true;
+        g.selected = false;
+    });
+
+    localStorage.setItem(ADMIN_DRAFT_KEY, JSON.stringify(base));
+    localStorage.setItem(ADMIN_DIRTY_KEY, '1');
+
+    renderResults();
+    showToast(`${addedProducts} produk + ${addedVariants} varian dikirim ke draft Admin. Buka Panel Admin untuk lengkapi foto & ekspor.`);
 }
 
 // ============================================================
@@ -378,6 +478,24 @@ document.addEventListener('DOMContentLoaded', () => {
     document.getElementById('searchInput').addEventListener('input', renderResults);
     document.getElementById('hideMaybe').addEventListener('change', renderResults);
     document.getElementById('copyMissingBtn').addEventListener('click', copyMissing);
+
+    // Pilih & kirim ke admin
+    document.getElementById('missingList').addEventListener('change', (e) => {
+        const cb = e.target.closest('.cmp-check');
+        if (!cb) return;
+        const g = missingGroups[+cb.dataset.mg];
+        if (g) g.selected = cb.checked;
+        updateSelectionUI();
+    });
+    document.getElementById('selectAllBtn').addEventListener('click', () => {
+        missingGroups.forEach(g => { if (!g.added) g.selected = true; });
+        renderResults();
+    });
+    document.getElementById('clearSelBtn').addEventListener('click', () => {
+        missingGroups.forEach(g => { g.selected = false; });
+        renderResults();
+    });
+    document.getElementById('addToAdminBtn').addEventListener('click', addSelectedToAdmin);
 
     const toggle = document.getElementById('onlyCatToggle');
     toggle.addEventListener('click', () => {

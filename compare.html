@@ -85,13 +85,18 @@
                     <h2>Ada di kasir, belum di katalog</h2>
                     <div class="result-head-right">
                         <span class="result-count" id="missingCount">0</span>
-                        <button class="btn btn-ghost btn-sm" id="copyMissingBtn">Salin daftar</button>
+                        <button class="btn btn-primary btn-sm" id="addToAdminBtn" disabled>Tambahkan ke Admin</button>
                     </div>
                 </div>
-                <p class="result-hint">Inilah produk/varian yang perlu kamu tambahkan lewat Panel Admin.</p>
+                <p class="result-hint">Centang yang ingin ditambahkan lalu klik <em>Tambahkan ke Admin</em> — produk langsung masuk ke draft Panel Admin (kategori otomatis dari kasir), tinggal lengkapi foto lalu ekspor. Item <strong>"Mungkin sama"</strong> sengaja tidak dicentang otomatis — kamu yang menentukan.</p>
                 <div class="missing-controls">
                     <span class="breakdown" id="missingBreakdown"></span>
-                    <label class="check"><input type="checkbox" id="hideMaybe"> Sembunyikan kemungkinan duplikat</label>
+                    <div class="missing-tools">
+                        <button class="linkbtn" id="selectAllBtn">Pilih semua</button>
+                        <button class="linkbtn" id="clearSelBtn">Kosongkan</button>
+                        <button class="linkbtn" id="copyMissingBtn">Salin daftar</button>
+                        <label class="check"><input type="checkbox" id="hideMaybe"> Sembunyikan kemungkinan duplikat</label>
+                    </div>
                 </div>
                 <div class="cmp-list" id="missingList"></div>
                 <p class="block-empty" id="missingEmpty" hidden>Tidak ada — semua produk kasir sudah ada di katalog. 🎉</p>
