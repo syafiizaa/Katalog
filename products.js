@@ -13,22 +13,22 @@
 
 const productsData = [
   {
-    "nama": "Air Mawar",
-    "varian": "100ml",
-    "kategori": "Kosmetik",
-    "gambar": "https://down-id.img.susercontent.com/file/a5b0f10dea28e1a51c24aad6a123243d"
+    "nama": "Air Mawar L",
+    "varian": "100m",
+    "kategori": "Bab",
+    "gambar": null
   },
   {
-    "nama": "Air Mawar",
+    "nama": "Air Mawar L",
     "varian": "200ml",
-    "kategori": "Kosmetik",
-    "gambar": "https://down-id.img.susercontent.com/file/a5b0f10dea28e1a51c24aad6a123243d"
+    "kategori": "Bab",
+    "gambar": null
   },
   {
-    "nama": "Air Mawar",
+    "nama": "Air Mawar L",
     "varian": "Face Milk",
-    "kategori": "Kosmetik",
-    "gambar": "https://down-id.img.susercontent.com/file/a5b0f10dea28e1a51c24aad6a123243d"
+    "kategori": "Bab",
+    "gambar": null
   },
   {
     "nama": "Alkaline AA",
