@@ -1354,7 +1354,7 @@ const productsData = [
     "nama": "Hanasui serum cushion",
     "varian": null,
     "kategori": "Kosmetik",
-    "gambar": null
+    "gambar": "https://p16-oec-sg.ibyteimg.com/tos-alisg-i-aphluv4xwc-sg/img/VqbcmM/2023/12/11/2c64d983-a392-4dca-acca-64d9bea86fd2.jpg~tplv-aphluv4xwc-resize-jpeg:700:0.jpg"
   },
   {
     "nama": "Handbody Leivy",
@@ -1552,7 +1552,7 @@ const productsData = [
     "nama": "Jepit Bulu Mata",
     "varian": null,
     "kategori": "Kosmetik",
-    "gambar": null
+    "gambar": "https://www.serbagrosirmurah.com/image-product/img3001-1602752975.jpg"
   },
   {
     "nama": "Jepit kuku",
@@ -1642,7 +1642,7 @@ const productsData = [
     "nama": "Kapas Selection",
     "varian": "Bulat",
     "kategori": "Kosmetik",
-    "gambar": null
+    "gambar": "https://storage.googleapis.com/rxstorage/Product/Photos/farmaku_selection-kapas-round-pack-80-sheets-01.jpg"
   },
   {
     "nama": "Kapur Ajaib",
@@ -1726,13 +1726,13 @@ const productsData = [
     "nama": "Kispray",
     "varian": "Botol",
     "kategori": "Alat Kebersihan",
-    "gambar": null
+    "gambar": "https://id-test-11.slatic.net/p/02afe90037a13f6b2ca5a24e7785f948.jpg"
   },
   {
     "nama": "Kispray",
     "varian": "Refill",
     "kategori": "Alat Kebersihan",
-    "gambar": null
+    "gambar": "https://id-test-11.slatic.net/p/02afe90037a13f6b2ca5a24e7785f948.jpg"
   },
   {
     "nama": "Kiwi cair",
