@@ -322,7 +322,7 @@ const productsData = [
     "nama": "Bedak Nichi",
     "varian": null,
     "kategori": "Kosmetik",
-    "gambar": null
+    "gambar": "https://id-live-01.slatic.net/p/d26dc880803ab3461c50c512772ad24f.jpg"
   },
   {
     "nama": "Bedak pigeon",
@@ -886,13 +886,13 @@ const productsData = [
     "nama": "Cutton buds cussons",
     "varian": "Extra Fine",
     "kategori": "Baby Care",
-    "gambar": null
+    "gambar": "https://down-id.img.susercontent.com/file/id-11134207-7rasb-m0jpqwp986oc48"
   },
   {
     "nama": "Cutton buds cussons",
     "varian": "Regular",
     "kategori": "Baby Care",
-    "gambar": null
+    "gambar": "https://down-id.img.susercontent.com/file/id-11134207-7rasb-m0jpqwp986oc48"
   },
   {
     "nama": "Dee-Dee Shampoo",
@@ -1336,19 +1336,19 @@ const productsData = [
     "nama": "Hanasui Body SPA",
     "varian": null,
     "kategori": "Kosmetik",
-    "gambar": null
+    "gambar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQV8JXVI9dBQb1BJfqf14azEB3fWcwFIgRZGxL-p_aXjjhTAH6mQZNc0L4&s=10"
   },
   {
     "nama": "Hanasui next level bouncy blush",
     "varian": null,
     "kategori": "Kosmetik",
-    "gambar": null
+    "gambar": "https://medias.watsons.co.id/publishing/WTCID-44862-extra1-zoom.jpg?version=1743002262"
   },
   {
     "nama": "Hanasui next level powder foundation",
     "varian": null,
     "kategori": "Kosmetik",
-    "gambar": null
+    "gambar": "https://down-id.img.susercontent.com/file/id-11134207-81ztf-mepmwsyb28019a"
   },
   {
     "nama": "Hanasui serum cushion",
@@ -3415,12 +3415,6 @@ const productsData = [
     "gambar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRmaR4DgXatQUeuzyG4oq5qcjzx-2rYt78LuUye4gX7cQ&s=10"
   },
   {
-    "nama": "Refill Zwitsal hair&body 400ml",
-    "varian": null,
-    "kategori": "Sabun",
-    "gambar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQnjqNKzwGEofo4NtLRFcYuwSfyc15Yz3WzeUeYNItWYA&s=10"
-  },
-  {
     "nama": "Regazza body spray 100ml",
     "varian": null,
     "kategori": "Parfum",
@@ -4558,13 +4552,13 @@ const productsData = [
     "nama": "Sunscreen Wardah SPF 35",
     "varian": "Acne Calm",
     "kategori": "Kosmetik",
-    "gambar": "https://p16-oec-sg.ibyteimg.com/tos-alisg-i-aphluv4xwc-sg/4775ee4a3e8e436f83fd7d9b6e217a20~tplv-aphluv4xwc-resize-webp:800:800.webp?dr=15584&t=555f072d&ps=933b5bde&shp=6ce186a1&shcp=e1be8f53&idc=my&from=1826719393"
+    "gambar": null
   },
   {
     "nama": "Sunscreen Wardah SPF 35",
     "varian": "Vit.C",
     "kategori": "Kosmetik",
-    "gambar": "https://p16-oec-sg.ibyteimg.com/tos-alisg-i-aphluv4xwc-sg/4775ee4a3e8e436f83fd7d9b6e217a20~tplv-aphluv4xwc-resize-webp:800:800.webp?dr=15584&t=555f072d&ps=933b5bde&shp=6ce186a1&shcp=e1be8f53&idc=my&from=1826719393"
+    "gambar": null
   },
   {
     "nama": "Sunscreen Wardah SPF 50",
@@ -4730,7 +4724,31 @@ const productsData = [
   },
   {
     "nama": "Toner Viva",
-    "varian": "Tonic/Milk",
+    "varian": "Milk Cucumber",
+    "kategori": "Kosmetik",
+    "gambar": "https://www.static-src.com/wcsstore/Indraprastha/images/catalog/full//113/MTA-27993569/viva_cosmetics_viva_face_tonic_toner_lemon_spirulina_cucumber_astringent_green_tea_bengkuang_original_air_mawar_full01_kt6uue6r.jpg"
+  },
+  {
+    "nama": "Toner Viva",
+    "varian": "Milk Lemon",
+    "kategori": "Kosmetik",
+    "gambar": "https://www.static-src.com/wcsstore/Indraprastha/images/catalog/full//113/MTA-27993569/viva_cosmetics_viva_face_tonic_toner_lemon_spirulina_cucumber_astringent_green_tea_bengkuang_original_air_mawar_full01_kt6uue6r.jpg"
+  },
+  {
+    "nama": "Toner Viva",
+    "varian": "Toner Bengkoang",
+    "kategori": "Kosmetik",
+    "gambar": "https://www.static-src.com/wcsstore/Indraprastha/images/catalog/full//113/MTA-27993569/viva_cosmetics_viva_face_tonic_toner_lemon_spirulina_cucumber_astringent_green_tea_bengkuang_original_air_mawar_full01_kt6uue6r.jpg"
+  },
+  {
+    "nama": "Toner Viva",
+    "varian": "Toner Green Tea",
+    "kategori": "Kosmetik",
+    "gambar": "https://www.static-src.com/wcsstore/Indraprastha/images/catalog/full//113/MTA-27993569/viva_cosmetics_viva_face_tonic_toner_lemon_spirulina_cucumber_astringent_green_tea_bengkuang_original_air_mawar_full01_kt6uue6r.jpg"
+  },
+  {
+    "nama": "Toner Viva",
+    "varian": "Toner Cucumber",
     "kategori": "Kosmetik",
     "gambar": "https://www.static-src.com/wcsstore/Indraprastha/images/catalog/full//113/MTA-27993569/viva_cosmetics_viva_face_tonic_toner_lemon_spirulina_cucumber_astringent_green_tea_bengkuang_original_air_mawar_full01_kt6uue6r.jpg"
   },
@@ -4775,12 +4793,6 @@ const productsData = [
     "varian": "200ml",
     "kategori": "Kosmetik",
     "gambar": "https://image.astronauts.cloud/product-images/2024/10/8999999719418VaselineLotionHealthyBrightUvExtraBrigtheningBodyLotion200ml1_d4091fd8-b972-408f-ac2d-0d449136aef8_900x900.png"
-  },
-  {
-    "nama": "Vaseline Gel 50ml",
-    "varian": null,
-    "kategori": "Kosmetik",
-    "gambar": "https://res-4.cloudinary.com/dk0z4ums3/image/upload/c_scale,h_500,w_500/v1/production/pharmacy/products/1660211330_vaseline_repairing_petroleum_jelly_50_ml"
   },
   {
     "nama": "Vaseline soft+glow gluta vitamin 180ml",
@@ -5246,7 +5258,7 @@ const productsData = [
   },
   {
     "nama": "Wardah Perfect Bright Cream",
-    "varian": "Oil Control",
+    "varian": null,
     "kategori": "Kosmetik",
     "gambar": "https://favo.id/cdn/shop/products/WARWAJ1020_Wardah-Perfect-Bright-Moisturizer-SPF-28---20-mL-new-packaging_4625c5cd-35dc-428f-8b48-51ba50a1eab3.jpg?v=1757321323"
   },
@@ -5258,13 +5270,25 @@ const productsData = [
   },
   {
     "nama": "Wardah renew you cream 15g",
-    "varian": null,
+    "varian": "Day",
+    "kategori": "Kosmetik",
+    "gambar": "https://cf.shopee.co.id/file/sg-11134201-22120-kspkrwnqxtkva4"
+  },
+  {
+    "nama": "Wardah renew you cream 15g",
+    "varian": "Night",
     "kategori": "Kosmetik",
     "gambar": "https://cf.shopee.co.id/file/sg-11134201-22120-kspkrwnqxtkva4"
   },
   {
     "nama": "Wardah renew you cream 30g",
-    "varian": null,
+    "varian": "Day",
+    "kategori": "Kosmetik",
+    "gambar": "https://img.lazcdn.com/g/p/6852f48d654e987395af0e2ad5c11268.jpg_720x720q80.jpg"
+  },
+  {
+    "nama": "Wardah renew you cream 30g",
+    "varian": "Night",
     "kategori": "Kosmetik",
     "gambar": "https://img.lazcdn.com/g/p/6852f48d654e987395af0e2ad5c11268.jpg_720x720q80.jpg"
   },
@@ -5301,6 +5325,12 @@ const productsData = [
   {
     "nama": "Zwitsal 2in1",
     "varian": "300ml",
+    "kategori": "Baby Care",
+    "gambar": "https://www.static-src.com/wcsstore/Indraprastha/images/catalog/full//95/MTA-79351232/zwitsal_perawatan_bayi_-_zwitsal_baby_bath_minyak_telon_full31_ht59infg.jpg"
+  },
+  {
+    "nama": "Zwitsal 2in1",
+    "varian": "Refill",
     "kategori": "Baby Care",
     "gambar": "https://www.static-src.com/wcsstore/Indraprastha/images/catalog/full//95/MTA-79351232/zwitsal_perawatan_bayi_-_zwitsal_baby_bath_minyak_telon_full31_ht59infg.jpg"
   },
