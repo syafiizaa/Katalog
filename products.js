@@ -1006,19 +1006,19 @@ const productsData = [
     "nama": "Emina Bright Stuff",
     "varian": "Face Toner 100ml",
     "kategori": "Kosmetik",
-    "gambar": null
+    "gambar": "img/sabun kodomo.jpg"
   },
   {
     "nama": "Emina Bright Stuff",
     "varian": "Micellar Water 100ml",
     "kategori": "Kosmetik",
-    "gambar": null
+    "gambar": "img/sabun kodomo.jpg"
   },
   {
     "nama": "Emina Bright Stuff",
     "varian": "Cream",
     "kategori": "Kosmetik",
-    "gambar": null
+    "gambar": "img/sabun kodomo.jpg"
   },
   {
     "nama": "Emina face wash",
@@ -2272,55 +2272,55 @@ const productsData = [
     "nama": "Minyak Rambut",
     "varian": "Clear Men",
     "kategori": "Minyak Rambut",
-    "gambar": null
+    "gambar": "img/minyak rambut.jpg"
   },
   {
     "nama": "Minyak Rambut",
     "varian": "Kemiriku",
     "kategori": "Minyak Rambut",
-    "gambar": null
+    "gambar": "img/minyak rambut.jpg"
   },
   {
     "nama": "Minyak Rambut",
     "varian": "Naura",
     "kategori": "Minyak Rambut",
-    "gambar": null
+    "gambar": "img/minyak rambut.jpg"
   },
   {
     "nama": "Minyak Rambut",
     "varian": "Rita",
     "kategori": "Minyak Rambut",
-    "gambar": null
+    "gambar": "img/minyak rambut.jpg"
   },
   {
     "nama": "Minyak Rambut",
     "varian": "Santal",
     "kategori": "Minyak Rambut",
-    "gambar": null
+    "gambar": "img/minyak rambut.jpg"
   },
   {
     "nama": "Minyak Rambut",
     "varian": "Viva",
     "kategori": "Minyak Rambut",
-    "gambar": null
+    "gambar": "img/minyak rambut.jpg"
   },
   {
     "nama": "Minyak Rambut",
     "varian": "Vycaris",
     "kategori": "Minyak Rambut",
-    "gambar": null
+    "gambar": "img/minyak rambut.jpg"
   },
   {
     "nama": "Minyak Rambut",
     "varian": "Mirabella",
     "kategori": "Minyak Rambut",
-    "gambar": null
+    "gambar": "img/minyak rambut.jpg"
   },
   {
     "nama": "Minyak Rambut",
     "varian": "Melani",
     "kategori": "Minyak Rambut",
-    "gambar": null
+    "gambar": "img/minyak rambut.jpg"
   },
   {
     "nama": "Minyak rambut Gatsby sachet",
@@ -4282,13 +4282,13 @@ const productsData = [
     "nama": "Sleek Baby",
     "varian": "Refill 450ml",
     "kategori": "Alat Kebersihan",
-    "gambar": null
+    "gambar": "https://img.lazcdn.com/g/p/05d63414e0d058fdf2b816827b9ce166.jpg_960x960q80.jpg_.webp"
   },
   {
     "nama": "Sleek Baby",
     "varian": "Botol 150ml",
     "kategori": "Alat Kebersihan",
-    "gambar": null
+    "gambar": "https://img.lazcdn.com/g/p/05d63414e0d058fdf2b816827b9ce166.jpg_960x960q80.jpg_.webp"
   },
   {
     "nama": "So klin lantai botol",
