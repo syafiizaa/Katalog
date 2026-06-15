@@ -1768,13 +1768,13 @@ const productsData = [
     "nama": "Kodomo Wash 200ml",
     "varian": "Shampoo Botol Pencet",
     "kategori": "Sabun",
-    "gambar": null
+    "gambar": "img/sabun kodomo.jpg"
   },
   {
     "nama": "Kodomo Wash 200ml",
     "varian": "Sabun/Shampoo",
     "kategori": "Sabun",
-    "gambar": null
+    "gambar": "img/sabun kodomo.jpg"
   },
   {
     "nama": "Korek telinga lampu",
@@ -2608,13 +2608,13 @@ const productsData = [
     "nama": "Odol paket anak",
     "varian": "Formula",
     "kategori": "Baby Care",
-    "gambar": null
+    "gambar": "img/odol paket.jpg"
   },
   {
     "nama": "Odol paket anak",
     "varian": "Kodomo",
     "kategori": "Baby Care",
-    "gambar": null
+    "gambar": "img/odol paket.jpg"
   },
   {
     "nama": "Odol Sasha",
@@ -2752,13 +2752,13 @@ const productsData = [
     "nama": "Parfum Master",
     "varian": "Splash cologne 150ml",
     "kategori": "Parfum",
-    "gambar": null
+    "gambar": "img/master.jpg"
   },
   {
     "nama": "Parfum Master",
     "varian": "Spray cologne 100ml",
     "kategori": "Parfum",
-    "gambar": null
+    "gambar": "img/master.jpg"
   },
   {
     "nama": "Parfum Spalding",
@@ -3886,49 +3886,49 @@ const productsData = [
     "nama": "Semir",
     "varian": "Bigen",
     "kategori": "Kosmetik",
-    "gambar": null
+    "gambar": "img/semir.jpg"
   },
   {
     "nama": "Semir",
     "varian": "Garnier",
     "kategori": "Kosmetik",
-    "gambar": null
+    "gambar": "img/semir.jpg"
   },
   {
     "nama": "Semir",
     "varian": "Hi top",
     "kategori": "Kosmetik",
-    "gambar": null
+    "gambar": "img/semir.jpg"
   },
   {
     "nama": "Semir",
     "varian": "Miranda",
     "kategori": "Kosmetik",
-    "gambar": null
+    "gambar": "img/semir.jpg"
   },
   {
     "nama": "Semir",
     "varian": "NYU",
     "kategori": "Kosmetik",
-    "gambar": null
+    "gambar": "img/semir.jpg"
   },
   {
     "nama": "Semir",
     "varian": "Tancho Bubuk",
     "kategori": "Kosmetik",
-    "gambar": null
+    "gambar": "img/semir.jpg"
   },
   {
     "nama": "Semir",
     "varian": "Tancho Cair",
     "kategori": "Kosmetik",
-    "gambar": null
+    "gambar": "img/semir.jpg"
   },
   {
     "nama": "Semir",
     "varian": "Top Lady",
     "kategori": "Kosmetik",
-    "gambar": null
+    "gambar": "img/semir.jpg"
   },
   {
     "nama": "Serum",
@@ -4156,13 +4156,13 @@ const productsData = [
     "nama": "Sikat Gigi Formula isi 3",
     "varian": "Bulu Lembut",
     "kategori": "Alat Kebersihan",
-    "gambar": null
+    "gambar": "img/sikat gigi.jpg"
   },
   {
     "nama": "Sikat Gigi Formula isi 3",
     "varian": "Ripple Biasa",
     "kategori": "Alat Kebersihan",
-    "gambar": null
+    "gambar": "img/sikat gigi.jpg"
   },
   {
     "nama": "Sikat Gigi Formula Lembut",
@@ -4366,13 +4366,13 @@ const productsData = [
     "nama": "Spons Cuci piring",
     "varian": "Prostex",
     "kategori": "Alat Kebersihan",
-    "gambar": null
+    "gambar": "img/spons cuci piring.jpg"
   },
   {
     "nama": "Spons Cuci piring",
     "varian": "Jaring",
     "kategori": "Alat Kebersihan",
-    "gambar": null
+    "gambar": "img/spons cuci piring.jpg"
   },
   {
     "nama": "Spons fanbo",
@@ -4672,37 +4672,37 @@ const productsData = [
     "nama": "Tisu",
     "varian": "Jolly Kecil",
     "kategori": "Alat Kebersihan",
-    "gambar": null
+    "gambar": "img/tisu.jpg"
   },
   {
     "nama": "Tisu",
     "varian": "Paseo Kecil isi 6",
     "kategori": "Alat Kebersihan",
-    "gambar": null
+    "gambar": "img/tisu.jpg"
   },
   {
     "nama": "Tisu",
     "varian": "Paseo Besar",
     "kategori": "Alat Kebersihan",
-    "gambar": null
+    "gambar": "img/tisu.jpg"
   },
   {
     "nama": "Tisu",
     "varian": "Montis Besar",
     "kategori": "Alat Kebersihan",
-    "gambar": null
+    "gambar": "img/tisu.jpg"
   },
   {
     "nama": "Tisu Basah Mitu",
     "varian": "Botol",
     "kategori": "Baby Care",
-    "gambar": null
+    "gambar": "img/tisu mitu.jpg"
   },
   {
     "nama": "Tisu Basah Mitu",
     "varian": "Refill Isi 2",
     "kategori": "Baby Care",
-    "gambar": null
+    "gambar": "img/tisu mitu.jpg"
   },
   {
     "nama": "Toner brightening Mustika Ratu",
