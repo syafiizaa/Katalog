@@ -323,6 +323,10 @@ function rowHtml(g, kind) {
         : '';
     const addedBadge = (kind === 'missing' && g.added) ? `<span class="tag added">✓ ditambahkan</span>` : '';
 
+    const copyBtn = `<button type="button" class="cmp-copy" data-copy="${escapeAttr(g.nama)}" title="Salin nama produk" aria-label="Salin nama produk">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg>
+            </button>`;
+
     return `
         <div class="cmp-row${g.added ? ' is-added' : ''}">
             ${checkbox}
@@ -331,6 +335,7 @@ function rowHtml(g, kind) {
                 <div class="cmp-variants">${variantsHtml}</div>
                 ${suggestion}
             </div>
+            ${copyBtn}
         </div>`;
 }
 
@@ -497,6 +502,20 @@ document.addEventListener('DOMContentLoaded', () => {
     });
     document.getElementById('addToAdminBtn').addEventListener('click', addSelectedToAdmin);
 
+    // Tombol salin nama produk per baris (berlaku untuk kedua daftar)
+    document.getElementById('resultsArea').addEventListener('click', (e) => {
+        const btn = e.target.closest('.cmp-copy');
+        if (!btn) return;
+        const name = btn.dataset.copy || '';
+        navigator.clipboard.writeText(name)
+            .then(() => {
+                showToast('Disalin: ' + name);
+                btn.classList.add('copied');
+                setTimeout(() => btn.classList.remove('copied'), 1200);
+            })
+            .catch(() => showToast('Gagal menyalin.'));
+    });
+
     const toggle = document.getElementById('onlyCatToggle');
     toggle.addEventListener('click', () => {
         const expanded = toggle.getAttribute('aria-expanded') === 'true';
@@ -530,4 +549,8 @@ function escapeHtml(text) {
     const div = document.createElement('div');
     div.textContent = text == null ? '' : text;
     return div.innerHTML;
+}
+
+function escapeAttr(text) {
+    return escapeHtml(text).replace(/"/g, '&quot;');
 }

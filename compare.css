@@ -180,6 +180,24 @@
     flex-shrink: 0;
 }
 .cmp-row-main { flex: 1; min-width: 0; }
+
+.cmp-copy {
+    flex-shrink: 0;
+    width: 34px;
+    height: 34px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--cream-deep);
+    border: 1px solid var(--line);
+    border-radius: var(--radius-sm);
+    color: var(--ink-soft);
+    cursor: pointer;
+    transition: all 0.18s var(--ease);
+}
+.cmp-copy svg { width: 16px; height: 16px; }
+.cmp-copy:hover { border-color: var(--accent); color: var(--accent-deep); background: var(--accent-tint); }
+.cmp-copy.copied { background: #e2efe1; border-color: #88b98c; color: #356b39; }
 .cmp-row-name {
     font-family: 'Fraunces', serif;
     font-size: 1.0rem;

@@ -186,7 +186,13 @@ function setupEvents() {
     const catInput = document.getElementById('fieldCategory');
     document.getElementById('catToggle').addEventListener('click', () => {
         const panel = document.getElementById('catOptions');
-        if (panel.hidden) { openCatDropdown(); catInput.focus(); } else { closeCatDropdown(); }
+        if (panel.hidden) {
+            openCatDropdown();
+            // Fokus ke input (memunculkan keyboard) hanya di desktop; di HP cukup
+            // tampilkan daftar kategori tanpa memaksa keyboard keluar.
+            const hasMouse = window.matchMedia && window.matchMedia('(hover: hover) and (pointer: fine)').matches;
+            if (hasMouse) catInput.focus();
+        } else { closeCatDropdown(); }
     });
     catInput.addEventListener('focus', openCatDropdown);
     catInput.addEventListener('input', () => openCatDropdown());
@@ -380,7 +386,13 @@ function openEditor(index) {
 
     updateImagePreview();
     openModal('editorModal');
-    setTimeout(() => document.getElementById('fieldName').focus(), 50);
+    // Hanya fokus otomatis di perangkat dengan mouse (desktop). Di HP/tablet
+    // jangan auto-fokus agar keyboard tidak muncul sendiri — keyboard baru
+    // muncul saat pengguna mengetuk kolom teks.
+    const hasMouse = window.matchMedia && window.matchMedia('(hover: hover) and (pointer: fine)').matches;
+    if (hasMouse) {
+        setTimeout(() => document.getElementById('fieldName').focus(), 50);
+    }
 }
 
 function addVariantRow(value) {
