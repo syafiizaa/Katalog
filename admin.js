@@ -154,6 +154,13 @@ function setupEvents() {
     document.getElementById('addVariantBtn').addEventListener('click', () => addVariantRow(''));
     document.getElementById('fieldImage').addEventListener('input', updateImagePreview);
 
+    // Cari foto produk di Google Images (pakai nama produk yang sedang diedit)
+    document.getElementById('searchImageBtn').addEventListener('click', () => {
+        const q = document.getElementById('fieldName').value.trim();
+        if (!q) { showToast('Isi nama produk dulu untuk mencari fotonya.'); return; }
+        window.open('https://www.google.com/search?tbm=isch&q=' + encodeURIComponent(q), '_blank', 'noopener');
+    });
+
     // Dropdown kategori kustom
     const catInput = document.getElementById('fieldCategory');
     document.getElementById('catToggle').addEventListener('click', () => {

@@ -415,6 +415,7 @@
 .image-preview .img-placeholder { width: 40%; height: 40%; }
 .image-preview img { width: 100%; height: 100%; object-fit: cover; }
 .image-input-wrap { flex: 1; min-width: 0; }
+.img-search-btn { margin-top: 0.5rem; }
 
 .variant-rows { display: flex; flex-direction: column; gap: 0.5rem; margin: 0.6rem 0; }
 .variant-row { display: flex; gap: 0.5rem; align-items: center; }
