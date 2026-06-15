@@ -1888,13 +1888,13 @@ const productsData = [
     "nama": "Listerine",
     "varian": "100ml",
     "kategori": "Alat Kebersihan",
-    "gambar": null
+    "gambar": "https://down-id.img.susercontent.com/file/id-11134207-7r98q-lthhhums32fu0d"
   },
   {
     "nama": "Listerine",
     "varian": "250ml",
     "kategori": "Alat Kebersihan",
-    "gambar": null
+    "gambar": "https://down-id.img.susercontent.com/file/id-11134207-7r98q-lthhhums32fu0d"
   },
   {
     "nama": "Lovilla",
@@ -2056,13 +2056,13 @@ const productsData = [
     "nama": "Make over Trixia eye shadow",
     "varian": null,
     "kategori": "Kosmetik",
-    "gambar": null
+    "gambar": "https://medias.watsons.co.id/publishing/WTCID-64746-side-zoom.jpg?version=1735744469"
   },
   {
     "nama": "Make Up Brush Set",
     "varian": null,
     "kategori": "Kosmetik",
-    "gambar": null
+    "gambar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRNt93o39yN-6aorIt7Sx3MBqDX_Y7jo6RFSwm1UdxtxbAZyPL5vEmibhY&s=10"
   },
   {
     "nama": "Manjakani",
@@ -2548,13 +2548,13 @@ const productsData = [
     "nama": "Nivea deo spray",
     "varian": "Men",
     "kategori": "Deodorant",
-    "gambar": null
+    "gambar": "https://down-id.img.susercontent.com/file/id-11134207-7rbk5-maws4xhtazha3b"
   },
   {
     "nama": "Nivea deo spray",
     "varian": "Women",
     "kategori": "Deodorant",
-    "gambar": null
+    "gambar": "https://down-id.img.susercontent.com/file/id-11134207-7rbk5-maws4xhtazha3b"
   },
   {
     "nama": "Nivea Roll on",
@@ -2632,13 +2632,13 @@ const productsData = [
     "nama": "OMG Cover last cushion",
     "varian": null,
     "kategori": "Kosmetik",
-    "gambar": null
+    "gambar": "https://img.lazcdn.com/g/p/5c6feb197bfe1612398a09be8eff42fb.jpg_720x720q80.jpg"
   },
   {
     "nama": "OMG Cover last TWC",
     "varian": null,
     "kategori": "Kosmetik",
-    "gambar": null
+    "gambar": "https://d1d8o7q9jg8pjk.cloudfront.net/p/lg_66a08ee7b8129.jpeg"
   },
   {
     "nama": "OMG Sunscreen SPF 50",
@@ -2938,7 +2938,7 @@ const productsData = [
     "nama": "Pixy Foundation Stick",
     "varian": null,
     "kategori": "Kosmetik",
-    "gambar": null
+    "gambar": "https://img.lazcdn.com/g/p/b201bf9e87d2726c2402e2e05304fcbe.jpg_720x720q80.jpg"
   },
   {
     "nama": "Pixy Micellar Water",
@@ -3112,13 +3112,13 @@ const productsData = [
     "nama": "Posh Spray 150ml",
     "varian": "Men",
     "kategori": "Parfum",
-    "gambar": null
+    "gambar": "https://down-id.img.susercontent.com/file/9a54afa60870705102823959cb7c0c29"
   },
   {
     "nama": "Posh Spray 150ml",
     "varian": "Women",
     "kategori": "Parfum",
-    "gambar": null
+    "gambar": "https://down-id.img.susercontent.com/file/9a54afa60870705102823959cb7c0c29"
   },
   {
     "nama": "Puccelle Eau De Luxe",
@@ -4168,7 +4168,7 @@ const productsData = [
     "nama": "Sikat Gigi Formula Lembut",
     "varian": null,
     "kategori": "Alat Kebersihan",
-    "gambar": null
+    "gambar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-fjHpQtWmoyYiWOX_BjztrcbgjupviZ2vczLUI8-gB3_j6VbSFu5iAr8&s=10"
   },
   {
     "nama": "Sikat gigi kodomo",
@@ -4504,7 +4504,7 @@ const productsData = [
     "nama": "Sunscreen Aqua",
     "varian": null,
     "kategori": "Kosmetik",
-    "gambar": null
+    "gambar": "https://nihonmart.id/pub/media/catalog/product/cache/8a3fa81d90974d9a7299f2eff309979f/w/h/whitening_milk_3-min.png"
   },
   {
     "nama": "Sunscreen Azarine 40ml",
@@ -4546,19 +4546,19 @@ const productsData = [
     "nama": "Sunscreen Pigeon",
     "varian": null,
     "kategori": "Kosmetik",
-    "gambar": null
+    "gambar": "https://down-id.img.susercontent.com/file/sg-11134201-23020-pisnrg907mnv82"
   },
   {
     "nama": "Sunscreen Wardah SPF 35",
     "varian": "Acne Calm",
     "kategori": "Kosmetik",
-    "gambar": null
+    "gambar": "https://p16-oec-sg.ibyteimg.com/tos-alisg-i-aphluv4xwc-sg/8a17772965d04162984fc7f8985f90b1~tplv-aphluv4xwc-crop-webp:888:888.webp?dr=15592&t=555f072d&ps=933b5bde&shp=8dbd94bf&shcp=e1be8f53&idc=my2&from=2378011839"
   },
   {
     "nama": "Sunscreen Wardah SPF 35",
     "varian": "Vit.C",
     "kategori": "Kosmetik",
-    "gambar": null
+    "gambar": "https://p16-oec-sg.ibyteimg.com/tos-alisg-i-aphluv4xwc-sg/8a17772965d04162984fc7f8985f90b1~tplv-aphluv4xwc-crop-webp:888:888.webp?dr=15592&t=555f072d&ps=933b5bde&shp=8dbd94bf&shcp=e1be8f53&idc=my2&from=2378011839"
   },
   {
     "nama": "Sunscreen Wardah SPF 50",
@@ -4954,7 +4954,7 @@ const productsData = [
     "nama": "Wardah acnederm face powder",
     "varian": null,
     "kategori": "Kosmetik",
-    "gambar": null
+    "gambar": "https://down-id.img.susercontent.com/file/74bd44b5d68b74d7eadb645898186070"
   },
   {
     "nama": "Wardah aloe gel multifunction 100ml",
@@ -4984,13 +4984,13 @@ const productsData = [
     "nama": "Wardah Bright Now C.foam",
     "varian": "100ml",
     "kategori": "Kosmetik",
-    "gambar": null
+    "gambar": "https://down-id.img.susercontent.com/file/sg-11134201-823rj-mp7p51gfbabx22"
   },
   {
     "nama": "Wardah Bright Now C.foam",
     "varian": "50ml",
     "kategori": "Kosmetik",
-    "gambar": null
+    "gambar": "https://down-id.img.susercontent.com/file/sg-11134201-823rj-mp7p51gfbabx22"
   },
   {
     "nama": "Wardah C-defense creamy wash",
@@ -5020,7 +5020,7 @@ const productsData = [
     "nama": "Wardah colorfit cloud cushion",
     "varian": null,
     "kategori": "Kosmetik",
-    "gambar": null
+    "gambar": "https://down-id.img.susercontent.com/file/id-11134207-7ras8-m3xa1293i9mg29"
   },
   {
     "nama": "Wardah colorfit perfect glow cushion 15g",
@@ -5098,7 +5098,7 @@ const productsData = [
     "nama": "Wardah Exclusive Liquid Foundation",
     "varian": null,
     "kategori": "Kosmetik",
-    "gambar": null
+    "gambar": "https://down-id.img.susercontent.com/file/id-11134207-7rasi-m4o91jdgv58ae8"
   },
   {
     "nama": "Wardah Exclusive matte lip cream",
@@ -5134,37 +5134,37 @@ const productsData = [
     "nama": "Wardah Light cream",
     "varian": "Day 20ml",
     "kategori": "Kosmetik",
-    "gambar": null
+    "gambar": "https://down-id.img.susercontent.com/file/id-11134207-81ztf-megi84i3mzgn1b"
   },
   {
     "nama": "Wardah Light cream",
     "varian": "Night 20ml",
     "kategori": "Kosmetik",
-    "gambar": null
+    "gambar": "https://down-id.img.susercontent.com/file/id-11134207-81ztf-megi84i3mzgn1b"
   },
   {
     "nama": "Wardah Light cream",
     "varian": "Day 30ml",
     "kategori": "Kosmetik",
-    "gambar": null
+    "gambar": "https://down-id.img.susercontent.com/file/id-11134207-81ztf-megi84i3mzgn1b"
   },
   {
     "nama": "Wardah Light cream",
     "varian": "Night 30ml",
     "kategori": "Kosmetik",
-    "gambar": null
+    "gambar": "https://down-id.img.susercontent.com/file/id-11134207-81ztf-megi84i3mzgn1b"
   },
   {
     "nama": "Wardah Light Facial Wash",
     "varian": "100ml",
     "kategori": "Kosmetik",
-    "gambar": null
+    "gambar": "https://down-id.img.susercontent.com/file/sg-11134201-8226l-mhs9q6de1fr78e"
   },
   {
     "nama": "Wardah Light Facial Wash",
     "varian": "50ml",
     "kategori": "Kosmetik",
-    "gambar": null
+    "gambar": "https://down-id.img.susercontent.com/file/sg-11134201-8226l-mhs9q6de1fr78e"
   },
   {
     "nama": "Wardah Lightening BB cream SFP 32 15ml",
@@ -5188,7 +5188,7 @@ const productsData = [
     "nama": "Wardah Lightening Liquid Foundation",
     "varian": null,
     "kategori": "Kosmetik",
-    "gambar": null
+    "gambar": "https://id-live-01.slatic.net/p/625ee2c998b7f6c23d1586f792639c21.jpg"
   },
   {
     "nama": "Wardah lightening matte powder 20g",
@@ -5230,7 +5230,7 @@ const productsData = [
     "nama": "Wardah Lite Skin Filter Cushion",
     "varian": null,
     "kategori": "Kosmetik",
-    "gambar": null
+    "gambar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRQQOAETe-r7Rv8OrjSqZREdHTFzgxKXE2q3li-Fou12wGKCekb5oGrZV4&s=10"
   },
   {
     "nama": "Wardah luminous",
