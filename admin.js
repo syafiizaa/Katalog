@@ -161,6 +161,27 @@ function setupEvents() {
         window.open('https://www.google.com/search?tbm=isch&q=' + encodeURIComponent(q), '_blank', 'noopener');
     });
 
+    // Tempel link foto langsung dari clipboard (tanpa klik kanan / Ctrl+V manual)
+    document.getElementById('pasteImageBtn').addEventListener('click', async () => {
+        const field = document.getElementById('fieldImage');
+        if (!navigator.clipboard || !navigator.clipboard.readText) {
+            field.focus();
+            showToast('Browser tidak mendukung tempel otomatis. Tempel manual: Ctrl+V.');
+            return;
+        }
+        try {
+            const text = (await navigator.clipboard.readText()).trim();
+            if (!text) { showToast('Clipboard kosong — salin dulu alamat gambarnya.'); return; }
+            field.value = text;
+            updateImagePreview();
+            field.focus();
+            showToast('Link foto ditempel.');
+        } catch (err) {
+            field.focus();
+            showToast('Tempel otomatis diblokir browser. Tempel manual: Ctrl+V.');
+        }
+    });
+
     // Dropdown kategori kustom
     const catInput = document.getElementById('fieldCategory');
     document.getElementById('catToggle').addEventListener('click', () => {
