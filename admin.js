@@ -6,8 +6,9 @@
 // ============================================================
 
 const CONFIG = {
-    DRAFT_KEY: 'adminProductsDraft',  // draf produk tersimpan di localStorage
-    DIRTY_KEY: 'adminProductsDirty'   // penanda ada perubahan belum diunduh
+    DRAFT_KEY: 'adminProductsDraft',   // draf produk tersimpan di localStorage
+    DIRTY_KEY: 'adminProductsDirty',   // penanda ada perubahan belum diunduh
+    EDITED_KEY: 'adminEditedNames'     // nama produk yang sudah diedit/dikerjakan
 };
 // Catatan: tidak ada gerbang kata sandi — panel ini tidak bisa mengubah
 // katalog yang live. Perubahan baru tampil setelah products.js di-upload
@@ -31,7 +32,9 @@ let pendingDeleteIndex = null;
 let isDirty = false;
 let filterNoImage = false; // true = tampilkan hanya produk tanpa foto
 let filterBroken = false;  // true = tampilkan hanya produk dengan link foto rusak
+let filterPending = false; // true = tampilkan hanya produk yang belum diedit
 let brokenNames = new Set(); // nama produk yang link fotonya gagal dimuat
+let editedNames = new Set(); // nama produk yang sudah diedit/dikerjakan (progres lokal)
 let imagesChecked = false;   // sudah pernah dicek di sesi ini?
 let checking = false;        // sedang mengecek?
 
@@ -111,6 +114,24 @@ function updateDirtyIndicator() {
     if (dot) dot.classList.toggle('active', isDirty);
 }
 
+// ---- Penanda "sudah diedit" (progres kerja lokal, tidak ikut diekspor) ----
+function loadEdited() {
+    try {
+        const raw = localStorage.getItem(CONFIG.EDITED_KEY);
+        editedNames = new Set(raw ? JSON.parse(raw) : []);
+    } catch (e) { editedNames = new Set(); }
+}
+
+function saveEdited() {
+    localStorage.setItem(CONFIG.EDITED_KEY, JSON.stringify(Array.from(editedNames)));
+}
+
+function markEdited(name) {
+    if (!name) return;
+    editedNames.add(name);
+    saveEdited();
+}
+
 // ============================================================
 // INIT
 // ============================================================
@@ -118,6 +139,7 @@ document.addEventListener('DOMContentLoaded', initApp);
 
 function initApp() {
     loadProducts();
+    loadEdited();
     renderList();
     updateDirtyIndicator();
     setupEvents();
@@ -138,6 +160,10 @@ function setupEvents() {
     });
     document.getElementById('brokenChip').addEventListener('click', () => {
         filterBroken = !filterBroken;
+        renderList();
+    });
+    document.getElementById('pendingChip').addEventListener('click', () => {
+        filterPending = !filterPending;
         renderList();
     });
     document.getElementById('checkImagesBtn').addEventListener('click', checkAllImages);
@@ -252,6 +278,11 @@ function renderList() {
     document.getElementById('noImageCount').textContent = noImgCount;
     document.getElementById('noImageChip').classList.toggle('active', filterNoImage);
 
+    // Hitung & tampilkan jumlah produk yang belum diedit (progres kerja)
+    const pendingCount = products.filter(p => !editedNames.has(p.nama)).length;
+    document.getElementById('pendingCount').textContent = pendingCount;
+    document.getElementById('pendingChip').classList.toggle('active', filterPending);
+
     // Chip "foto rusak" hanya muncul setelah pengecekan dilakukan
     const brokenChip = document.getElementById('brokenChip');
     if (imagesChecked) {
@@ -269,6 +300,7 @@ function renderList() {
     const filtered = indexed.filter(({ p }) => {
         if (filterNoImage && hasImage(p)) return false;
         if (filterBroken && !brokenNames.has(p.nama)) return false;
+        if (filterPending && editedNames.has(p.nama)) return false;
         if (search && !(p.nama.toLowerCase().includes(search) || (p.kategori || '').toLowerCase().includes(search))) return false;
         return true;
     });
@@ -292,13 +324,17 @@ function renderList() {
         const brokenBadge = (imagesChecked && brokenNames.has(p.nama))
             ? `<span class="broken-badge">link foto rusak</span>` : '';
 
+        const editedBadge = editedNames.has(p.nama)
+            ? `<span class="edited-badge">✓ sudah diedit</span>` : '';
+
         return `
-            <div class="product-row">
+            <div class="product-row${editedNames.has(p.nama) ? ' is-edited' : ''}">
                 <div class="product-thumb">${thumb}</div>
                 <div class="product-main">
                     <div class="product-row-name"><span class="rowname-inner">${escapeHtml(p.nama)}</span></div>
                     <div class="product-meta">
                         <span class="cat-chip">${escapeHtml(p.kategori || '—')}</span>
+                        ${editedBadge}
                         ${brokenBadge}
                         ${variantHtml}
                     </div>
@@ -444,10 +480,14 @@ function saveEditor() {
         products.push(record);
         showToast(`"${nama}" ditambahkan.`);
     } else {
+        // Bila nama diubah, pindahkan juga penanda "sudah diedit"-nya
+        const oldName = products[editingIndex] ? products[editingIndex].nama : null;
+        if (oldName && oldName !== nama) editedNames.delete(oldName);
         products[editingIndex] = record;
         showToast(`"${nama}" diperbarui.`);
     }
 
+    markEdited(nama);  // disimpan/ditambah lewat editor = sudah dikerjakan
     saveDraft();
     renderList();
     closeEditor();
@@ -471,6 +511,7 @@ function doDelete() {
     const p = products[pendingDeleteIndex];
     products.splice(pendingDeleteIndex, 1);
     pendingDeleteIndex = null;
+    if (editedNames.delete(p.nama)) saveEdited();
     saveDraft();
     renderList();
     closeConfirm();
@@ -584,6 +625,7 @@ function handleImport(e) {
         try {
             const arr = parseProductsFile(ev.target.result);
             products = groupFromFlat(arr);
+            editedNames = new Set(); saveEdited(); // dataset baru: mulai progres dari nol
             saveDraft();
             renderList();
             showToast(`Berhasil mengimpor ${products.length} produk.`);
@@ -615,6 +657,7 @@ function resetToFile() {
     if (!ok) return;
     localStorage.removeItem(CONFIG.DRAFT_KEY);
     localStorage.removeItem(CONFIG.DIRTY_KEY);
+    editedNames = new Set(); saveEdited(); // mulai progres dari nol
     products = groupFromFlat(typeof productsData !== 'undefined' ? productsData : []);
     isDirty = false;
     renderList();

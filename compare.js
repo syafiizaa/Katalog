@@ -25,11 +25,15 @@ const ADMIN_DIRTY_KEY = 'adminProductsDirty';
 
 // Ambang kemiripan nama untuk dianggap "mungkin sama" (0–1)
 const FUZZY_THRESHOLD = 0.84;
+// Ambang kemiripan VARIAN (lebih longgar: varian itu teks pendek, beda 1 spasi
+// saja sudah menurunkan skor banyak, mis. "100ml" vs "100 ml")
+const VARIANT_FUZZY_THRESHOLD = 0.80;
 
 // State
 let catalogUnits = [];   // { nama, varian }
 let catalogNameSet = new Set();
 let catalogNameList = []; // nama produk unik di katalog (untuk pencocokan mirip)
+let catalogVariantsByName = {}; // norm(nama) -> [varian katalog] (untuk pencocokan varian mirip)
 let posCategoryByName = {}; // norm(nama POS) -> nama kategori (untuk auto-isi kategori)
 let missingGroups = [];   // ada di kasir, tidak di katalog
 let onlyCatGroups = [];   // ada di katalog, tidak di kasir
@@ -182,11 +186,67 @@ function bestMatch(name, candidates) {
     return (best && best.score >= FUZZY_THRESHOLD) ? best : null;
 }
 
+// ---- Kemiripan VARIAN (mis. "100ml" vs "100 ml", "isi 2" vs "isi2") ----
+// Bandingkan tanpa spasi sama sekali; kalau hanya beda spasi -> dianggap kembar.
+function variantSim(a, b) {
+    const ta = norm(a).replace(/\s+/g, '');
+    const tb = norm(b).replace(/\s+/g, '');
+    if (!ta.length && !tb.length) return 1;
+    if (ta === tb) return 1;        // hanya beda spasi/penulisan
+    return strSim(ta, tb);
+}
+
+// Cari varian paling mirip di `candidates` (varian sisi lain). Null jika di bawah ambang.
+function bestVariantMatch(variant, candidates) {
+    const a = norm(variant);
+    let best = null;
+    for (const cand of candidates) {
+        const b = norm(cand);
+        if (b === a) continue; // identik persis (semestinya tak masuk daftar selisih)
+        let score = variantSim(variant, cand);
+        // Varian yang merupakan varian lama + kata tambahan (mis. "Roll on" -> "Roll On Promo",
+        // "Besi" -> "Besi Tangkai") dianggap mungkin sama walau jarak ejaannya jauh.
+        const [s, l] = a.length <= b.length ? [a, b] : [b, a];
+        if (wordPrefix(s, l)) score = Math.max(score, 0.88);
+        if (!best || score > best.score) best = { name: cand, score };
+    }
+    return (best && best.score >= VARIANT_FUZZY_THRESHOLD) ? best : null;
+}
+
+// Analisis satu kelompok produk: deteksi "mungkin sama" di tingkat NAMA dan VARIAN.
+// `otherNames` = daftar nama sisi lain; `otherVariantsByName` = peta norm(nama)->[varian] sisi lain.
+function analyzeGroup(g, isNewProduct, otherNames, otherVariantsByName) {
+    // Kemiripan nama (hanya relevan bila namanya tidak ada persis di sisi lain)
+    const maybe = isNewProduct ? bestMatch(g.nama, otherNames) : null;
+
+    // Varian pembanding: dari produk bernama sama (persis), atau dari produk yang namanya mirip
+    let refName = null;
+    if (!isNewProduct) refName = norm(g.nama);
+    else if (maybe) refName = norm(maybe.name);
+    const refVariants = (refName && otherVariantsByName[refName]) ? otherVariantsByName[refName] : [];
+
+    // Untuk tiap varian yang berbeda, cek apakah cuma beda penulisan dari varian yang sudah ada
+    const variantInfo = (g.variants || []).map(v => ({
+        name: v,
+        maybe: refVariants.length ? bestVariantMatch(v, refVariants) : null
+    }));
+    const maybeVariant = variantInfo.some(vi => vi.maybe);
+
+    // "Mungkin sama" bila namanya mirip ATAU ada varian yang cuma beda penulisan
+    const suspect = (isNewProduct && !!maybe) || maybeVariant;
+    return { maybe, variantInfo, maybeVariant, suspect };
+}
+
 function buildCatalog() {
     const data = (typeof productsData !== 'undefined') ? productsData : [];
     catalogUnits = data.map(r => ({ nama: (r.nama || '').trim(), varian: r.varian || null }));
     catalogNameSet = new Set(catalogUnits.map(u => norm(u.nama)));
     catalogNameList = Array.from(new Set(catalogUnits.map(u => u.nama)));
+    catalogVariantsByName = {};
+    catalogUnits.forEach(u => {
+        if (!u.varian) return;
+        (catalogVariantsByName[norm(u.nama)] = catalogVariantsByName[norm(u.nama)] || []).push(u.varian);
+    });
 }
 
 function buildPosUnits(sql) {
@@ -258,27 +318,36 @@ function compare(sql) {
     const posKeys = new Set(posUnits.map(u => unitKey(u.nama, u.varian)));
     const posNameSet = new Set(posUnits.map(u => norm(u.nama)));
     const posNameList = Array.from(new Set(posUnits.map(u => u.nama)));
+    const posVariantsByName = {};
+    posUnits.forEach(u => {
+        if (!u.varian) return;
+        (posVariantsByName[norm(u.nama)] = posVariantsByName[norm(u.nama)] || []).push(u.varian);
+    });
 
     const missing = posUnits.filter(u => !catKeys.has(unitKey(u.nama, u.varian)));
     const onlyCat = catalogUnits.filter(u => !posKeys.has(unitKey(u.nama, u.varian)));
 
-    // Untuk tiap nama yang "baru", cari kandidat mirip di data satunya (beda penulisan)
+    // Deteksi "mungkin sama" di tingkat nama DAN varian (beda penulisan)
     missingGroups = groupByName(missing).map((g, i) => {
         const isNewProduct = !catalogNameSet.has(norm(g.nama));
-        const maybe = isNewProduct ? bestMatch(g.nama, catalogNameList) : null;
+        const a = analyzeGroup(g, isNewProduct, catalogNameList, catalogVariantsByName);
         return {
             ...g,
             isNewProduct,
-            maybe,
+            maybe: a.maybe,
+            variantInfo: a.variantInfo,
+            maybeVariant: a.maybeVariant,
+            suspect: a.suspect,
             kategori: posCategoryByName[norm(g.nama)] || '',
-            selected: !(isNewProduct && maybe),  // "mungkin sama" tidak dicentang otomatis
+            selected: !a.suspect,  // "mungkin sama" (nama/varian) tidak dicentang otomatis
             added: false,
             _id: i
         };
     });
     onlyCatGroups = groupByName(onlyCat).map(g => {
         const isNewProduct = !posNameSet.has(norm(g.nama));
-        return { ...g, isNewProduct, maybe: isNewProduct ? bestMatch(g.nama, posNameList) : null };
+        const a = analyzeGroup(g, isNewProduct, posNameList, posVariantsByName);
+        return { ...g, isNewProduct, maybe: a.maybe, variantInfo: a.variantInfo, maybeVariant: a.maybeVariant, suspect: a.suspect };
     });
 
     // Summary
@@ -298,21 +367,39 @@ function compare(sql) {
 // RENDER
 // ============================================================
 function rowHtml(g, kind) {
+    const where = kind === 'missing' ? 'di katalog' : 'di kasir';
     let tag, suggestion = '';
-    if (!g.isNewProduct) {
-        tag = `<span class="tag new-variant">Varian baru</span>`;
-    } else if (g.maybe) {
+    if (g.suspect) {
         tag = `<span class="tag maybe-same">Mungkin sama</span>`;
-        const where = kind === 'missing' ? 'di katalog' : 'di kasir';
-        const pct = Math.round(g.maybe.score * 100);
-        suggestion = `<div class="cmp-suggest">≈ mirip ${where}: <strong>${escapeHtml(g.maybe.name)}</strong> <span class="sim">${pct}%</span></div>`;
+        const parts = [];
+        if (g.maybe) {
+            const pct = Math.round(g.maybe.score * 100);
+            parts.push(`nama mirip ${where}: <strong>${escapeHtml(g.maybe.name)}</strong> <span class="sim">${pct}%</span>`);
+        }
+        const vm = (g.variantInfo || []).filter(vi => vi.maybe);
+        if (vm.length) {
+            const vtxt = vm.map(vi =>
+                `<strong>${escapeHtml(vi.name)}</strong> ≈ ${escapeHtml(vi.maybe.name)} <span class="sim">${Math.round(vi.maybe.score * 100)}%</span>`
+            ).join(' · ');
+            parts.push(`varian mirip ${where}: ${vtxt}`);
+        }
+        suggestion = `<div class="cmp-suggest">≈ ${parts.join('<br>')}</div>`;
+    } else if (!g.isNewProduct) {
+        tag = `<span class="tag new-variant">Varian baru</span>`;
     } else {
         tag = `<span class="tag new-product">${kind === 'missing' ? 'Produk baru' : 'Tak ada di kasir'}</span>`;
     }
 
     let variantsHtml;
-    if (g.variants.length) {
-        variantsHtml = g.variants.map(v => `<span class="cmp-variant-chip">${escapeHtml(v)}</span>`).join('');
+    const vinfo = g.variantInfo || (g.variants || []).map(v => ({ name: v, maybe: null }));
+    if (vinfo.length) {
+        variantsHtml = vinfo.map(vi => {
+            if (vi.maybe) {
+                const pct = Math.round(vi.maybe.score * 100);
+                return `<span class="cmp-variant-chip maybe" title="Mirip varian &quot;${escapeAttr(vi.maybe.name)}&quot; ${where} (${pct}%)">${escapeHtml(vi.name)}</span>`;
+            }
+            return `<span class="cmp-variant-chip">${escapeHtml(vi.name)}</span>`;
+        }).join('');
         if (g.hasNoVariantUnit) variantsHtml += `<span class="cmp-variant-chip none">tanpa varian</span>`;
     } else {
         variantsHtml = `<span class="cmp-variant-chip none">tanpa varian</span>`;
@@ -345,13 +432,13 @@ function renderResults() {
     const filt = groups => q ? groups.filter(g => norm(g.nama).includes(q)) : groups;
 
     let missing = filt(missingGroups);
-    if (hideMaybe) missing = missing.filter(g => !(g.isNewProduct && g.maybe));
+    if (hideMaybe) missing = missing.filter(g => !g.suspect);
     const onlyCat = filt(onlyCatGroups);
 
     // Rincian jenis (dari seluruh data, bukan hasil filter)
-    const cNew = missingGroups.filter(g => g.isNewProduct && !g.maybe).length;
-    const cMaybe = missingGroups.filter(g => g.isNewProduct && g.maybe).length;
-    const cVar = missingGroups.filter(g => !g.isNewProduct).length;
+    const cNew = missingGroups.filter(g => g.isNewProduct && !g.suspect).length;
+    const cMaybe = missingGroups.filter(g => g.suspect).length;
+    const cVar = missingGroups.filter(g => !g.isNewProduct && !g.suspect).length;
     document.getElementById('missingBreakdown').innerHTML =
         `<strong>${cNew}</strong> produk baru · <strong>${cMaybe}</strong> mungkin sama · <strong>${cVar}</strong> varian baru`;
 

@@ -218,6 +218,12 @@
     border-radius: 999px;
 }
 .cmp-variant-chip.none { color: var(--muted); background: transparent; padding-left: 0; font-style: italic; }
+.cmp-variant-chip.maybe {
+    background: #f3e8cf;
+    color: #876214;
+    border: 1px dashed #d8b86a;
+    cursor: help;
+}
 
 .tag {
     font-size: 0.6rem;
