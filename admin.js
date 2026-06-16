@@ -32,7 +32,7 @@ let pendingDeleteIndex = null;
 let isDirty = false;
 let filterNoImage = false; // true = tampilkan hanya produk tanpa foto
 let filterBroken = false;  // true = tampilkan hanya produk dengan link foto rusak
-let filterPending = false; // true = tampilkan hanya produk yang belum diedit
+let editFilter = 'all';    // 'all' | 'pending' (belum diedit) | 'edited' (sudah diedit)
 let brokenNames = new Set(); // nama produk yang link fotonya gagal dimuat
 let editedNames = new Set(); // nama produk yang sudah diedit/dikerjakan (progres lokal)
 let imagesChecked = false;   // sudah pernah dicek di sesi ini?
@@ -163,7 +163,11 @@ function setupEvents() {
         renderList();
     });
     document.getElementById('pendingChip').addEventListener('click', () => {
-        filterPending = !filterPending;
+        editFilter = (editFilter === 'pending') ? 'all' : 'pending';
+        renderList();
+    });
+    document.getElementById('editedChip').addEventListener('click', () => {
+        editFilter = (editFilter === 'edited') ? 'all' : 'edited';
         renderList();
     });
     document.getElementById('checkImagesBtn').addEventListener('click', checkAllImages);
@@ -278,10 +282,13 @@ function renderList() {
     document.getElementById('noImageCount').textContent = noImgCount;
     document.getElementById('noImageChip').classList.toggle('active', filterNoImage);
 
-    // Hitung & tampilkan jumlah produk yang belum diedit (progres kerja)
-    const pendingCount = products.filter(p => !editedNames.has(p.nama)).length;
+    // Hitung & tampilkan progres kerja (belum vs sudah diedit)
+    const editedCount = products.filter(p => editedNames.has(p.nama)).length;
+    const pendingCount = products.length - editedCount;
     document.getElementById('pendingCount').textContent = pendingCount;
-    document.getElementById('pendingChip').classList.toggle('active', filterPending);
+    document.getElementById('editedCount').textContent = editedCount;
+    document.getElementById('pendingChip').classList.toggle('active', editFilter === 'pending');
+    document.getElementById('editedChip').classList.toggle('active', editFilter === 'edited');
 
     // Chip "foto rusak" hanya muncul setelah pengecekan dilakukan
     const brokenChip = document.getElementById('brokenChip');
@@ -300,7 +307,8 @@ function renderList() {
     const filtered = indexed.filter(({ p }) => {
         if (filterNoImage && hasImage(p)) return false;
         if (filterBroken && !brokenNames.has(p.nama)) return false;
-        if (filterPending && editedNames.has(p.nama)) return false;
+        if (editFilter === 'pending' && editedNames.has(p.nama)) return false;
+        if (editFilter === 'edited' && !editedNames.has(p.nama)) return false;
         if (search && !(p.nama.toLowerCase().includes(search) || (p.kategori || '').toLowerCase().includes(search))) return false;
         return true;
     });

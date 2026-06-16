@@ -173,8 +173,8 @@
 .filter-chip.active { background: var(--accent); border-color: var(--accent); color: #fff; }
 .filter-chip.broken:hover { border-color: var(--danger); color: var(--danger); }
 .filter-chip.broken.active { background: var(--danger); border-color: var(--danger); color: #fff; }
-.filter-chip.pending:hover { border-color: #4a8f52; color: #356b39; }
-.filter-chip.pending.active { background: #4a8f52; border-color: #4a8f52; color: #fff; }
+.filter-chip.done:hover { border-color: #4a8f52; color: #356b39; }
+.filter-chip.done.active { background: #4a8f52; border-color: #4a8f52; color: #fff; }
 
 .broken-badge {
     font-size: 0.6rem;
