@@ -871,6 +871,18 @@ const productsData = [
     "gambar": "https://filebroker-cdn.lazada.co.id/kf/S4bc8f137e7b34a79b5fe8d4a84e5c584w.jpg"
   },
   {
+    "nama": "Cream Garnier 50ml",
+    "varian": "Sakura",
+    "kategori": "Kosmetik",
+    "gambar": null
+  },
+  {
+    "nama": "Cream Garnier 50ml",
+    "varian": "Vitamin C",
+    "kategori": "Kosmetik",
+    "gambar": null
+  },
+  {
     "nama": "Cream Garnier Sachet",
     "varian": "Night",
     "kategori": "Kosmetik",
@@ -1639,6 +1651,12 @@ const productsData = [
     "gambar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQsBJL2Y0m3VOYuwc2n6cXsDhO6Y1-Qh62vTGmhBDdfcA&s=10"
   },
   {
+    "nama": "Hit Kaleng",
+    "varian": "600ml",
+    "kategori": "Kosmetik",
+    "gambar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQsBJL2Y0m3VOYuwc2n6cXsDhO6Y1-Qh62vTGmhBDdfcA&s=10"
+  },
+  {
     "nama": "Inhaler Lang",
     "varian": null,
     "kategori": "Kosmetik",
@@ -1646,13 +1664,13 @@ const productsData = [
   },
   {
     "nama": "Isi Staples",
-    "varian": "Besar",
+    "varian": "Untuk Staples Besar",
     "kategori": "Alat",
     "gambar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTPinKbGInEII8oKMS8hQ1t9I2EL0iXa1fx1YwsJmG0PA&s=10"
   },
   {
     "nama": "Isi Staples",
-    "varian": "Kecil",
+    "varian": "Untuk Staples Kecil",
     "kategori": "Alat",
     "gambar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTPinKbGInEII8oKMS8hQ1t9I2EL0iXa1fx1YwsJmG0PA&s=10"
   },
@@ -1804,19 +1822,31 @@ const productsData = [
     "nama": "Kapas Muka",
     "varian": "Kharisma",
     "kategori": "Kosmetik",
-    "gambar": "https://raw.githubusercontent.com/syafiizaa/katalog/refs/heads/main/img/kapas.jpg"
+    "gambar": null
   },
   {
     "nama": "Kapas Muka",
     "varian": "Modis",
     "kategori": "Kosmetik",
-    "gambar": "https://raw.githubusercontent.com/syafiizaa/katalog/refs/heads/main/img/kapas.jpg"
+    "gambar": null
   },
   {
-    "nama": "Kapas Selection",
-    "varian": "Bulat",
+    "nama": "Kapas Muka",
+    "varian": "Selection Bulat",
     "kategori": "Kosmetik",
-    "gambar": "https://storage.googleapis.com/rxstorage/Product/Photos/farmaku_selection-kapas-round-pack-80-sheets-01.jpg"
+    "gambar": null
+  },
+  {
+    "nama": "Kapas Muka",
+    "varian": "Selection Kecil",
+    "kategori": "Kosmetik",
+    "gambar": null
+  },
+  {
+    "nama": "Kapas Muka",
+    "varian": "Selection B",
+    "kategori": "Kosmetik",
+    "gambar": null
   },
   {
     "nama": "Kapur Ajaib",
@@ -2413,10 +2443,40 @@ const productsData = [
     "gambar": "https://img.lazcdn.com/g/p/262eb7bea200f62048fa27be2f11c4a5.jpg_960x960q80.jpg_.webp"
   },
   {
-    "nama": "Minyak Kayu Putih Gajah kaca",
-    "varian": null,
+    "nama": "Minyak Kayu Putih Gajah",
+    "varian": "15ml",
     "kategori": "Kosmetik",
-    "gambar": "https://images.tokopedia.net/img/cache/500-square/aphluv/1997/1/1/95bd9a48fbb6439e80e67619965f45cb~.jpeg"
+    "gambar": null
+  },
+  {
+    "nama": "Minyak Kayu Putih Gajah",
+    "varian": "30ml",
+    "kategori": "Kosmetik",
+    "gambar": null
+  },
+  {
+    "nama": "Minyak Kayu Putih Gajah",
+    "varian": "60ml",
+    "kategori": "Kosmetik",
+    "gambar": null
+  },
+  {
+    "nama": "Minyak Kayu Putih Gajah",
+    "varian": "120ml",
+    "kategori": "Kosmetik",
+    "gambar": null
+  },
+  {
+    "nama": "Minyak Kayu Putih Gajah",
+    "varian": "210ml",
+    "kategori": "Kosmetik",
+    "gambar": null
+  },
+  {
+    "nama": "Minyak Kayu Putih Gajah",
+    "varian": "Kaca",
+    "kategori": "Kosmetik",
+    "gambar": null
   },
   {
     "nama": "Minyak Kayu Putih Lang",
@@ -4418,13 +4478,13 @@ const productsData = [
   },
   {
     "nama": "Sikat gigi Ciptadent",
-    "varian": "1 kotak",
+    "varian": "1 kotak isi 12",
     "kategori": "Alat Kebersihan",
     "gambar": "https://www.static-src.com/wcsstore/Indraprastha/images/catalog/full/catalog-image/96/MTA-180831812/ciptadent_sikat-gigi-ciptadent-crystal-clean_full01.jpg"
   },
   {
     "nama": "Sikat gigi Formula Diamond",
-    "varian": "1 kotak",
+    "varian": "1 kotak isi 12",
     "kategori": "Alat Kebersihan",
     "gambar": "https://filebroker-cdn.lazada.co.id/kf/S366c6fde471845bcb573ee83490f4a73Y.jpg"
   },
@@ -4448,7 +4508,7 @@ const productsData = [
   },
   {
     "nama": "Sikat gigi kodomo",
-    "varian": "1 kotak",
+    "varian": "1 kotak isi 12cs",
     "kategori": "Alat Kebersihan",
     "gambar": "https://arti-assets.sgp1.cdn.digitaloceanspaces.com/renyswalayanku/products/7a511498-84a0-41a4-9000-60f8e68ee4d4.jpg"
   },
@@ -4718,9 +4778,21 @@ const productsData = [
   },
   {
     "nama": "Staples",
-    "varian": "Kecil",
+    "varian": "Kenko Kecil",
     "kategori": "Alat",
-    "gambar": "https://siplah.blibli.com/data/images/SMOO-0001-00073/a3e5a479-9740-4926-9cb3-c3f5eeb24d2c.jpg"
+    "gambar": null
+  },
+  {
+    "nama": "Staples",
+    "varian": "Kenko Besar",
+    "kategori": "Alat",
+    "gambar": null
+  },
+  {
+    "nama": "Staples",
+    "varian": "Greeble Kecil",
+    "kategori": "Alat",
+    "gambar": null
   },
   {
     "nama": "Stella gantung",
@@ -4969,16 +5041,16 @@ const productsData = [
     "gambar": "https://i0.wp.com/rajasusu.com/wp-content/uploads/2019/04/my-baby-145-ml.jpg?fit=300%2C300&ssl=1"
   },
   {
-    "nama": "Tempat bedak bayi Anti pecah",
-    "varian": null,
+    "nama": "Tempat Bedak Bayi",
+    "varian": "Isi 1",
     "kategori": "Baby Care",
-    "gambar": "https://id-test-11.slatic.net/p/b33deb3e76c43c5ada41774d9bbf1084.jpg"
+    "gambar": null
   },
   {
-    "nama": "Tempat Bedak Bayi Biasa",
-    "varian": null,
+    "nama": "Tempat Bedak Bayi",
+    "varian": "Isi 2",
     "kategori": "Baby Care",
-    "gambar": "https://www.adikbayishop.com/image-product/img1841-1624270227.jpg"
+    "gambar": null
   },
   {
     "nama": "Thai",
