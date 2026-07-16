@@ -37,16 +37,16 @@ const productsData = [
     "gambar": "https://down-id.img.susercontent.com/file/a5b0f10dea28e1a51c24aad6a123243d"
   },
   {
-    "nama": "Alkaline AA",
-    "varian": "Isi 2",
-    "kategori": "Baterai",
-    "gambar": "https://down-id.img.susercontent.com/file/ab1e222d89407e87cdd1badcfdf2a616"
+    "nama": "Alat Tulis",
+    "varian": "Pulpen Snowman",
+    "kategori": "Alat",
+    "gambar": null
   },
   {
-    "nama": "Alkaline AA",
-    "varian": "Isi 6",
-    "kategori": "Baterai",
-    "gambar": "https://down-id.img.susercontent.com/file/ab1e222d89407e87cdd1badcfdf2a616"
+    "nama": "Alat Tulis",
+    "varian": "Spidol Permanent",
+    "kategori": "Alat",
+    "gambar": null
   },
   {
     "nama": "Aloe Vera Nature republic",
@@ -83,6 +83,12 @@ const productsData = [
     "varian": "30ml",
     "kategori": "Parfum",
     "gambar": "https://down-id.img.susercontent.com/file/sg-11134201-22110-mbny18hhq5jv42"
+  },
+  {
+    "nama": "Animate Facial Essence",
+    "varian": null,
+    "kategori": "Kosmetik",
+    "gambar": null
   },
   {
     "nama": "Asepso",
@@ -130,13 +136,25 @@ const productsData = [
     "nama": "Baby cologne 100ml",
     "varian": "Cussons",
     "kategori": "Baby Care",
-    "gambar": "https://raw.githubusercontent.com/syafiizaa/katalog/refs/heads/main/img/cologne%20baby.jpg"
+    "gambar": null
   },
   {
     "nama": "Baby cologne 100ml",
     "varian": "Jhonsons",
     "kategori": "Baby Care",
-    "gambar": "https://raw.githubusercontent.com/syafiizaa/katalog/refs/heads/main/img/cologne%20baby.jpg"
+    "gambar": null
+  },
+  {
+    "nama": "Baby cologne 100ml",
+    "varian": "Mitu 50ml",
+    "kategori": "Baby Care",
+    "gambar": null
+  },
+  {
+    "nama": "Baby cologne 100ml",
+    "varian": "Mitu 100ml",
+    "kategori": "Baby Care",
+    "gambar": null
   },
   {
     "nama": "Balsem geliga",
@@ -166,13 +184,25 @@ const productsData = [
     "nama": "Baterai ABC",
     "varian": "AA",
     "kategori": "Baterai",
-    "gambar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRCZIUfs4Z76OghIqleXCPfHRIRiEQGNViTStEmfZeP1EYCn4Q96yjVQaE&s=10"
+    "gambar": null
   },
   {
     "nama": "Baterai ABC",
     "varian": "AAA",
     "kategori": "Baterai",
-    "gambar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRCZIUfs4Z76OghIqleXCPfHRIRiEQGNViTStEmfZeP1EYCn4Q96yjVQaE&s=10"
+    "gambar": null
+  },
+  {
+    "nama": "Baterai ABC",
+    "varian": "Alkaline isi 2",
+    "kategori": "Baterai",
+    "gambar": null
+  },
+  {
+    "nama": "Baterai ABC",
+    "varian": "Alkaline isi 6",
+    "kategori": "Baterai",
+    "gambar": null
   },
   {
     "nama": "Bayclin",
@@ -220,13 +250,25 @@ const productsData = [
     "nama": "Bedak Caladine",
     "varian": "100g",
     "kategori": "Kosmetik",
-    "gambar": "https://img.lazcdn.com/g/p/fe971e958bb54054968694e343cf0e19.jpg_720x720q80.jpg"
+    "gambar": null
   },
   {
     "nama": "Bedak Caladine",
     "varian": "60g",
     "kategori": "Kosmetik",
-    "gambar": "https://img.lazcdn.com/g/p/fe971e958bb54054968694e343cf0e19.jpg_720x720q80.jpg"
+    "gambar": null
+  },
+  {
+    "nama": "Bedak Caladine",
+    "varian": "Cair 60ml",
+    "kategori": "Kosmetik",
+    "gambar": null
+  },
+  {
+    "nama": "Bedak Caladine",
+    "varian": "Cair 95ml",
+    "kategori": "Kosmetik",
+    "gambar": null
   },
   {
     "nama": "Bedak Cussons",
@@ -302,19 +344,25 @@ const productsData = [
   },
   {
     "nama": "Bedak My Baby",
+    "varian": "50g",
+    "kategori": "Baby Care",
+    "gambar": "https://id-test-11.slatic.net/p/377f7620e490b30fadcc8004029b3433.jpg"
+  },
+  {
+    "nama": "Bedak My Baby",
     "varian": "100g",
     "kategori": "Baby Care",
     "gambar": "https://id-test-11.slatic.net/p/377f7620e490b30fadcc8004029b3433.jpg"
   },
   {
     "nama": "Bedak My Baby",
-    "varian": "350g",
+    "varian": "135g",
     "kategori": "Baby Care",
     "gambar": "https://id-test-11.slatic.net/p/377f7620e490b30fadcc8004029b3433.jpg"
   },
   {
     "nama": "Bedak My Baby",
-    "varian": "50g",
+    "varian": "350g",
     "kategori": "Baby Care",
     "gambar": "https://id-test-11.slatic.net/p/377f7620e490b30fadcc8004029b3433.jpg"
   },
@@ -340,13 +388,25 @@ const productsData = [
     "nama": "Bedak Pixy",
     "varian": "Refill",
     "kategori": "Kosmetik",
-    "gambar": "https://id-test-11.slatic.net/p/e169ce4ac90afc4ae2f98024c935f399.jpg"
+    "gambar": null
   },
   {
     "nama": "Bedak Pixy",
     "varian": "Two way cake",
     "kategori": "Kosmetik",
-    "gambar": "https://id-test-11.slatic.net/p/e169ce4ac90afc4ae2f98024c935f399.jpg"
+    "gambar": null
+  },
+  {
+    "nama": "Bedak Pixy",
+    "varian": "Perfect Last Refill",
+    "kategori": "Kosmetik",
+    "gambar": null
+  },
+  {
+    "nama": "Bedak Pixy",
+    "varian": "Perfect Last TWC",
+    "kategori": "Kosmetik",
+    "gambar": null
   },
   {
     "nama": "Bedak Salicyl",
@@ -421,6 +481,12 @@ const productsData = [
     "gambar": "https://www.static-src.com/wcsstore/Indraprastha/images/catalog/full//99/MTA-68842233/eagle-s_eagle-s_eagle_henna_hair_dye_pewarna_rambut_full01_crk8lv3y.jpg"
   },
   {
+    "nama": "Blush ON Implora",
+    "varian": null,
+    "kategori": "Kosmetik",
+    "gambar": null
+  },
+  {
     "nama": "Botol dot Cussons",
     "varian": "240ml",
     "kategori": "Baby Care",
@@ -485,18 +551,6 @@ const productsData = [
     "varian": "60ml",
     "kategori": "Baby Care",
     "gambar": "https://id-test-11.slatic.net/p/adc000a00e4e3167ba46215a84889d3a.jpg"
-  },
-  {
-    "nama": "Caladine cair",
-    "varian": "60ml",
-    "kategori": "Kosmetik",
-    "gambar": "https://img.lazcdn.com/g/p/12ba8bba6c7609034301bdf2dd4f22d1.png_720x720q80.png"
-  },
-  {
-    "nama": "Caladine cair",
-    "varian": "95ml",
-    "kategori": "Kosmetik",
-    "gambar": "https://img.lazcdn.com/g/p/12ba8bba6c7609034301bdf2dd4f22d1.png_720x720q80.png"
   },
   {
     "nama": "Camelia body mist 100ml",
@@ -563,6 +617,12 @@ const productsData = [
     "varian": null,
     "kategori": "Deodorant",
     "gambar": "https://www.static-src.com/wcsstore/Indraprastha/images/catalog/full/catalog-image/92/MTA-154159021/br-m036969-00599_casablanca-deodorant-roll-on-50ml_full05-c12e6117.jpg"
+  },
+  {
+    "nama": "Celak Mata Lyra",
+    "varian": null,
+    "kategori": "Kosmetik",
+    "gambar": null
   },
   {
     "nama": "Cermin Bulat",
@@ -649,16 +709,34 @@ const productsData = [
     "gambar": "https://down-id.img.susercontent.com/file/id-11134207-7ra0s-mdbupbgjqjp856@resize_w450_nl.webp"
   },
   {
+    "nama": "Citra Pearly UV",
+    "varian": "Night 210ml",
+    "kategori": "Kosmetik",
+    "gambar": "https://down-id.img.susercontent.com/file/id-11134207-7ra0s-mdbupbgjqjp856@resize_w450_nl.webp"
+  },
+  {
     "nama": "Clean&Clear Facial wash",
     "varian": "100ml",
     "kategori": "Kosmetik",
-    "gambar": "https://id-live-01.slatic.net/p/248069c2a4de40fcdebb9751def28cbf.jpg"
+    "gambar": null
   },
   {
     "nama": "Clean&Clear Facial wash",
     "varian": "50ml",
     "kategori": "Kosmetik",
-    "gambar": "https://id-live-01.slatic.net/p/248069c2a4de40fcdebb9751def28cbf.jpg"
+    "gambar": null
+  },
+  {
+    "nama": "Clean&Clear Facial wash",
+    "varian": "Oil control toner",
+    "kategori": "Kosmetik",
+    "gambar": null
+  },
+  {
+    "nama": "Closeup",
+    "varian": null,
+    "kategori": "Odol",
+    "gambar": null
   },
   {
     "nama": "Colagen laptulipe",
@@ -979,46 +1057,22 @@ const productsData = [
     "gambar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR6Tpbkc-LWGTcIcp_eWM2p7nIeJRORHOCHptdtKQVaww&s=10"
   },
   {
-    "nama": "Emeron lovely natural",
-    "varian": "200ml",
-    "kategori": "Kosmetik",
-    "gambar": "https://id-live-01.slatic.net/p/f62814d1cbff8cc7f78f5de05ad8cdfd.jpg"
-  },
-  {
-    "nama": "Emeron lovely natural",
-    "varian": "500ml",
-    "kategori": "Kosmetik",
-    "gambar": "https://id-live-01.slatic.net/p/f62814d1cbff8cc7f78f5de05ad8cdfd.jpg"
-  },
-  {
-    "nama": "Emeron lovely white",
-    "varian": "200ml",
-    "kategori": "Kosmetik",
-    "gambar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRP9BkedRwsdqoweN5C-AszEWyEZoG9kfGg8xqo9rCZyg&s=10"
-  },
-  {
-    "nama": "Emeron lovely white",
-    "varian": "500ml",
-    "kategori": "Kosmetik",
-    "gambar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRP9BkedRwsdqoweN5C-AszEWyEZoG9kfGg8xqo9rCZyg&s=10"
-  },
-  {
     "nama": "Emina Bright Stuff",
     "varian": "Face Toner 100ml",
     "kategori": "Kosmetik",
-    "gambar": "img/sabun kodomo.jpg"
+    "gambar": "img/emina.jpg"
   },
   {
     "nama": "Emina Bright Stuff",
     "varian": "Micellar Water 100ml",
     "kategori": "Kosmetik",
-    "gambar": "img/sabun kodomo.jpg"
+    "gambar": "img/emina.jpg"
   },
   {
     "nama": "Emina Bright Stuff",
     "varian": "Cream",
     "kategori": "Kosmetik",
-    "gambar": "img/sabun kodomo.jpg"
+    "gambar": "img/emina.jpg"
   },
   {
     "nama": "Emina face wash",
@@ -1063,16 +1117,28 @@ const productsData = [
     "gambar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR5Ij1dLBViat4stFAoOfMnKZU401cT5C8ydvc3uEFlSg&s=10"
   },
   {
-    "nama": "Eskulin Kids 2in1 280ml",
-    "varian": null,
+    "nama": "Eskulin Kids 2in1",
+    "varian": "Botol 280ml",
     "kategori": "Sabun",
-    "gambar": "https://kkakka.id/9163/eskulin-hair-body-wash-bottle-280ml-natural-smoothsofia.jpg"
+    "gambar": null
+  },
+  {
+    "nama": "Eskulin Kids 2in1",
+    "varian": "Refill",
+    "kategori": "Sabun",
+    "gambar": null
   },
   {
     "nama": "Eskulin Kids Shampoo 200ml",
     "varian": null,
     "kategori": "Shampoo",
     "gambar": "https://id-test-11.slatic.net/p/262811fe280dc794c8c6c13edd026b63.jpg"
+  },
+  {
+    "nama": "Eskulin kids spray cologne",
+    "varian": null,
+    "kategori": "Parfum",
+    "gambar": null
   },
   {
     "nama": "Eskulin mist cologne 125ml",
@@ -1091,6 +1157,12 @@ const productsData = [
     "varian": null,
     "kategori": "Kosmetik",
     "gambar": "https://id-test-11.slatic.net/p/17a7aa1ffaf83e6149f132bab7fe8420.jpg"
+  },
+  {
+    "nama": "Eyeliner Esenses",
+    "varian": null,
+    "kategori": "Kosmetik",
+    "gambar": null
   },
   {
     "nama": "Ez White Tofu",
@@ -1141,34 +1213,34 @@ const productsData = [
     "gambar": "https://raw.githubusercontent.com/syafiizaa/katalog/refs/heads/main/img/fresh.jpg"
   },
   {
-    "nama": "Fresh Point Parfum Laundry",
-    "varian": "1 Liter",
+    "nama": "Fresh Point Laundry",
+    "varian": "Parfum 250ml",
     "kategori": "Parfum",
-    "gambar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSprwk2tipgT5fBsWO9Z4mJDFaSlpsXLivnszNk2LFJEA&s=10"
+    "gambar": null
   },
   {
-    "nama": "Fresh Point Parfum Laundry",
-    "varian": "250ml",
+    "nama": "Fresh Point Laundry",
+    "varian": "Parfum 500ml",
     "kategori": "Parfum",
-    "gambar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSprwk2tipgT5fBsWO9Z4mJDFaSlpsXLivnszNk2LFJEA&s=10"
+    "gambar": null
   },
   {
-    "nama": "Fresh Point Parfum Laundry",
-    "varian": "500ml",
+    "nama": "Fresh Point Laundry",
+    "varian": "Parfum 1 Liter",
     "kategori": "Parfum",
-    "gambar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSprwk2tipgT5fBsWO9Z4mJDFaSlpsXLivnszNk2LFJEA&s=10"
+    "gambar": null
   },
   {
-    "nama": "Fresh Point Pelicin Laundry",
-    "varian": "1 Liter",
+    "nama": "Fresh Point Laundry",
+    "varian": "Pelicin 250ml",
     "kategori": "Parfum",
-    "gambar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQHNtdIwqrQyG_BH4HC-nnYLTM4VPpmkXvD1MlCGOxUzw&s=10"
+    "gambar": null
   },
   {
-    "nama": "Fresh Point Pelicin Laundry",
-    "varian": "250ml",
+    "nama": "Fresh Point Laundry",
+    "varian": "Pelicin 1 Liter",
     "kategori": "Parfum",
-    "gambar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQHNtdIwqrQyG_BH4HC-nnYLTM4VPpmkXvD1MlCGOxUzw&s=10"
+    "gambar": null
   },
   {
     "nama": "Freshcare",
@@ -1292,9 +1364,21 @@ const productsData = [
   },
   {
     "nama": "Gentle Gen",
-    "varian": null,
+    "varian": "Pouch 360ml",
     "kategori": "Alat Kebersihan",
-    "gambar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTiAMgr0QXgLMqs4Z9_Yt6FvhZiMJAF7-zzrBkcItXdGQ&s=10"
+    "gambar": null
+  },
+  {
+    "nama": "Gentle Gen",
+    "varian": "Botol 700ml",
+    "kategori": "Alat Kebersihan",
+    "gambar": null
+  },
+  {
+    "nama": "Gentle Gen",
+    "varian": "Sachet",
+    "kategori": "Alat Kebersihan",
+    "gambar": null
   },
   {
     "nama": "Godokan sirih",
@@ -1306,13 +1390,19 @@ const productsData = [
     "nama": "GPU",
     "varian": "30ml",
     "kategori": "Kosmetik",
-    "gambar": "https://down-id.img.susercontent.com/file/id-11134207-7rasi-m0l4obeubwuke1"
+    "gambar": null
   },
   {
     "nama": "GPU",
     "varian": "60ml",
     "kategori": "Kosmetik",
-    "gambar": "https://down-id.img.susercontent.com/file/id-11134207-7rasi-m0l4obeubwuke1"
+    "gambar": null
+  },
+  {
+    "nama": "GPU",
+    "varian": "Krim",
+    "kategori": "Kosmetik",
+    "gambar": null
   },
   {
     "nama": "Gunting",
@@ -1333,10 +1423,40 @@ const productsData = [
     "gambar": "https://imgx.brdcdn.com/imgx/500/aW1hZ2VzLnRva29wZWRpYS5uZXQvaW1nL2NhY2hlLzcwMC9WcWJjbU0vMjAyMS80LzE3L2JjNzczNjU3LTQzZmItNDFkNy04YTgyLTY3ODI1MmRiNjBlZA==.jpg"
   },
   {
+    "nama": "Hada Labo face wash",
+    "varian": "Ultimate whitening",
+    "kategori": "Sabun",
+    "gambar": null
+  },
+  {
+    "nama": "Hada Labo face wash",
+    "varian": "Ultimate moisturizing",
+    "kategori": "Sabun",
+    "gambar": null
+  },
+  {
     "nama": "Hanasui Body SPA",
     "varian": null,
     "kategori": "Kosmetik",
     "gambar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQV8JXVI9dBQb1BJfqf14azEB3fWcwFIgRZGxL-p_aXjjhTAH6mQZNc0L4&s=10"
+  },
+  {
+    "nama": "Hanasui cream glow expert",
+    "varian": "Day",
+    "kategori": "Kosmetik",
+    "gambar": null
+  },
+  {
+    "nama": "Hanasui cream glow expert",
+    "varian": "Night",
+    "kategori": "Kosmetik",
+    "gambar": null
+  },
+  {
+    "nama": "Hanasui next level Airy velvet cushion",
+    "varian": null,
+    "kategori": "Kosmetik",
+    "gambar": null
   },
   {
     "nama": "Hanasui next level bouncy blush",
@@ -1351,10 +1471,46 @@ const productsData = [
     "gambar": "https://down-id.img.susercontent.com/file/id-11134207-81ztf-mepmwsyb28019a"
   },
   {
+    "nama": "Hanasui perfect fit powder Foundation",
+    "varian": null,
+    "kategori": "Kosmetik",
+    "gambar": null
+  },
+  {
+    "nama": "Hanasui perfect fit setting powder",
+    "varian": null,
+    "kategori": "Kosmetik",
+    "gambar": null
+  },
+  {
     "nama": "Hanasui serum cushion",
     "varian": null,
     "kategori": "Kosmetik",
     "gambar": "https://p16-oec-sg.ibyteimg.com/tos-alisg-i-aphluv4xwc-sg/img/VqbcmM/2023/12/11/2c64d983-a392-4dca-acca-64d9bea86fd2.jpg~tplv-aphluv4xwc-resize-jpeg:700:0.jpg"
+  },
+  {
+    "nama": "Handbody Emeron lovely",
+    "varian": "Natural 200ml",
+    "kategori": "Kosmetik",
+    "gambar": null
+  },
+  {
+    "nama": "Handbody Emeron lovely",
+    "varian": "Natural 500ml",
+    "kategori": "Kosmetik",
+    "gambar": null
+  },
+  {
+    "nama": "Handbody Emeron lovely",
+    "varian": "White 200ml",
+    "kategori": "Kosmetik",
+    "gambar": null
+  },
+  {
+    "nama": "Handbody Emeron lovely",
+    "varian": "White 500ml",
+    "kategori": "Kosmetik",
+    "gambar": null
   },
   {
     "nama": "Handbody Leivy",
@@ -1391,6 +1547,30 @@ const productsData = [
     "varian": "210ml",
     "kategori": "Kosmetik",
     "gambar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQwYEElbkx_Ix9wK2Y8CIdlH4KybvEbgq-Ld2jPbdEk2Q&s=10"
+  },
+  {
+    "nama": "Handbody Vaseline",
+    "varian": "B3 100ml",
+    "kategori": "Kosmetik",
+    "gambar": null
+  },
+  {
+    "nama": "Handbody Vaseline",
+    "varian": "B3 200ml",
+    "kategori": "Kosmetik",
+    "gambar": null
+  },
+  {
+    "nama": "Handbody Vaseline",
+    "varian": "SPF 100ml",
+    "kategori": "Kosmetik",
+    "gambar": null
+  },
+  {
+    "nama": "Handbody Vaseline",
+    "varian": "SPF 200ml",
+    "kategori": "Kosmetik",
+    "gambar": null
   },
   {
     "nama": "Handsoap Yuri",
@@ -1582,13 +1762,19 @@ const productsData = [
     "nama": "Jhonsons 2IN1 body wash",
     "varian": "100ml",
     "kategori": "Baby Care",
-    "gambar": "https://img.lazcdn.com/g/p/52ae5668820fd031489f20755209a19d.png_720x720q80.png"
+    "gambar": null
   },
   {
     "nama": "Jhonsons 2IN1 body wash",
     "varian": "200ml",
     "kategori": "Baby Care",
-    "gambar": "https://img.lazcdn.com/g/p/52ae5668820fd031489f20755209a19d.png_720x720q80.png"
+    "gambar": null
+  },
+  {
+    "nama": "Jhonsons 2IN1 body wash",
+    "varian": "Refill 400ml",
+    "kategori": "Baby Care",
+    "gambar": null
   },
   {
     "nama": "Jovan musk oil",
@@ -2173,10 +2359,22 @@ const productsData = [
     "gambar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTsth38iRJrbCwKZ4j7gw8KoDJ_ixfjcfXBnqwePXGNfA&s=10"
   },
   {
+    "nama": "Master kids shampoo&conditioner",
+    "varian": null,
+    "kategori": "Shampoo",
+    "gambar": null
+  },
+  {
     "nama": "Master kids spray cologne 80+20ml",
     "varian": null,
     "kategori": "Parfum",
     "gambar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQR31IVbvg9BkS5D2hEEpOV8bSnA3O64E-Egw7PH6vT-g&s=10"
+  },
+  {
+    "nama": "Maybelline Fit Me Compact",
+    "varian": null,
+    "kategori": "Kosmetik",
+    "gambar": null
   },
   {
     "nama": "Melani",
@@ -2417,18 +2615,6 @@ const productsData = [
     "varian": "Purbasari 75ml",
     "kategori": "Kosmetik",
     "gambar": "img/minyak zaitun.jpg"
-  },
-  {
-    "nama": "Mitu baby cologne",
-    "varian": "100ml",
-    "kategori": "Baby Care",
-    "gambar": "https://id-test-11.slatic.net/p/b2291e51fd005574b8394316c06296e2.jpg"
-  },
-  {
-    "nama": "Mitu baby cologne",
-    "varian": "50ml",
-    "kategori": "Baby Care",
-    "gambar": "https://id-test-11.slatic.net/p/b2291e51fd005574b8394316c06296e2.jpg"
   },
   {
     "nama": "Morris Eau De Parfume",
@@ -2773,6 +2959,12 @@ const productsData = [
     "gambar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRVdMhoJaeXfkKE2-AzKE-iZQliVkiTRmS3w3aEVj982g&s=10"
   },
   {
+    "nama": "Parfum Zwitsal",
+    "varian": null,
+    "kategori": "Parfum",
+    "gambar": null
+  },
+  {
     "nama": "Payung Saten",
     "varian": "Besar",
     "kategori": "Alat",
@@ -2787,6 +2979,12 @@ const productsData = [
   {
     "nama": "Payung Saten",
     "varian": "Sedang",
+    "kategori": "Alat",
+    "gambar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSj1ZtCeS4UbzCMUuPjFCkwcQX-OmKjwPsg6_9nWjU8xg&s=10"
+  },
+  {
+    "nama": "Payung Saten",
+    "varian": "Model Lipat",
     "kategori": "Alat",
     "gambar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSj1ZtCeS4UbzCMUuPjFCkwcQX-OmKjwPsg6_9nWjU8xg&s=10"
   },
@@ -2875,6 +3073,12 @@ const productsData = [
     "gambar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRGDVSEJwFxNq5EMhtrfdOLyswQcSFO5-68NrkOwRJ1NlfF6-aSlOJZvKGp&s=10"
   },
   {
+    "nama": "Pepsodent sensitive expert",
+    "varian": null,
+    "kategori": "Odol",
+    "gambar": null
+  },
+  {
     "nama": "Pepsodent Siwak 110g",
     "varian": null,
     "kategori": "Odol",
@@ -2921,6 +3125,18 @@ const productsData = [
     "varian": "Kuning",
     "kategori": "Alat",
     "gambar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTiIx7dJzzWe8KfvoNMTAkZBhBuzChkdsrDdUJGgL5EMw&s=10"
+  },
+  {
+    "nama": "Pixy Cleansing Express",
+    "varian": "Anti acne",
+    "kategori": "Kosmetik",
+    "gambar": null
+  },
+  {
+    "nama": "Pixy Cleansing Express",
+    "varian": "Brightening",
+    "kategori": "Kosmetik",
+    "gambar": null
   },
   {
     "nama": "Pixy Facial Foam",
@@ -3241,6 +3457,12 @@ const productsData = [
     "gambar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRPrz0B7gBv8nyLh6Sqw-o4GRC6IF-UdeB5b6Q_RYulbA&s=10"
   },
   {
+    "nama": "Refill Eskulin kids 2in1",
+    "varian": null,
+    "kategori": "Baby Care",
+    "gambar": null
+  },
+  {
     "nama": "Refill Giv",
     "varian": "250ml",
     "kategori": "Sabun",
@@ -3377,6 +3599,12 @@ const productsData = [
     "varian": null,
     "kategori": "Alat Kebersihan",
     "gambar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSNu3PDgSSJvRMZJDRuCJJvpFh1nPpJlNFC1On8HPlqGA&s=10"
+  },
+  {
+    "nama": "Refill Super pell",
+    "varian": null,
+    "kategori": "Alat Kebersihan",
+    "gambar": null
   },
   {
     "nama": "Refill Vanish 150ml",
@@ -3643,10 +3871,16 @@ const productsData = [
     "gambar": "https://down-id.img.susercontent.com/file/id-11134207-7rbk4-m8vxbwa86tjha9"
   },
   {
-    "nama": "Sabun Mitu 2in1 Botol",
-    "varian": null,
+    "nama": "Sabun Mitu 2in1",
+    "varian": "Botol",
     "kategori": "Baby Care",
-    "gambar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQXTcvaRENbM6kWZGaO0RPLBCT3HzkxnPPHN89hxmsWRA&s=10"
+    "gambar": null
+  },
+  {
+    "nama": "Sabun Mitu 2in1",
+    "varian": "Refill",
+    "kategori": "Baby Care",
+    "gambar": null
   },
   {
     "nama": "Sabun Muka Acnes",
@@ -4351,10 +4585,16 @@ const productsData = [
     "gambar": "https://www.static-src.com/wcsstore/Indraprastha/images/catalog/full/catalog-image/MTA-14088329/laurier_laurier_active_day_x-tra_maxi_wing_30-s_full03_ervraa78.jpeg"
   },
   {
-    "nama": "Spidol Permanen",
-    "varian": null,
-    "kategori": "Alat",
-    "gambar": "https://img.lazcdn.com/g/p/71ab9e9f062f4fca35eb2db991021288.jpg_720x720q80.jpg"
+    "nama": "Sosoft",
+    "varian": "Sachet",
+    "kategori": "Alat Kebersihan",
+    "gambar": null
+  },
+  {
+    "nama": "Sosoft",
+    "varian": "Botol 700ml",
+    "kategori": "Alat Kebersihan",
+    "gambar": null
   },
   {
     "nama": "Spons Candy",
@@ -4783,34 +5023,10 @@ const productsData = [
     "gambar": "https://id-live-01.slatic.net/p/dcef16adde6ba852822df95f6cf59cb9.jpg"
   },
   {
-    "nama": "Vaseline B3",
-    "varian": "100ml",
-    "kategori": "Kosmetik",
-    "gambar": "https://image.astronauts.cloud/product-images/2024/10/8999999719418VaselineLotionHealthyBrightUvExtraBrigtheningBodyLotion200ml1_d4091fd8-b972-408f-ac2d-0d449136aef8_900x900.png"
-  },
-  {
-    "nama": "Vaseline B3",
-    "varian": "200ml",
-    "kategori": "Kosmetik",
-    "gambar": "https://image.astronauts.cloud/product-images/2024/10/8999999719418VaselineLotionHealthyBrightUvExtraBrigtheningBodyLotion200ml1_d4091fd8-b972-408f-ac2d-0d449136aef8_900x900.png"
-  },
-  {
     "nama": "Vaseline soft+glow gluta vitamin 180ml",
     "varian": null,
     "kategori": "Kosmetik",
     "gambar": "https://down-id.img.susercontent.com/file/id-11134201-7r98r-looxqy9146wg91"
-  },
-  {
-    "nama": "Vaseline SPF",
-    "varian": "100ml",
-    "kategori": "Kosmetik",
-    "gambar": "https://www.static-src.com/wcsstore/Indraprastha/images/catalog/full/catalog-image/97/MTA-154159053/br-m036969-03437_vaseline-100ml-healthy-bright-hand-body-lotion-spf-24-melembabkan-kulit_full02-ce0c42cb.jpg"
-  },
-  {
-    "nama": "Vaseline SPF",
-    "varian": "200ml",
-    "kategori": "Kosmetik",
-    "gambar": "https://www.static-src.com/wcsstore/Indraprastha/images/catalog/full/catalog-image/97/MTA-154159053/br-m036969-03437_vaseline-100ml-healthy-bright-hand-body-lotion-spf-24-melembabkan-kulit_full02-ce0c42cb.jpg"
   },
   {
     "nama": "Veet pencabut bulu 25g",
