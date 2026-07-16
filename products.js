@@ -439,8 +439,14 @@ const productsData = [
     "gambar": "https://raw.githubusercontent.com/syafiizaa/katalog/refs/heads/main/img/sariayu.jpg"
   },
   {
-    "nama": "Bedak Skiva 21",
-    "varian": null,
+    "nama": "Bedak Skiva",
+    "varian": "De luxe",
+    "kategori": "Kosmetik",
+    "gambar": "https://raw.githubusercontent.com/syafiizaa/katalog/refs/heads/main/img/bedak%20skiva.jpg"
+  },
+  {
+    "nama": "Bedak Skiva",
+    "varian": "Merah G55",
     "kategori": "Kosmetik",
     "gambar": "https://raw.githubusercontent.com/syafiizaa/katalog/refs/heads/main/img/bedak%20skiva.jpg"
   },
@@ -739,12 +745,6 @@ const productsData = [
     "gambar": null
   },
   {
-    "nama": "Colagen laptulipe",
-    "varian": null,
-    "kategori": "Kosmetik",
-    "gambar": "https://down-id.img.susercontent.com/file/id-11134207-7r98v-lzzq2nxm1ja3fc"
-  },
-  {
     "nama": "Colagen Mecca Anugrah",
     "varian": null,
     "kategori": "Kosmetik",
@@ -935,18 +935,6 @@ const productsData = [
     "varian": "50ml",
     "kategori": "Baby Care",
     "gambar": "https://img.lazcdn.com/g/p/61635b124aec85d7da2eb4a019f17290.jpg_960x960q80.jpg_.webp"
-  },
-  {
-    "nama": "Cutter",
-    "varian": "Biasa",
-    "kategori": "Alat",
-    "gambar": "https://filebroker-cdn.lazada.co.id/kf/S596031b0924949be975f94e0136317bbB.jpg"
-  },
-  {
-    "nama": "Cutter",
-    "varian": "Gunindo",
-    "kategori": "Alat",
-    "gambar": "https://filebroker-cdn.lazada.co.id/kf/S596031b0924949be975f94e0136317bbB.jpg"
   },
   {
     "nama": "Cutton buds",
@@ -1951,18 +1939,6 @@ const productsData = [
     "gambar": "https://img.lazcdn.com/g/p/df6f01149553023b7ac77da5db3da7b1.jpg_960x960q80.jpg_.webp"
   },
   {
-    "nama": "Kodomo Wash 200ml",
-    "varian": "Shampoo Botol Pencet",
-    "kategori": "Sabun",
-    "gambar": "img/sabun kodomo.jpg"
-  },
-  {
-    "nama": "Kodomo Wash 200ml",
-    "varian": "Sabun/Shampoo",
-    "kategori": "Sabun",
-    "gambar": "img/sabun kodomo.jpg"
-  },
-  {
     "nama": "Korek telinga lampu",
     "varian": null,
     "kategori": "Alat",
@@ -1981,28 +1957,16 @@ const productsData = [
     "gambar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSbYVaXJZFqaC4hsNw2YBesNfe8iBxCy-bPQ4lj8EgfnQ&s=10"
   },
   {
-    "nama": "Laurier Night 30cm",
-    "varian": "Isi 16",
+    "nama": "Latulipe Cosmetics",
+    "varian": "Colagen",
     "kategori": "Kosmetik",
-    "gambar": "https://www.kao.com/content/dam/sites/kao/www-kao-com/id/id/products/laurier/lre_relax_night30_01.jpg"
+    "gambar": null
   },
   {
-    "nama": "Laurier Night 30cm",
-    "varian": "Isi 8",
+    "nama": "Latulipe Cosmetics",
+    "varian": "Bedak Refill",
     "kategori": "Kosmetik",
-    "gambar": "https://www.kao.com/content/dam/sites/kao/www-kao-com/id/id/products/laurier/lre_relax_night30_01.jpg"
-  },
-  {
-    "nama": "Laurier Night 35cm",
-    "varian": "Isi 12",
-    "kategori": "Kosmetik",
-    "gambar": "https://assets.babyzania.com/image/cache/catalog/1/1530c0dc-7c0f-4654-adfd-cec64c9c66f6-800x800.jpg"
-  },
-  {
-    "nama": "Laurier Night 35cm",
-    "varian": "Isi 6",
-    "kategori": "Kosmetik",
-    "gambar": "https://assets.babyzania.com/image/cache/catalog/1/1530c0dc-7c0f-4654-adfd-cec64c9c66f6-800x800.jpg"
+    "gambar": null
   },
   {
     "nama": "Lem korea",
@@ -2059,7 +2023,7 @@ const productsData = [
     "gambar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTU04lmtcyemL85m74mA6U1PJ7FZU-34dIcktmietCzBg&s=10"
   },
   {
-    "nama": "Lipstik Skiva 21",
+    "nama": "Lipstik Skiva no.500",
     "varian": null,
     "kategori": "Kosmetik",
     "gambar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQN_NYm5SvfNGuWRonhLs-oCLX4cJjjAQLzsgDYj04Fhw&s=10"
@@ -2176,13 +2140,25 @@ const productsData = [
     "nama": "Lulur Purbasari",
     "varian": "100g",
     "kategori": "Kosmetik",
-    "gambar": "https://down-id.img.susercontent.com/file/id-11134207-7rbk3-m95g0s3ynt0221"
+    "gambar": null
   },
   {
     "nama": "Lulur Purbasari",
     "varian": "200g",
     "kategori": "Kosmetik",
-    "gambar": "https://down-id.img.susercontent.com/file/id-11134207-7rbk3-m95g0s3ynt0221"
+    "gambar": null
+  },
+  {
+    "nama": "Lulur Purbasari",
+    "varian": "Pouch 500g",
+    "kategori": "Kosmetik",
+    "gambar": null
+  },
+  {
+    "nama": "Lulur Purbasari",
+    "varian": "Pouch 1000g",
+    "kategori": "Kosmetik",
+    "gambar": null
   },
   {
     "nama": "Lulur Shinzui",
@@ -2345,6 +2321,12 @@ const productsData = [
     "varian": "Hyper Curl",
     "kategori": "Kosmetik",
     "gambar": "https://raw.githubusercontent.com/syafiizaa/katalog/refs/heads/main/img/mascara%20Maybelline.jpg"
+  },
+  {
+    "nama": "Mascara Murah Merk Random",
+    "varian": null,
+    "kategori": "Kosmetik",
+    "gambar": null
   },
   {
     "nama": "Masker Muka Naturgo Hanasui",
@@ -2617,6 +2599,18 @@ const productsData = [
     "gambar": "img/minyak zaitun.jpg"
   },
   {
+    "nama": "Mirabella Chic",
+    "varian": "TWC",
+    "kategori": "Kosmetik",
+    "gambar": null
+  },
+  {
+    "nama": "Mirabella Chic",
+    "varian": "Refill",
+    "kategori": "Kosmetik",
+    "gambar": null
+  },
+  {
     "nama": "Morris Eau De Parfume",
     "varian": "60ml",
     "kategori": "Parfum",
@@ -2663,6 +2657,12 @@ const productsData = [
     "varian": null,
     "kategori": "Baby Care",
     "gambar": "https://img.lazcdn.com/g/p/7fd6f2a985590b7d4282de8da8f5a676.jpg_720x720q80.jpg"
+  },
+  {
+    "nama": "N°CO EDP Hanasui 100ml",
+    "varian": null,
+    "kategori": "Kosmetik",
+    "gambar": null
   },
   {
     "nama": "Nivea body lotion 200ml",
@@ -2863,34 +2863,34 @@ const productsData = [
     "gambar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRF243DtaTFCIXuDICh0XmntIKK9YopssBPiUIUrzjkYg&s=10"
   },
   {
-    "nama": "Pacar Chandini",
-    "varian": "Besar",
+    "nama": "Pacar Arab",
+    "varian": "Rani Kecil",
     "kategori": "Kosmetik",
-    "gambar": "https://img.lazcdn.com/g/p/d0cccb7802ae2900e493b5ac3c27f5b0.png_720x720q80.png"
+    "gambar": null
   },
   {
-    "nama": "Pacar Chandini",
-    "varian": "Kecil",
+    "nama": "Pacar Arab",
+    "varian": "Rani Besar",
     "kategori": "Kosmetik",
-    "gambar": "https://img.lazcdn.com/g/p/d0cccb7802ae2900e493b5ac3c27f5b0.png_720x720q80.png"
+    "gambar": null
+  },
+  {
+    "nama": "Pacar Arab",
+    "varian": "Chandini Kecil",
+    "kategori": "Kosmetik",
+    "gambar": null
+  },
+  {
+    "nama": "Pacar Arab",
+    "varian": "Chandini Besar",
+    "kategori": "Kosmetik",
+    "gambar": null
   },
   {
     "nama": "Pacar Henna gollecha",
     "varian": null,
     "kategori": "Kosmetik",
     "gambar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZTm0rTp1-eEEERuvkqW8a6zBY_qajIK3UHCoqQfzJBw&s=10"
-  },
-  {
-    "nama": "Pacar Rani",
-    "varian": "Besar",
-    "kategori": "Kosmetik",
-    "gambar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-cWNfmKFIgGlTd9QeBxE2r3pi9iY8JMZ_2rSXWVM4mA&s=10"
-  },
-  {
-    "nama": "Pacar Rani",
-    "varian": "Kecil",
-    "kategori": "Kosmetik",
-    "gambar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-cWNfmKFIgGlTd9QeBxE2r3pi9iY8JMZ_2rSXWVM4mA&s=10"
   },
   {
     "nama": "Pacar Ratu dangdut",
@@ -3056,7 +3056,7 @@ const productsData = [
   },
   {
     "nama": "Pepsodent",
-    "varian": "75g",
+    "varian": "72g",
     "kategori": "Odol",
     "gambar": "https://id-test-11.slatic.net/p/e31bc35c929669e31b716154dfc80c3c.jpg"
   },
@@ -3068,7 +3068,7 @@ const productsData = [
   },
   {
     "nama": "Pepsodent Herbal",
-    "varian": "75g",
+    "varian": "65g",
     "kategori": "Odol",
     "gambar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRGDVSEJwFxNq5EMhtrfdOLyswQcSFO5-68NrkOwRJ1NlfF6-aSlOJZvKGp&s=10"
   },
@@ -3125,6 +3125,18 @@ const productsData = [
     "varian": "Kuning",
     "kategori": "Alat",
     "gambar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTiIx7dJzzWe8KfvoNMTAkZBhBuzChkdsrDdUJGgL5EMw&s=10"
+  },
+  {
+    "nama": "Pisau Cutter",
+    "varian": "Biasa",
+    "kategori": "Alat",
+    "gambar": "https://filebroker-cdn.lazada.co.id/kf/S596031b0924949be975f94e0136317bbB.jpg"
+  },
+  {
+    "nama": "Pisau Cutter",
+    "varian": "Gunindo",
+    "kategori": "Alat",
+    "gambar": "https://filebroker-cdn.lazada.co.id/kf/S596031b0924949be975f94e0136317bbB.jpg"
   },
   {
     "nama": "Pixy Cleansing Express",
@@ -3464,6 +3476,12 @@ const productsData = [
   },
   {
     "nama": "Refill Giv",
+    "varian": "Mini",
+    "kategori": "Sabun",
+    "gambar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSUltnFs2FYF1BDztK08h618eFxM7BvlWpJggw2a4CMOg&s=10"
+  },
+  {
+    "nama": "Refill Giv",
     "varian": "250ml",
     "kategori": "Sabun",
     "gambar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSUltnFs2FYF1BDztK08h618eFxM7BvlWpJggw2a4CMOg&s=10"
@@ -3542,6 +3560,12 @@ const productsData = [
   },
   {
     "nama": "Refill Nuvo",
+    "varian": "Mini",
+    "kategori": "Sabun",
+    "gambar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZQ0H92DGOBlDOiJvNVz6VpSi_hg6QTx0PRFPQq4A2Hw&s=10"
+  },
+  {
+    "nama": "Refill Nuvo",
     "varian": "250ml",
     "kategori": "Sabun",
     "gambar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZQ0H92DGOBlDOiJvNVz6VpSi_hg6QTx0PRFPQq4A2Hw&s=10"
@@ -3551,12 +3575,6 @@ const productsData = [
     "varian": "400ml",
     "kategori": "Sabun",
     "gambar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZQ0H92DGOBlDOiJvNVz6VpSi_hg6QTx0PRFPQq4A2Hw&s=10"
-  },
-  {
-    "nama": "Refill Nuvo / Giv mini",
-    "varian": null,
-    "kategori": "Sabun",
-    "gambar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRE-8AD-vq6dmb2DWE2lupnK1ClYnkqjIu_vvj1m1sGYg&s=10"
   },
   {
     "nama": "Refill Shinzui",
@@ -3593,12 +3611,6 @@ const productsData = [
     "varian": null,
     "kategori": "Alat Kebersihan",
     "gambar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRRuNiZecI1tO25kjn9rCf0yI6pHmLK5aR3cdvaNjmtuw&s=10"
-  },
-  {
-    "nama": "Refill Stella Matic",
-    "varian": null,
-    "kategori": "Alat Kebersihan",
-    "gambar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSNu3PDgSSJvRMZJDRuCJJvpFh1nPpJlNFC1On8HPlqGA&s=10"
   },
   {
     "nama": "Refill Super pell",
@@ -3788,13 +3800,25 @@ const productsData = [
   },
   {
     "nama": "Sabun Garnier",
-    "varian": "100g",
+    "varian": "100ml",
     "kategori": "Sabun",
     "gambar": "https://down-id.img.susercontent.com/file/id-11134207-7ra0s-mdpkozlej1xr2c"
   },
   {
     "nama": "Sabun Garnier",
-    "varian": "50g",
+    "varian": "50ml",
+    "kategori": "Sabun",
+    "gambar": "https://down-id.img.susercontent.com/file/id-11134207-7ra0s-mdpkozlej1xr2c"
+  },
+  {
+    "nama": "Sabun Garnier",
+    "varian": "Anti Acne 100ml",
+    "kategori": "Sabun",
+    "gambar": "https://down-id.img.susercontent.com/file/id-11134207-7ra0s-mdpkozlej1xr2c"
+  },
+  {
+    "nama": "Sabun Garnier",
+    "varian": "Anti Acne 50ml",
     "kategori": "Sabun",
     "gambar": "https://down-id.img.susercontent.com/file/id-11134207-7ra0s-mdpkozlej1xr2c"
   },
@@ -3821,6 +3845,24 @@ const productsData = [
     "varian": "Biasa",
     "kategori": "Sabun",
     "gambar": "https://www.static-src.com/wcsstore/Indraprastha/images/catalog/full//103/MTA-9489613/bee_brand_sabun_tawon_original_import_china_bee_-_flower_brand_besar_125_gr_aroma_cendana_-_lifebuoy_-_cuci_muka_-_murah_full02_i1jt2qj0.jpg"
+  },
+  {
+    "nama": "Sabun Kodomo",
+    "varian": "Shampoo Botol Pencet 250ml",
+    "kategori": "Sabun",
+    "gambar": "img/sabun kodomo.jpg"
+  },
+  {
+    "nama": "Sabun Kodomo",
+    "varian": "Sabun 200ml",
+    "kategori": "Sabun",
+    "gambar": "img/sabun kodomo.jpg"
+  },
+  {
+    "nama": "Sabun Kodomo",
+    "varian": "Shampoo 200ml",
+    "kategori": "Sabun",
+    "gambar": "img/sabun kodomo.jpg"
   },
   {
     "nama": "Sabun Kojie San 65g",
@@ -3923,18 +3965,6 @@ const productsData = [
     "varian": null,
     "kategori": "Sabun",
     "gambar": "https://id-live-01.slatic.net/p/15eaddb839709642b8832d69fb255c3a.jpg"
-  },
-  {
-    "nama": "Sabun muka Garnier Anti acne",
-    "varian": "100ml",
-    "kategori": "Sabun",
-    "gambar": "https://filebroker-cdn.lazada.co.id/kf/S4c4ea945e53d40f6a989c628d49341c24.jpg"
-  },
-  {
-    "nama": "Sabun muka Garnier Anti acne",
-    "varian": "50ml",
-    "kategori": "Sabun",
-    "gambar": "https://filebroker-cdn.lazada.co.id/kf/S4c4ea945e53d40f6a989c628d49341c24.jpg"
   },
   {
     "nama": "Sabun muka Garnier Men",
@@ -4172,13 +4202,25 @@ const productsData = [
   },
   {
     "nama": "Serum",
-    "varian": "Hanasui",
+    "varian": "Garnier 15ml",
     "kategori": "Kosmetik",
     "gambar": "https://raw.githubusercontent.com/syafiizaa/katalog/refs/heads/main/img/serum.jpg"
   },
   {
     "nama": "Serum",
     "varian": "Implora",
+    "kategori": "Kosmetik",
+    "gambar": "https://raw.githubusercontent.com/syafiizaa/katalog/refs/heads/main/img/serum.jpg"
+  },
+  {
+    "nama": "Serum",
+    "varian": "Scarlett",
+    "kategori": "Kosmetik",
+    "gambar": "https://raw.githubusercontent.com/syafiizaa/katalog/refs/heads/main/img/serum.jpg"
+  },
+  {
+    "nama": "Serum",
+    "varian": "Hanasui",
     "kategori": "Kosmetik",
     "gambar": "https://raw.githubusercontent.com/syafiizaa/katalog/refs/heads/main/img/serum.jpg"
   },
@@ -4322,13 +4364,13 @@ const productsData = [
   },
   {
     "nama": "Shampoo Sachet",
-    "varian": "11rb",
+    "varian": "10rb/renteng",
     "kategori": "Shampoo",
     "gambar": "https://img.lazcdn.com/g/p/6592cbdbcf1629c6078362e32ae1a31a.png_720x720q80.png"
   },
   {
     "nama": "Shampoo Sachet",
-    "varian": "6rb",
+    "varian": "5rb/renteng",
     "kategori": "Shampoo",
     "gambar": "https://img.lazcdn.com/g/p/6592cbdbcf1629c6078362e32ae1a31a.png_720x720q80.png"
   },
@@ -4562,27 +4604,51 @@ const productsData = [
   },
   {
     "nama": "Softex Laurier",
-    "varian": "Isi 20",
+    "varian": "Maxi 8",
     "kategori": "Kosmetik",
-    "gambar": "https://down-id.img.susercontent.com/file/id-11134211-7ra0o-mbnbldy3poif38"
+    "gambar": null
   },
   {
     "nama": "Softex Laurier",
-    "varian": "Isi 8",
+    "varian": "Maxi 20",
     "kategori": "Kosmetik",
-    "gambar": "https://down-id.img.susercontent.com/file/id-11134211-7ra0o-mbnbldy3poif38"
+    "gambar": null
   },
   {
-    "nama": "Softex Laurier Wing",
-    "varian": "Isi 20",
+    "nama": "Softex Laurier",
+    "varian": "Maxi Wing 8",
     "kategori": "Kosmetik",
-    "gambar": "https://www.static-src.com/wcsstore/Indraprastha/images/catalog/full/catalog-image/MTA-14088329/laurier_laurier_active_day_x-tra_maxi_wing_30-s_full03_ervraa78.jpeg"
+    "gambar": null
   },
   {
-    "nama": "Softex Laurier Wing",
-    "varian": "Isi 8",
+    "nama": "Softex Laurier",
+    "varian": "Maxi Wing 20",
     "kategori": "Kosmetik",
-    "gambar": "https://www.static-src.com/wcsstore/Indraprastha/images/catalog/full/catalog-image/MTA-14088329/laurier_laurier_active_day_x-tra_maxi_wing_30-s_full03_ervraa78.jpeg"
+    "gambar": null
+  },
+  {
+    "nama": "Softex Laurier",
+    "varian": "Night 30cm 8",
+    "kategori": "Kosmetik",
+    "gambar": null
+  },
+  {
+    "nama": "Softex Laurier",
+    "varian": "Night 30cm 16",
+    "kategori": "Kosmetik",
+    "gambar": null
+  },
+  {
+    "nama": "Softex Laurier",
+    "varian": "Night 35cm 6",
+    "kategori": "Kosmetik",
+    "gambar": null
+  },
+  {
+    "nama": "Softex Laurier",
+    "varian": "Night 35cm 12",
+    "kategori": "Kosmetik",
+    "gambar": null
   },
   {
     "nama": "Sosoft",
@@ -4597,14 +4663,26 @@ const productsData = [
     "gambar": null
   },
   {
-    "nama": "Spons Candy",
-    "varian": null,
+    "nama": "Spons bedak",
+    "varian": "Candy",
     "kategori": "Kosmetik",
-    "gambar": "https://id-live-01.slatic.net/p/8099dc699abee9b59d0b4183b201b52d.png"
+    "gambar": null
+  },
+  {
+    "nama": "Spons bedak",
+    "varian": "Fanbo isi 2",
+    "kategori": "Kosmetik",
+    "gambar": null
+  },
+  {
+    "nama": "Spons bedak",
+    "varian": "X- Pert",
+    "kategori": "Kosmetik",
+    "gambar": null
   },
   {
     "nama": "Spons Cuci piring",
-    "varian": "Prostex",
+    "varian": "Polytex",
     "kategori": "Alat Kebersihan",
     "gambar": "img/spons cuci piring.jpg"
   },
@@ -4613,12 +4691,6 @@ const productsData = [
     "varian": "Jaring",
     "kategori": "Alat Kebersihan",
     "gambar": "img/spons cuci piring.jpg"
-  },
-  {
-    "nama": "Spons fanbo",
-    "varian": null,
-    "kategori": "Kosmetik",
-    "gambar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT4J8CWkhPj4hTSsC8ifgHXfUW232JMvMQyFTm8jZRSNunvhI0RRAj_FCit&s=10"
   },
   {
     "nama": "Spons mandi",
@@ -4643,12 +4715,6 @@ const productsData = [
     "varian": "50g",
     "kategori": "Alat Kebersihan",
     "gambar": "https://raw.githubusercontent.com/syafiizaa/katalog/refs/heads/main/img/spons%20mandi.jpg"
-  },
-  {
-    "nama": "Spons x-pert",
-    "varian": null,
-    "kategori": "Kosmetik",
-    "gambar": "https://cf.shopee.co.id/file/67609a89cb48575682279214b1cca731"
   },
   {
     "nama": "Staples",
@@ -4685,6 +4751,18 @@ const productsData = [
     "varian": "400ml",
     "kategori": "Alat Kebersihan",
     "gambar": "https://static-tokodaring.tisera.id/prod/images/produk_gambar/687f1bbd9a897.jpg"
+  },
+  {
+    "nama": "Stella Matic",
+    "varian": "Mesin+Refill",
+    "kategori": "Alat Kebersihan",
+    "gambar": null
+  },
+  {
+    "nama": "Stella Matic",
+    "varian": "Refill",
+    "kategori": "Alat Kebersihan",
+    "gambar": null
   },
   {
     "nama": "Sumber Ayu",
@@ -4741,12 +4819,6 @@ const productsData = [
     "gambar": "https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcT-tueiqU_ZKBiKBNFXvPoMOwF2_jXuKHDUPeXZQd1QDBVwu0mCkzlDcYC3os2Ul9-3MtoULLadLHl8igPjwgvOxkgJdZkUp2sOmva08h82&usqp=CAc"
   },
   {
-    "nama": "Sunscreen Aqua",
-    "varian": null,
-    "kategori": "Kosmetik",
-    "gambar": "https://nihonmart.id/pub/media/catalog/product/cache/8a3fa81d90974d9a7299f2eff309979f/w/h/whitening_milk_3-min.png"
-  },
-  {
     "nama": "Sunscreen Azarine 40ml",
     "varian": "SPF 35",
     "kategori": "Kosmetik",
@@ -4771,6 +4843,18 @@ const productsData = [
     "gambar": "https://down-id.img.susercontent.com/file/id-11134207-7r98v-lwi95qrj1926c4"
   },
   {
+    "nama": "Sunscreen Garnier",
+    "varian": "SPF 35",
+    "kategori": "Kosmetik",
+    "gambar": null
+  },
+  {
+    "nama": "Sunscreen Garnier",
+    "varian": "SPF 50",
+    "kategori": "Kosmetik",
+    "gambar": null
+  },
+  {
     "nama": "Sunscreen Madame Gie",
     "varian": null,
     "kategori": "Kosmetik",
@@ -4787,6 +4871,12 @@ const productsData = [
     "varian": null,
     "kategori": "Kosmetik",
     "gambar": "https://down-id.img.susercontent.com/file/sg-11134201-23020-pisnrg907mnv82"
+  },
+  {
+    "nama": "Sunscreen Skin Aqua",
+    "varian": null,
+    "kategori": "Kosmetik",
+    "gambar": "https://nihonmart.id/pub/media/catalog/product/cache/8a3fa81d90974d9a7299f2eff309979f/w/h/whitening_milk_3-min.png"
   },
   {
     "nama": "Sunscreen Wardah SPF 35",
@@ -4909,28 +4999,40 @@ const productsData = [
     "gambar": "https://cf.shopee.co.id/file/id-11134207-7rbk7-m7fzhgp2vmx06b"
   },
   {
+    "nama": "Timungan",
+    "varian": "Kecil",
+    "kategori": "Kosmetik",
+    "gambar": "https://cf.shopee.co.id/file/id-11134207-7rbk7-m7fzhgp2vmx06b"
+  },
+  {
     "nama": "Tisu",
     "varian": "Jolly Kecil",
     "kategori": "Alat Kebersihan",
-    "gambar": "img/tisu.jpg"
+    "gambar": null
   },
   {
     "nama": "Tisu",
     "varian": "Paseo Kecil isi 6",
     "kategori": "Alat Kebersihan",
-    "gambar": "img/tisu.jpg"
+    "gambar": null
   },
   {
     "nama": "Tisu",
-    "varian": "Paseo Besar",
+    "varian": "Paseo Bantal",
     "kategori": "Alat Kebersihan",
-    "gambar": "img/tisu.jpg"
+    "gambar": null
   },
   {
     "nama": "Tisu",
-    "varian": "Montis Besar",
+    "varian": "Montis Bantal",
     "kategori": "Alat Kebersihan",
-    "gambar": "img/tisu.jpg"
+    "gambar": null
+  },
+  {
+    "nama": "Tisu",
+    "varian": "Nice Bantal",
+    "kategori": "Alat Kebersihan",
+    "gambar": null
   },
   {
     "nama": "Tisu Basah Mitu",
@@ -5326,13 +5428,25 @@ const productsData = [
     "nama": "Wardah eye expert",
     "varian": "Expert Mascara",
     "kategori": "Kosmetik",
-    "gambar": "https://bimg.akulaku.net/goods/spu/3930679a0f064afcb80ad24096b60f050490.jpg?w=726&q=80&fit=1"
+    "gambar": null
   },
   {
     "nama": "Wardah eye expert",
     "varian": "Perfectcurl Mascara",
     "kategori": "Kosmetik",
-    "gambar": "https://bimg.akulaku.net/goods/spu/3930679a0f064afcb80ad24096b60f050490.jpg?w=726&q=80&fit=1"
+    "gambar": null
+  },
+  {
+    "nama": "Wardah eye expert",
+    "varian": "Eyeshadow",
+    "kategori": "Kosmetik",
+    "gambar": null
+  },
+  {
+    "nama": "Wardah eye expert",
+    "varian": "Liquid liner",
+    "kategori": "Kosmetik",
+    "gambar": null
   },
   {
     "nama": "Wardah Eye Expert optimum liner",
@@ -5395,6 +5509,12 @@ const productsData = [
     "gambar": "https://img.lazcdn.com/g/p/42b21af2f8085c48a14c02d9babc0ada.jpg_960x960q80.jpg_.webp"
   },
   {
+    "nama": "Wardah Lightening Extra Cover Refill",
+    "varian": null,
+    "kategori": "Kosmetik",
+    "gambar": null
+  },
+  {
     "nama": "Wardah lightening face toner 125ml",
     "varian": null,
     "kategori": "Kosmetik",
@@ -5449,22 +5569,22 @@ const productsData = [
     "gambar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRQQOAETe-r7Rv8OrjSqZREdHTFzgxKXE2q3li-Fou12wGKCekb5oGrZV4&s=10"
   },
   {
-    "nama": "Wardah luminous",
+    "nama": "Wardah Luminous",
     "varian": "Refill",
     "kategori": "Kosmetik",
-    "gambar": "https://img.lazcdn.com/g/ff/kf/S8751468261324e55b79520270ea61263g.jpg_720x720q80.jpg"
+    "gambar": null
   },
   {
-    "nama": "Wardah luminous",
+    "nama": "Wardah Luminous",
     "varian": "Two way cake",
     "kategori": "Kosmetik",
-    "gambar": "https://img.lazcdn.com/g/ff/kf/S8751468261324e55b79520270ea61263g.jpg_720x720q80.jpg"
+    "gambar": null
   },
   {
-    "nama": "Wardah Luminous Face Powder 30g",
-    "varian": null,
+    "nama": "Wardah Luminous",
+    "varian": "Face Powder 30g",
     "kategori": "Kosmetik",
-    "gambar": "https://images.tokopedia.net/img/cache/700/VqbcmM/2023/9/27/c5e28274-df68-40a0-99d0-b565b16a7a6a.jpg"
+    "gambar": null
   },
   {
     "nama": "Wardah Luminous Liquid Foundation 35ml",
@@ -5521,10 +5641,40 @@ const productsData = [
     "gambar": "https://img.lazcdn.com/g/p/ad19b1f61adb5270f3aa364d63ea3834.jpg_720x720q80.jpg"
   },
   {
+    "nama": "Wardah Scentsation",
+    "varian": "Body mist",
+    "kategori": "Parfum",
+    "gambar": null
+  },
+  {
+    "nama": "Wardah Scentsation",
+    "varian": "Eau De Toilette",
+    "kategori": "Parfum",
+    "gambar": null
+  },
+  {
     "nama": "Wipol botol 450ml",
     "varian": null,
     "kategori": "Alat Kebersihan",
     "gambar": "https://media.monotaro.id/mid01/big/Alat%20%26%20Kebutuhan%20Kebersihan/Pembersih%20Lantai/Pembersih%20Serbaguna/Wipol%20Karbol%20Cemara/Wipol%20Karbol%20Cemara%20Bottle%20450ml%201pc/3jS031990127-2.jpg"
+  },
+  {
+    "nama": "Xi Xiu Divane",
+    "varian": "Mascara",
+    "kategori": "Kosmetik",
+    "gambar": null
+  },
+  {
+    "nama": "Xi Xiu Divane",
+    "varian": "Eyeliner",
+    "kategori": "Kosmetik",
+    "gambar": null
+  },
+  {
+    "nama": "Xi Xiu Divane",
+    "varian": "Mascara+Eyeliner",
+    "kategori": "Kosmetik",
+    "gambar": null
   },
   {
     "nama": "Zwitsal 2in1",
