@@ -19,24 +19,6 @@ const productsData = [
     "gambar": "https://id-test-11.slatic.net/p/84fdd2ba2a32ab848af955a032886fa5.jpg"
   },
   {
-    "nama": "Air Mawar",
-    "varian": "100ml",
-    "kategori": "Kosmetik",
-    "gambar": "https://down-id.img.susercontent.com/file/a5b0f10dea28e1a51c24aad6a123243d"
-  },
-  {
-    "nama": "Air Mawar",
-    "varian": "200ml",
-    "kategori": "Kosmetik",
-    "gambar": "https://down-id.img.susercontent.com/file/a5b0f10dea28e1a51c24aad6a123243d"
-  },
-  {
-    "nama": "Air Mawar",
-    "varian": "Face Milk",
-    "kategori": "Kosmetik",
-    "gambar": "https://down-id.img.susercontent.com/file/a5b0f10dea28e1a51c24aad6a123243d"
-  },
-  {
     "nama": "Alat Tulis",
     "varian": "Pulpen Snowman",
     "kategori": "Alat",
@@ -89,12 +71,6 @@ const productsData = [
     "varian": null,
     "kategori": "Kosmetik",
     "gambar": null
-  },
-  {
-    "nama": "Asepso",
-    "varian": null,
-    "kategori": "Sabun",
-    "gambar": "https://favo.id/cdn/shop/files/ASPTUB1001_Asepso-Plus-Antiseptic-Bar-Soap---80-gr.jpg?v=1757320358"
   },
   {
     "nama": "Aulia Body Lotion",
@@ -157,28 +133,28 @@ const productsData = [
     "gambar": null
   },
   {
-    "nama": "Balsem geliga",
-    "varian": "10g",
+    "nama": "Balsem",
+    "varian": "Lang 10g",
     "kategori": "Kosmetik",
-    "gambar": "https://d3bbrrd0qs69m4.cloudfront.net/images/product/apotek_online_k24klik_20201204093827359225_GELIGA-20G.jpg"
+    "gambar": null
   },
   {
-    "nama": "Balsem geliga",
-    "varian": "20g",
+    "nama": "Balsem",
+    "varian": "Lang 20g",
     "kategori": "Kosmetik",
-    "gambar": "https://d3bbrrd0qs69m4.cloudfront.net/images/product/apotek_online_k24klik_20201204093827359225_GELIGA-20G.jpg"
+    "gambar": null
   },
   {
-    "nama": "Balsem Lang",
-    "varian": "10g",
+    "nama": "Balsem",
+    "varian": "Geliga 10g",
     "kategori": "Kosmetik",
-    "gambar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT29gsDoNM2e94C0T1NbE-ua8Nvq9Z82duyV65_lzsdrFO8pX9SDO84AvI&s=10"
+    "gambar": null
   },
   {
-    "nama": "Balsem Lang",
-    "varian": "20g",
+    "nama": "Balsem",
+    "varian": "Geliga 20g",
     "kategori": "Kosmetik",
-    "gambar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT29gsDoNM2e94C0T1NbE-ua8Nvq9Z82duyV65_lzsdrFO8pX9SDO84AvI&s=10"
+    "gambar": null
   },
   {
     "nama": "Baterai ABC",
@@ -241,12 +217,6 @@ const productsData = [
     "gambar": "https://img.mbizmarket.co.id/products/thumbs/800x800/2022/01/20/2b8bc1e6c28a63bb5c222bae9aad0349.jpg"
   },
   {
-    "nama": "Bedak Air mancur Nirmala sari",
-    "varian": null,
-    "kategori": "Kosmetik",
-    "gambar": "https://img.lazcdn.com/g/ff/kf/Sb20569403e9340d5a7adbcf05fef3e353.jpg_720x720q80.jpg"
-  },
-  {
     "nama": "Bedak Caladine",
     "varian": "100g",
     "kategori": "Kosmetik",
@@ -283,10 +253,28 @@ const productsData = [
     "gambar": "https://id-test-11.slatic.net/p/bedc1ed4bb08595d7d92606fc47269a7.jpg"
   },
   {
-    "nama": "Bedak dingin Bunga Tanjung",
-    "varian": null,
+    "nama": "Bedak dingin",
+    "varian": "Bunga Tanjung",
     "kategori": "Kosmetik",
-    "gambar": "https://cf.shopee.co.id/file/4197268326ba96755cb880497686ecf1"
+    "gambar": null
+  },
+  {
+    "nama": "Bedak dingin",
+    "varian": "Sari Bengkoang",
+    "kategori": "Kosmetik",
+    "gambar": null
+  },
+  {
+    "nama": "Bedak dingin",
+    "varian": "Putih Salju",
+    "kategori": "Kosmetik",
+    "gambar": null
+  },
+  {
+    "nama": "Bedak dingin",
+    "varian": "Air Mancur Nirmalasari",
+    "kategori": "Kosmetik",
+    "gambar": null
   },
   {
     "nama": "Bedak Emina",
@@ -413,12 +401,6 @@ const productsData = [
     "varian": null,
     "kategori": "Kosmetik",
     "gambar": "https://img.lazcdn.com/g/p/14d85023b5e9862b9da9330d9452a9ca.jpg_720x720q80.jpg"
-  },
-  {
-    "nama": "Bedak Sari bengkoang",
-    "varian": null,
-    "kategori": "Kosmetik",
-    "gambar": "https://img.lazcdn.com/g/p/b005e11f41b577efe8df75e12454ccae.jpg_720x720q80.jpg"
   },
   {
     "nama": "Bedak Sari Rias",
@@ -817,10 +799,22 @@ const productsData = [
     "gambar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQgTFu05rMFmv-UO4YanYPQFaE5mnXY80ycDUhswihMjkcs2UAbn1AY3Uqe&s=10"
   },
   {
-    "nama": "Cream Emina",
-    "varian": null,
+    "nama": "Cream Dr.Pure",
+    "varian": "Sabun Batang",
     "kategori": "Kosmetik",
-    "gambar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQs6d5x1sMWjj39iNaJvHypwntbInZeZbTYxgYlG_-NTQ&s=10"
+    "gambar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQgTFu05rMFmv-UO4YanYPQFaE5mnXY80ycDUhswihMjkcs2UAbn1AY3Uqe&s=10"
+  },
+  {
+    "nama": "Cream Emina",
+    "varian": "Moisturizing",
+    "kategori": "Kosmetik",
+    "gambar": null
+  },
+  {
+    "nama": "Cream Emina",
+    "varian": "Tone Up",
+    "kategori": "Kosmetik",
+    "gambar": null
   },
   {
     "nama": "Cream Fair lovely",
@@ -1015,18 +1009,6 @@ const productsData = [
     "gambar": "https://img.lazcdn.com/g/p/92878cecb4d1549441b92b52a049c8d5.jpg_720x720q80.jpg"
   },
   {
-    "nama": "Dolby",
-    "varian": "Panjang",
-    "kategori": "Kosmetik",
-    "gambar": "https://raw.githubusercontent.com/syafiizaa/katalog/refs/heads/main/img/dolby.jpg"
-  },
-  {
-    "nama": "Dolby",
-    "varian": "Pendek",
-    "kategori": "Kosmetik",
-    "gambar": "https://raw.githubusercontent.com/syafiizaa/katalog/refs/heads/main/img/dolby.jpg"
-  },
-  {
     "nama": "Doremi kids cologne",
     "varian": "100ml",
     "kategori": "Parfum",
@@ -1060,19 +1042,13 @@ const productsData = [
     "nama": "Emina Bright Stuff",
     "varian": "Face Toner 100ml",
     "kategori": "Kosmetik",
-    "gambar": "img/emina.jpg"
+    "gambar": null
   },
   {
     "nama": "Emina Bright Stuff",
     "varian": "Micellar Water 100ml",
     "kategori": "Kosmetik",
-    "gambar": "img/emina.jpg"
-  },
-  {
-    "nama": "Emina Bright Stuff",
-    "varian": "Cream",
-    "kategori": "Kosmetik",
-    "gambar": "img/emina.jpg"
+    "gambar": null
   },
   {
     "nama": "Emina face wash",
@@ -1939,36 +1915,6 @@ const productsData = [
     "gambar": "https://id-test-11.slatic.net/p/02afe90037a13f6b2ca5a24e7785f948.jpg"
   },
   {
-    "nama": "Kiwi cair",
-    "varian": "30ml",
-    "kategori": "Alat",
-    "gambar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTts8KwNwj5k1rQKMSVkZhh_zdAOZw3nE7ND60ZTCvSVWqQjy-IzrFBMqc&s=10"
-  },
-  {
-    "nama": "Kiwi cair",
-    "varian": "75ml",
-    "kategori": "Alat",
-    "gambar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTts8KwNwj5k1rQKMSVkZhh_zdAOZw3nE7ND60ZTCvSVWqQjy-IzrFBMqc&s=10"
-  },
-  {
-    "nama": "Kiwi kaleng",
-    "varian": "100g",
-    "kategori": "Alat",
-    "gambar": "https://img.lazcdn.com/g/p/df6f01149553023b7ac77da5db3da7b1.jpg_960x960q80.jpg_.webp"
-  },
-  {
-    "nama": "Kiwi kaleng",
-    "varian": "17g",
-    "kategori": "Alat",
-    "gambar": "https://img.lazcdn.com/g/p/df6f01149553023b7ac77da5db3da7b1.jpg_960x960q80.jpg_.webp"
-  },
-  {
-    "nama": "Kiwi kaleng",
-    "varian": "45g",
-    "kategori": "Alat",
-    "gambar": "https://img.lazcdn.com/g/p/df6f01149553023b7ac77da5db3da7b1.jpg_960x960q80.jpg_.webp"
-  },
-  {
     "nama": "Korek telinga lampu",
     "varian": null,
     "kategori": "Alat",
@@ -2051,6 +1997,18 @@ const productsData = [
     "varian": null,
     "kategori": "Kosmetik",
     "gambar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTU04lmtcyemL85m74mA6U1PJ7FZU-34dIcktmietCzBg&s=10"
+  },
+  {
+    "nama": "Lipstik Dolby",
+    "varian": "Panjang",
+    "kategori": "Kosmetik",
+    "gambar": "https://raw.githubusercontent.com/syafiizaa/katalog/refs/heads/main/img/dolby.jpg"
+  },
+  {
+    "nama": "Lipstik Dolby",
+    "varian": "Pendek",
+    "kategori": "Kosmetik",
+    "gambar": "https://raw.githubusercontent.com/syafiizaa/katalog/refs/heads/main/img/dolby.jpg"
   },
   {
     "nama": "Lipstik Skiva no.500",
@@ -2273,12 +2231,6 @@ const productsData = [
     "varian": "Jumbo",
     "kategori": "Kosmetik",
     "gambar": "https://cf.shopee.co.id/file/535db97cf720105ffbfca7cc024a0188"
-  },
-  {
-    "nama": "Marie jos 70ml",
-    "varian": null,
-    "kategori": "Parfum",
-    "gambar": "https://img.lazcdn.com/g/p/b261506ae6169be853eea025a05a3024.jpg_720x720q80.jpg"
   },
   {
     "nama": "Marina Compact Powder",
@@ -3259,22 +3211,22 @@ const productsData = [
     "gambar": "https://id-test-11.slatic.net/p/4f5f7665c764804abdefb0d13463349c.png"
   },
   {
-    "nama": "Poise Facial Foam",
-    "varian": null,
-    "kategori": "Sabun",
-    "gambar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS25vNIUPd1cJetYav8O7ptMc3cqY4HIzTLcz9lXOOGzQ&s=10"
+    "nama": "Ponds Age Miracle",
+    "varian": "10g Day",
+    "kategori": "Kosmetik",
+    "gambar": null
   },
   {
-    "nama": "Ponds Age Miracle 10g",
-    "varian": "Day",
+    "nama": "Ponds Age Miracle",
+    "varian": "10g Night",
     "kategori": "Kosmetik",
-    "gambar": "https://laz-img-sg.alicdn.com/p/fca5242b53fabe0bb1b51014697cd8ca.jpg"
+    "gambar": null
   },
   {
-    "nama": "Ponds Age Miracle 10g",
-    "varian": "Night",
+    "nama": "Ponds Age Miracle",
+    "varian": "Sabun Muka",
     "kategori": "Kosmetik",
-    "gambar": "https://laz-img-sg.alicdn.com/p/fca5242b53fabe0bb1b51014697cd8ca.jpg"
+    "gambar": null
   },
   {
     "nama": "Ponds cream sachet",
@@ -3461,12 +3413,6 @@ const productsData = [
     "varian": null,
     "kategori": "Parfum",
     "gambar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQuJO4zM-z8eFFxMrPf1PdCYou8Ofsemh5p63_wTCEI7w&s=10"
-  },
-  {
-    "nama": "Putih Salju",
-    "varian": null,
-    "kategori": "Kosmetik",
-    "gambar": "https://id-test-11.slatic.net/p/ebdff4e5632c91fd6435430f318e4b01.jpg"
   },
   {
     "nama": "Rapika",
@@ -3805,6 +3751,12 @@ const productsData = [
     "gambar": "https://raw.githubusercontent.com/syafiizaa/katalog/refs/heads/main/img/sabun%20batang%20dws.jpg"
   },
   {
+    "nama": "Sabun batang",
+    "varian": "Asepso",
+    "kategori": "Sabun",
+    "gambar": "https://raw.githubusercontent.com/syafiizaa/katalog/refs/heads/main/img/sabun%20batang%20dws.jpg"
+  },
+  {
     "nama": "Sabun batang Bayi",
     "varian": "Cussons",
     "kategori": "Baby Care",
@@ -3839,12 +3791,6 @@ const productsData = [
     "varian": "550ml",
     "kategori": "Sabun",
     "gambar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSWUJQyvZJ4f2pPaWRjV3_foZLT4dzodWMKyEfviI8low&s=10"
-  },
-  {
-    "nama": "Sabun Dr.Pure",
-    "varian": null,
-    "kategori": "Sabun",
-    "gambar": "https://cf.shopee.co.id/file/2c8596a36882a699b63ccfc96b03392f"
   },
   {
     "nama": "Sabun Fair lovely",
@@ -4118,12 +4064,6 @@ const productsData = [
   },
   {
     "nama": "Sabun Ponds 100ml",
-    "varian": "Age Miracle",
-    "kategori": "Sabun",
-    "gambar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcReaOH5VSyu-qsm389lYka2-wa2Fc2NbWL420Ib1e38Bw&s=10"
-  },
-  {
-    "nama": "Sabun Ponds 100ml",
     "varian": "Hitam",
     "kategori": "Sabun",
     "gambar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcReaOH5VSyu-qsm389lYka2-wa2Fc2NbWL420Ib1e38Bw&s=10"
@@ -4253,6 +4193,36 @@ const productsData = [
     "varian": "Top Lady",
     "kategori": "Kosmetik",
     "gambar": "img/semir.jpg"
+  },
+  {
+    "nama": "Semir Sepatu Kiwi",
+    "varian": "Cair 30ml",
+    "kategori": "Alat",
+    "gambar": null
+  },
+  {
+    "nama": "Semir Sepatu Kiwi",
+    "varian": "Cair 75ml",
+    "kategori": "Alat",
+    "gambar": null
+  },
+  {
+    "nama": "Semir Sepatu Kiwi",
+    "varian": "Kaleng 17g",
+    "kategori": "Alat",
+    "gambar": null
+  },
+  {
+    "nama": "Semir Sepatu Kiwi",
+    "varian": "Kaleng 45g",
+    "kategori": "Alat",
+    "gambar": null
+  },
+  {
+    "nama": "Semir Sepatu Kiwi",
+    "varian": "Kaleng 100g",
+    "kategori": "Alat",
+    "gambar": null
   },
   {
     "nama": "Serum",
@@ -5263,6 +5233,24 @@ const productsData = [
     "gambar": "https://laz-img-sg.alicdn.com/p/c11e65e42767de0e7a67f162779881f4.jpg"
   },
   {
+    "nama": "Viva Air Mawar",
+    "varian": "100ml",
+    "kategori": "Kosmetik",
+    "gambar": "https://down-id.img.susercontent.com/file/a5b0f10dea28e1a51c24aad6a123243d"
+  },
+  {
+    "nama": "Viva Air Mawar",
+    "varian": "200ml",
+    "kategori": "Kosmetik",
+    "gambar": "https://down-id.img.susercontent.com/file/a5b0f10dea28e1a51c24aad6a123243d"
+  },
+  {
+    "nama": "Viva Air Mawar",
+    "varian": "Face Milk",
+    "kategori": "Kosmetik",
+    "gambar": "https://down-id.img.susercontent.com/file/a5b0f10dea28e1a51c24aad6a123243d"
+  },
+  {
     "nama": "Viva Compact Powder",
     "varian": null,
     "kategori": "Kosmetik",
@@ -5347,22 +5335,22 @@ const productsData = [
     "gambar": "https://down-id.img.susercontent.com/file/74bd44b5d68b74d7eadb645898186070"
   },
   {
-    "nama": "Wardah aloe gel multifunction 100ml",
-    "varian": null,
+    "nama": "Wardah Aloe vera",
+    "varian": "Multifunction",
     "kategori": "Kosmetik",
     "gambar": "https://img.lazcdn.com/g/p/ff260a760a37c1553616ef4201145644.png_960x960q80.png_.webp"
   },
   {
-    "nama": "Wardah aloe vera facial wash",
-    "varian": "100ml",
+    "nama": "Wardah Aloe vera",
+    "varian": "Facial Wash 60ml",
     "kategori": "Kosmetik",
-    "gambar": "https://down-id.img.susercontent.com/file/id-11134207-7r98q-luono0qle8tjdd"
+    "gambar": "https://img.lazcdn.com/g/p/ff260a760a37c1553616ef4201145644.png_960x960q80.png_.webp"
   },
   {
-    "nama": "Wardah aloe vera facial wash",
-    "varian": "60ml",
+    "nama": "Wardah Aloe vera",
+    "varian": "Facial Wash 100ml",
     "kategori": "Kosmetik",
-    "gambar": "https://down-id.img.susercontent.com/file/id-11134207-7r98q-luono0qle8tjdd"
+    "gambar": "https://img.lazcdn.com/g/p/ff260a760a37c1553616ef4201145644.png_960x960q80.png_.webp"
   },
   {
     "nama": "Wardah body mist 100ml",
@@ -5425,28 +5413,28 @@ const productsData = [
     "gambar": "https://down-id.img.susercontent.com/file/id-11134207-7r98z-lr608zoqs89977"
   },
   {
-    "nama": "Wardah Crystal Secret cream 15g",
-    "varian": "Day",
+    "nama": "Wardah Crystal Secret cream",
+    "varian": "Day 15g",
     "kategori": "Kosmetik",
-    "gambar": "https://img.lazcdn.com/g/ff/kf/S97a4d8168c354731a669af2b359fbfecr.jpg_720x720q80.jpg"
+    "gambar": null
   },
   {
-    "nama": "Wardah Crystal Secret cream 15g",
-    "varian": "Night",
+    "nama": "Wardah Crystal Secret cream",
+    "varian": "Night 15g",
     "kategori": "Kosmetik",
-    "gambar": "https://img.lazcdn.com/g/ff/kf/S97a4d8168c354731a669af2b359fbfecr.jpg_720x720q80.jpg"
+    "gambar": null
   },
   {
-    "nama": "Wardah Crystal Secret cream 30g",
-    "varian": "Day",
+    "nama": "Wardah Crystal Secret cream",
+    "varian": "Day 30g",
     "kategori": "Kosmetik",
-    "gambar": "https://www.static-src.com/wcsstore/Indraprastha/images/catalog/full//87/MTA-60741030/wardah_wardah_crystal_secret_brightening_day_cream_30gr_-white_secret_day_cream_full01_svm41oxh.jpg"
+    "gambar": null
   },
   {
-    "nama": "Wardah Crystal Secret cream 30g",
-    "varian": "Night",
+    "nama": "Wardah Crystal Secret cream",
+    "varian": "Night 30g",
     "kategori": "Kosmetik",
-    "gambar": "https://www.static-src.com/wcsstore/Indraprastha/images/catalog/full//87/MTA-60741030/wardah_wardah_crystal_secret_brightening_day_cream_30gr_-white_secret_day_cream_full01_svm41oxh.jpg"
+    "gambar": null
   },
   {
     "nama": "Wardah Crystal Secret foaming cleanser 100ml",
@@ -5497,34 +5485,34 @@ const productsData = [
     "gambar": "https://d2jlkn4m127vak.cloudfront.net/medias/articles/medias-2-1689093134.webp"
   },
   {
-    "nama": "Wardah eye expert",
+    "nama": "Wardah Eye Expert",
     "varian": "Expert Mascara",
     "kategori": "Kosmetik",
     "gambar": null
   },
   {
-    "nama": "Wardah eye expert",
+    "nama": "Wardah Eye Expert",
     "varian": "Perfectcurl Mascara",
     "kategori": "Kosmetik",
     "gambar": null
   },
   {
-    "nama": "Wardah eye expert",
+    "nama": "Wardah Eye Expert",
     "varian": "Eyeshadow",
     "kategori": "Kosmetik",
     "gambar": null
   },
   {
-    "nama": "Wardah eye expert",
+    "nama": "Wardah Eye Expert",
     "varian": "Liquid liner",
     "kategori": "Kosmetik",
     "gambar": null
   },
   {
-    "nama": "Wardah Eye Expert optimum liner",
-    "varian": null,
+    "nama": "Wardah Eye Expert",
+    "varian": "Optimum Liner",
     "kategori": "Kosmetik",
-    "gambar": "https://d2jlkn4m127vak.cloudfront.net/medias/products/slides-2-1656144338.webp"
+    "gambar": null
   },
   {
     "nama": "Wardah Face mist",
@@ -5668,7 +5656,7 @@ const productsData = [
     "nama": "Wardah Perfect Bright Cream",
     "varian": null,
     "kategori": "Kosmetik",
-    "gambar": "https://favo.id/cdn/shop/products/WARWAJ1020_Wardah-Perfect-Bright-Moisturizer-SPF-28---20-mL-new-packaging_4625c5cd-35dc-428f-8b48-51ba50a1eab3.jpg?v=1757321323"
+    "gambar": null
   },
   {
     "nama": "Wardah Perfect Bright micellar water 100ml",
@@ -5677,28 +5665,28 @@ const productsData = [
     "gambar": "https://images.soco.id/98468dab-475c-4224-bb4a-c7cd2bf9ece9-image-2-1724210730859"
   },
   {
-    "nama": "Wardah renew you cream 15g",
-    "varian": "Day",
+    "nama": "Wardah renew you cream",
+    "varian": "Day 15g",
     "kategori": "Kosmetik",
-    "gambar": "https://cf.shopee.co.id/file/sg-11134201-22120-kspkrwnqxtkva4"
+    "gambar": null
   },
   {
-    "nama": "Wardah renew you cream 15g",
-    "varian": "Night",
+    "nama": "Wardah renew you cream",
+    "varian": "Night 15g",
     "kategori": "Kosmetik",
-    "gambar": "https://cf.shopee.co.id/file/sg-11134201-22120-kspkrwnqxtkva4"
+    "gambar": null
   },
   {
-    "nama": "Wardah renew you cream 30g",
-    "varian": "Day",
+    "nama": "Wardah renew you cream",
+    "varian": "Day 30g",
     "kategori": "Kosmetik",
-    "gambar": "https://img.lazcdn.com/g/p/6852f48d654e987395af0e2ad5c11268.jpg_720x720q80.jpg"
+    "gambar": null
   },
   {
-    "nama": "Wardah renew you cream 30g",
-    "varian": "Night",
+    "nama": "Wardah renew you cream",
+    "varian": "Night 30g",
     "kategori": "Kosmetik",
-    "gambar": "https://img.lazcdn.com/g/p/6852f48d654e987395af0e2ad5c11268.jpg_720x720q80.jpg"
+    "gambar": null
   },
   {
     "nama": "Wardah renew you facial wash 100ml",
