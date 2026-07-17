@@ -3211,6 +3211,12 @@ const productsData = [
     "gambar": "https://id-test-11.slatic.net/p/4f5f7665c764804abdefb0d13463349c.png"
   },
   {
+    "nama": "Pomade Kahf",
+    "varian": null,
+    "kategori": "Minyak Rambut",
+    "gambar": null
+  },
+  {
     "nama": "Ponds Age Miracle",
     "varian": "10g Day",
     "kategori": "Kosmetik",
@@ -4489,6 +4495,12 @@ const productsData = [
     "gambar": "https://id-live-01.slatic.net/p/22014f916bb2298865af226d3b93c8f5.jpg"
   },
   {
+    "nama": "Sikat Gigi Total",
+    "varian": null,
+    "kategori": "Alat Kebersihan",
+    "gambar": null
+  },
+  {
     "nama": "Sikat Kawat cap kodok",
     "varian": null,
     "kategori": "Alat Kebersihan",
@@ -4897,6 +4909,12 @@ const productsData = [
     "gambar": null
   },
   {
+    "nama": "Sunscreen Kahf",
+    "varian": null,
+    "kategori": "Kosmetik",
+    "gambar": null
+  },
+  {
     "nama": "Sunscreen Madame Gie",
     "varian": null,
     "kategori": "Kosmetik",
@@ -5249,6 +5267,12 @@ const productsData = [
     "varian": "Face Milk",
     "kategori": "Kosmetik",
     "gambar": "https://down-id.img.susercontent.com/file/a5b0f10dea28e1a51c24aad6a123243d"
+  },
+  {
+    "nama": "Viva Chip ON Lips",
+    "varian": null,
+    "kategori": "Kosmetik",
+    "gambar": null
   },
   {
     "nama": "Viva Compact Powder",
