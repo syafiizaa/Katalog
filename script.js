@@ -276,12 +276,13 @@ function renderProducts() {
         }
         
         // Search filter
-        if (currentSearch) {
-            const searchText = product.nama.toLowerCase();
-            if (!searchText.includes(currentSearch)) {
-                return false;
-            }
-        }
+				if (currentSearch) {
+			const nameMatch = product.nama.toLowerCase().includes(currentSearch);
+			const variantMatch = product.variants.some(v => v.toLowerCase().includes(currentSearch));
+			if (!nameMatch && !variantMatch) {
+				return false;
+    }
+}
         
         return true;
     });
