@@ -154,6 +154,7 @@ function initApp() {
 // ============================================================
 function setupEvents() {
     document.getElementById('searchInput').addEventListener('input', () => renderList());
+    document.getElementById('searchInput').addEventListener('focus', function() { this.select(); });
     document.getElementById('noImageChip').addEventListener('click', () => {
         filterNoImage = !filterNoImage;
         renderList();
@@ -309,7 +310,7 @@ function renderList() {
         if (filterBroken && !brokenNames.has(p.nama)) return false;
         if (editFilter === 'pending' && editedNames.has(p.nama)) return false;
         if (editFilter === 'edited' && !editedNames.has(p.nama)) return false;
-        if (search && !(p.nama.toLowerCase().includes(search) || (p.kategori || '').toLowerCase().includes(search))) return false;
+        if (search && !(p.nama.toLowerCase().includes(search) || (p.kategori || '').toLowerCase().includes(search) || (p.variants || []).some(v => v.toLowerCase().includes(search)))) return false;
         return true;
     });
 

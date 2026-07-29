@@ -115,6 +115,9 @@ function setupEventListeners() {
             currentSearch = e.target.value.toLowerCase().trim();
             renderProducts();
         }, 300));
+        searchInput.addEventListener('focus', function() {
+            this.select();
+        });
     }
     
     // Close variant modal on overlay click
