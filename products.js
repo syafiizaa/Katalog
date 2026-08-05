@@ -28,13 +28,13 @@ const productsData = [
     "nama": "Alat Tulis",
     "varian": "Pulpen Snowman",
     "kategori": "Alat",
-    "gambar": null
+    "gambar": "img/alat tulis.jpg"
   },
   {
     "nama": "Alat Tulis",
     "varian": "Spidol Permanent",
     "kategori": "Alat",
-    "gambar": null
+    "gambar": "img/alat tulis.jpg"
   },
   {
     "nama": "Aloe Vera Nature republic",
@@ -118,25 +118,25 @@ const productsData = [
     "nama": "Baby cologne 100ml",
     "varian": "Cussons",
     "kategori": "Baby Care",
-    "gambar": null
+    "gambar": "img/baby cologne.jpg"
   },
   {
     "nama": "Baby cologne 100ml",
     "varian": "Jhonsons",
     "kategori": "Baby Care",
-    "gambar": null
+    "gambar": "img/baby cologne.jpg"
   },
   {
     "nama": "Baby cologne 100ml",
     "varian": "Mitu 50ml",
     "kategori": "Baby Care",
-    "gambar": null
+    "gambar": "img/baby cologne.jpg"
   },
   {
     "nama": "Baby cologne 100ml",
     "varian": "Mitu 100ml",
     "kategori": "Baby Care",
-    "gambar": null
+    "gambar": "img/baby cologne.jpg"
   },
   {
     "nama": "Balsem",
@@ -166,25 +166,25 @@ const productsData = [
     "nama": "Baterai ABC",
     "varian": "AA",
     "kategori": "Baterai",
-    "gambar": null
+    "gambar": "https://id-test-11.slatic.net/p/f895db92fe263e0c745cbf0a10a6dcaa.png"
   },
   {
     "nama": "Baterai ABC",
     "varian": "AAA",
     "kategori": "Baterai",
-    "gambar": null
+    "gambar": "https://id-test-11.slatic.net/p/f895db92fe263e0c745cbf0a10a6dcaa.png"
   },
   {
     "nama": "Baterai ABC",
     "varian": "Alkaline isi 2",
     "kategori": "Baterai",
-    "gambar": null
+    "gambar": "https://id-test-11.slatic.net/p/f895db92fe263e0c745cbf0a10a6dcaa.png"
   },
   {
     "nama": "Baterai ABC",
     "varian": "Alkaline isi 6",
     "kategori": "Baterai",
-    "gambar": null
+    "gambar": "https://id-test-11.slatic.net/p/f895db92fe263e0c745cbf0a10a6dcaa.png"
   },
   {
     "nama": "Baygon",
@@ -238,25 +238,25 @@ const productsData = [
     "nama": "Bedak dingin",
     "varian": "Bunga Tanjung",
     "kategori": "Kosmetik",
-    "gambar": null
+    "gambar": "img/bedak dingin.jpg"
   },
   {
     "nama": "Bedak dingin",
     "varian": "Sari Bengkoang",
     "kategori": "Kosmetik",
-    "gambar": null
+    "gambar": "img/bedak dingin.jpg"
   },
   {
     "nama": "Bedak dingin",
     "varian": "Putih Salju",
     "kategori": "Kosmetik",
-    "gambar": null
+    "gambar": "img/bedak dingin.jpg"
   },
   {
     "nama": "Bedak dingin",
     "varian": "Air Mancur Nirmalasari",
     "kategori": "Kosmetik",
-    "gambar": null
+    "gambar": "img/bedak dingin.jpg"
   },
   {
     "nama": "Bedak Emina",
@@ -298,13 +298,13 @@ const productsData = [
     "nama": "Bedak Mirabella Chic",
     "varian": "TWC",
     "kategori": "Kosmetik",
-    "gambar": null
+    "gambar": "img/mirabella twc.jpg"
   },
   {
     "nama": "Bedak Mirabella Chic",
     "varian": "Refill",
     "kategori": "Kosmetik",
-    "gambar": null
+    "gambar": "img/mirabella twc.jpg"
   },
   {
     "nama": "Bedak Mitu",
@@ -370,31 +370,31 @@ const productsData = [
     "nama": "Bedak Pixy",
     "varian": "Refill",
     "kategori": "Kosmetik",
-    "gambar": null
+    "gambar": "img/pixy twc.jpg"
   },
   {
     "nama": "Bedak Pixy",
     "varian": "Two way cake",
     "kategori": "Kosmetik",
-    "gambar": null
+    "gambar": "img/pixy twc.jpg"
   },
   {
     "nama": "Bedak Pixy",
     "varian": "Perfect Last Refill",
     "kategori": "Kosmetik",
-    "gambar": null
+    "gambar": "img/pixy twc.jpg"
   },
   {
     "nama": "Bedak Pixy",
     "varian": "Perfect Last TWC",
     "kategori": "Kosmetik",
-    "gambar": null
+    "gambar": "img/pixy twc.jpg"
   },
   {
     "nama": "Bedak Pixy",
     "varian": "Weekend",
     "kategori": "Kosmetik",
-    "gambar": null
+    "gambar": "img/pixy twc.jpg"
   },
   {
     "nama": "Bedak Salicyl",
@@ -820,13 +820,13 @@ const productsData = [
     "nama": "Cream Emina",
     "varian": "Moisturizing",
     "kategori": "Kosmetik",
-    "gambar": null
+    "gambar": "img/emina fw.jpg"
   },
   {
     "nama": "Cream Emina",
     "varian": "Tone Up",
     "kategori": "Kosmetik",
-    "gambar": null
+    "gambar": "img/emina fw.jpg"
   },
   {
     "nama": "Cream Fair lovely",
@@ -958,13 +958,13 @@ const productsData = [
     "nama": "Cutton buds",
     "varian": "Valentine",
     "kategori": "Baby Care",
-    "gambar": null
+    "gambar": "img/cutton buds.jpg"
   },
   {
     "nama": "Cutton buds",
     "varian": "Josly",
     "kategori": "Baby Care",
-    "gambar": null
+    "gambar": "img/cutton buds.jpg"
   },
   {
     "nama": "Cutton buds cussons",
@@ -1054,13 +1054,13 @@ const productsData = [
     "nama": "Emina Bright Stuff",
     "varian": "Face Toner 100ml",
     "kategori": "Kosmetik",
-    "gambar": null
+    "gambar": "img/emina toner.jpg"
   },
   {
     "nama": "Emina Bright Stuff",
     "varian": "Micellar Water 100ml",
     "kategori": "Kosmetik",
-    "gambar": null
+    "gambar": "img/emina toner.jpg"
   },
   {
     "nama": "Emina face wash",
@@ -1108,13 +1108,13 @@ const productsData = [
     "nama": "Eskulin Kids 2in1",
     "varian": "Botol 280ml",
     "kategori": "Sabun",
-    "gambar": null
+    "gambar": "https://down-id.img.susercontent.com/file/sg-11134201-8225f-mhj2pmuumvpk1f"
   },
   {
     "nama": "Eskulin Kids 2in1",
     "varian": "Refill 280ml",
     "kategori": "Sabun",
-    "gambar": null
+    "gambar": "https://down-id.img.susercontent.com/file/sg-11134201-8225f-mhj2pmuumvpk1f"
   },
   {
     "nama": "Eskulin Kids Shampoo 200ml",
@@ -1204,31 +1204,31 @@ const productsData = [
     "nama": "Fresh Point Laundry",
     "varian": "Parfum 250ml",
     "kategori": "Parfum",
-    "gambar": null
+    "gambar": "img/laundry.jpg"
   },
   {
     "nama": "Fresh Point Laundry",
     "varian": "Parfum 500ml",
     "kategori": "Parfum",
-    "gambar": null
+    "gambar": "img/laundry.jpg"
   },
   {
     "nama": "Fresh Point Laundry",
     "varian": "Parfum 1 Liter",
     "kategori": "Parfum",
-    "gambar": null
+    "gambar": "img/laundry.jpg"
   },
   {
     "nama": "Fresh Point Laundry",
     "varian": "Pelicin 250ml",
     "kategori": "Parfum",
-    "gambar": null
+    "gambar": "img/laundry.jpg"
   },
   {
     "nama": "Fresh Point Laundry",
     "varian": "Pelicin 1 Liter",
     "kategori": "Parfum",
-    "gambar": null
+    "gambar": "img/laundry.jpg"
   },
   {
     "nama": "Freshcare",
@@ -1354,19 +1354,19 @@ const productsData = [
     "nama": "Gentle Gen",
     "varian": "Pouch 360ml",
     "kategori": "Alat Kebersihan",
-    "gambar": null
+    "gambar": "img/gentle.jpg"
   },
   {
     "nama": "Gentle Gen",
     "varian": "Botol 700ml",
     "kategori": "Alat Kebersihan",
-    "gambar": null
+    "gambar": "img/gentle.jpg"
   },
   {
     "nama": "Gentle Gen",
     "varian": "Sachet",
     "kategori": "Alat Kebersihan",
-    "gambar": null
+    "gambar": "img/gentle.jpg"
   },
   {
     "nama": "Godokan sirih",
@@ -1378,19 +1378,19 @@ const productsData = [
     "nama": "GPU",
     "varian": "30ml",
     "kategori": "Kosmetik",
-    "gambar": null
+    "gambar": "img/gpu.jpg"
   },
   {
     "nama": "GPU",
     "varian": "60ml",
     "kategori": "Kosmetik",
-    "gambar": null
+    "gambar": "img/gpu.jpg"
   },
   {
     "nama": "GPU",
     "varian": "Krim",
     "kategori": "Kosmetik",
-    "gambar": null
+    "gambar": "img/gpu.jpg"
   },
   {
     "nama": "Gunting",
@@ -1822,37 +1822,37 @@ const productsData = [
     "nama": "Kapas Muka",
     "varian": "Kharisma",
     "kategori": "Kosmetik",
-    "gambar": null
+    "gambar": "img/kapas.jpg"
   },
   {
     "nama": "Kapas Muka",
     "varian": "Modis Kecil",
     "kategori": "Kosmetik",
-    "gambar": null
+    "gambar": "img/kapas.jpg"
   },
   {
     "nama": "Kapas Muka",
     "varian": "Modis Besar",
     "kategori": "Kosmetik",
-    "gambar": null
+    "gambar": "img/kapas.jpg"
   },
   {
     "nama": "Kapas Muka",
     "varian": "Selection Bulat",
     "kategori": "Kosmetik",
-    "gambar": null
+    "gambar": "img/kapas.jpg"
   },
   {
     "nama": "Kapas Muka",
     "varian": "Selection Kecil",
     "kategori": "Kosmetik",
-    "gambar": null
+    "gambar": "img/kapas.jpg"
   },
   {
     "nama": "Kapas Muka",
     "varian": "Selection Besar",
     "kategori": "Kosmetik",
-    "gambar": null
+    "gambar": "img/kapas.jpg"
   },
   {
     "nama": "Kapur Ajaib",
@@ -1972,13 +1972,13 @@ const productsData = [
     "nama": "Latulipe Cosmetics",
     "varian": "Colagen",
     "kategori": "Kosmetik",
-    "gambar": null
+    "gambar": "img/latulipe.jpg"
   },
   {
     "nama": "Latulipe Cosmetics",
     "varian": "Bedak Refill",
     "kategori": "Kosmetik",
-    "gambar": null
+    "gambar": "img/latulipe.jpg"
   },
   {
     "nama": "Lem korea",
@@ -2164,25 +2164,25 @@ const productsData = [
     "nama": "Lulur Purbasari",
     "varian": "100g",
     "kategori": "Kosmetik",
-    "gambar": null
+    "gambar": "img/Purbasari.jpg"
   },
   {
     "nama": "Lulur Purbasari",
     "varian": "200g",
     "kategori": "Kosmetik",
-    "gambar": null
+    "gambar": "img/Purbasari.jpg"
   },
   {
     "nama": "Lulur Purbasari",
     "varian": "Pouch 500g",
     "kategori": "Kosmetik",
-    "gambar": null
+    "gambar": "img/Purbasari.jpg"
   },
   {
     "nama": "Lulur Purbasari",
     "varian": "Pouch 1000g",
     "kategori": "Kosmetik",
-    "gambar": null
+    "gambar": "img/Purbasari.jpg"
   },
   {
     "nama": "Lulur Shinzui",
@@ -2254,7 +2254,7 @@ const productsData = [
     "nama": "Mama Lemon",
     "varian": "Refill 690ml",
     "kategori": "Alat Kebersihan",
-    "gambar": null
+    "gambar": "https://yoline.co.id/media/products/ProductFotoproduk_If3Iicg.jpg"
   },
   {
     "nama": "Manjakani",
@@ -2356,7 +2356,7 @@ const productsData = [
     "nama": "Mascara Murah Merk Random",
     "varian": null,
     "kategori": "Kosmetik",
-    "gambar": null
+    "gambar": "https://filebroker-cdn.lazada.co.id/kf/S4c3c3c3f89f848a4b3d18b8b3251dd8ck.jpg"
   },
   {
     "nama": "Masker Muka Naturgo Hanasui",
@@ -2446,37 +2446,37 @@ const productsData = [
     "nama": "Minyak Kayu Putih Gajah",
     "varian": "15ml",
     "kategori": "Kosmetik",
-    "gambar": null
+    "gambar": "img/mkpg.jpg"
   },
   {
     "nama": "Minyak Kayu Putih Gajah",
     "varian": "30ml",
     "kategori": "Kosmetik",
-    "gambar": null
+    "gambar": "img/mkpg.jpg"
   },
   {
     "nama": "Minyak Kayu Putih Gajah",
     "varian": "60ml",
     "kategori": "Kosmetik",
-    "gambar": null
+    "gambar": "img/mkpg.jpg"
   },
   {
     "nama": "Minyak Kayu Putih Gajah",
     "varian": "120ml",
     "kategori": "Kosmetik",
-    "gambar": null
+    "gambar": "img/mkpg.jpg"
   },
   {
     "nama": "Minyak Kayu Putih Gajah",
     "varian": "210ml",
     "kategori": "Kosmetik",
-    "gambar": null
+    "gambar": "img/mkpg.jpg"
   },
   {
     "nama": "Minyak Kayu Putih Gajah",
     "varian": "Kaca",
     "kategori": "Kosmetik",
-    "gambar": null
+    "gambar": "img/mkpg.jpg"
   },
   {
     "nama": "Minyak Kayu Putih Lang",
@@ -2950,25 +2950,25 @@ const productsData = [
     "nama": "Pacar Arab",
     "varian": "Rani Kecil",
     "kategori": "Kosmetik",
-    "gambar": null
+    "gambar": "img/pacar arab.jpg"
   },
   {
     "nama": "Pacar Arab",
     "varian": "Rani Besar",
     "kategori": "Kosmetik",
-    "gambar": null
+    "gambar": "img/pacar arab.jpg"
   },
   {
     "nama": "Pacar Arab",
     "varian": "Chandini Kecil",
     "kategori": "Kosmetik",
-    "gambar": null
+    "gambar": "img/pacar arab.jpg"
   },
   {
     "nama": "Pacar Arab",
     "varian": "Chandini Besar",
     "kategori": "Kosmetik",
-    "gambar": null
+    "gambar": "img/pacar arab.jpg"
   },
   {
     "nama": "Pacar Henna gollecha",
@@ -3322,13 +3322,13 @@ const productsData = [
     "nama": "Pixy Foundation",
     "varian": "Stick",
     "kategori": "Kosmetik",
-    "gambar": null
+    "gambar": "img/found pixy.jpg"
   },
   {
     "nama": "Pixy Foundation",
     "varian": "Liquid",
     "kategori": "Kosmetik",
-    "gambar": null
+    "gambar": "img/found pixy.jpg"
   },
   {
     "nama": "Pixy Micellar Water",
@@ -3370,19 +3370,19 @@ const productsData = [
     "nama": "Ponds Age Miracle",
     "varian": "10g Day",
     "kategori": "Kosmetik",
-    "gambar": null
+    "gambar": "https://down-id.img.susercontent.com/file/id-11134207-7r98s-lqr9if8dwoy8b8"
   },
   {
     "nama": "Ponds Age Miracle",
     "varian": "10g Night",
     "kategori": "Kosmetik",
-    "gambar": null
+    "gambar": "https://down-id.img.susercontent.com/file/id-11134207-7r98s-lqr9if8dwoy8b8"
   },
   {
     "nama": "Ponds Age Miracle",
     "varian": "Sabun Muka",
     "kategori": "Kosmetik",
-    "gambar": null
+    "gambar": "https://down-id.img.susercontent.com/file/id-11134207-7r98s-lqr9if8dwoy8b8"
   },
   {
     "nama": "Ponds cream sachet",
@@ -3826,19 +3826,19 @@ const productsData = [
     "nama": "Rinso Cair",
     "varian": "510ml",
     "kategori": "Alat Kebersihan",
-    "gambar": null
+    "gambar": "img/rinso.jpg"
   },
   {
     "nama": "Rinso Cair",
     "varian": "700ml",
     "kategori": "Alat Kebersihan",
-    "gambar": null
+    "gambar": "img/rinso.jpg"
   },
   {
     "nama": "Rinso Cair",
     "varian": "Sachet isi 6",
     "kategori": "Alat Kebersihan",
-    "gambar": null
+    "gambar": "img/rinso.jpg"
   },
   {
     "nama": "Royale Sachet",
@@ -4294,91 +4294,103 @@ const productsData = [
     "nama": "Semir",
     "varian": "Bigen",
     "kategori": "Kosmetik",
-    "gambar": null
+    "gambar": "img/semir.jpg"
   },
   {
     "nama": "Semir",
     "varian": "Garnier",
     "kategori": "Kosmetik",
-    "gambar": null
+    "gambar": "img/semir.jpg"
   },
   {
     "nama": "Semir",
     "varian": "Hi top",
     "kategori": "Kosmetik",
-    "gambar": null
+    "gambar": "img/semir.jpg"
   },
   {
     "nama": "Semir",
-    "varian": "Miranda",
+    "varian": "Shampoo NYU",
     "kategori": "Kosmetik",
-    "gambar": null
+    "gambar": "img/semir.jpg"
   },
   {
     "nama": "Semir",
     "varian": "NYU",
     "kategori": "Kosmetik",
-    "gambar": null
+    "gambar": "img/semir.jpg"
   },
   {
     "nama": "Semir",
     "varian": "Tancho Bubuk",
     "kategori": "Kosmetik",
-    "gambar": null
+    "gambar": "img/semir.jpg"
   },
   {
     "nama": "Semir",
     "varian": "Tancho Cair",
     "kategori": "Kosmetik",
-    "gambar": null
+    "gambar": "img/semir.jpg"
   },
   {
     "nama": "Semir",
     "varian": "Top Lady",
     "kategori": "Kosmetik",
-    "gambar": null
+    "gambar": "img/semir.jpg"
   },
   {
     "nama": "Semir",
     "varian": "Cultusia",
     "kategori": "Kosmetik",
-    "gambar": null
+    "gambar": "img/semir.jpg"
+  },
+  {
+    "nama": "Semir",
+    "varian": "Shampoo Cultusia",
+    "kategori": "Kosmetik",
+    "gambar": "img/semir.jpg"
+  },
+  {
+    "nama": "Semir",
+    "varian": "Miranda",
+    "kategori": "Kosmetik",
+    "gambar": "img/semir.jpg"
   },
   {
     "nama": "Semir",
     "varian": "Mengkudu Bestway",
     "kategori": "Kosmetik",
-    "gambar": null
+    "gambar": "img/semir.jpg"
   },
   {
     "nama": "Semir Sepatu Kiwi",
     "varian": "Cair 30ml",
     "kategori": "Alat",
-    "gambar": null
+    "gambar": "https://img.lazcdn.com/g/ff/kf/S2d5de70a4fc6437d9df054cd7e4bcd5bz.jpg_720x720q80.jpg"
   },
   {
     "nama": "Semir Sepatu Kiwi",
     "varian": "Cair 75ml",
     "kategori": "Alat",
-    "gambar": null
+    "gambar": "https://img.lazcdn.com/g/ff/kf/S2d5de70a4fc6437d9df054cd7e4bcd5bz.jpg_720x720q80.jpg"
   },
   {
     "nama": "Semir Sepatu Kiwi",
     "varian": "Kaleng 17g",
     "kategori": "Alat",
-    "gambar": null
+    "gambar": "https://img.lazcdn.com/g/ff/kf/S2d5de70a4fc6437d9df054cd7e4bcd5bz.jpg_720x720q80.jpg"
   },
   {
     "nama": "Semir Sepatu Kiwi",
     "varian": "Kaleng 45g",
     "kategori": "Alat",
-    "gambar": null
+    "gambar": "https://img.lazcdn.com/g/ff/kf/S2d5de70a4fc6437d9df054cd7e4bcd5bz.jpg_720x720q80.jpg"
   },
   {
     "nama": "Semir Sepatu Kiwi",
     "varian": "Kaleng 100g",
     "kategori": "Alat",
-    "gambar": null
+    "gambar": "https://img.lazcdn.com/g/ff/kf/S2d5de70a4fc6437d9df054cd7e4bcd5bz.jpg_720x720q80.jpg"
   },
   {
     "nama": "Serum",
@@ -4762,37 +4774,37 @@ const productsData = [
     "nama": "So klin lantai",
     "varian": "Botol 400ml",
     "kategori": "Alat Kebersihan",
-    "gambar": null
+    "gambar": "img/lantai.jpg"
   },
   {
     "nama": "So klin lantai",
     "varian": "Botol 800ml",
     "kategori": "Alat Kebersihan",
-    "gambar": null
+    "gambar": "img/lantai.jpg"
   },
   {
     "nama": "So klin lantai",
     "varian": "Refill 310ml",
     "kategori": "Alat Kebersihan",
-    "gambar": null
+    "gambar": "img/lantai.jpg"
   },
   {
     "nama": "So klin lantai",
     "varian": "Refill 770ml",
     "kategori": "Alat Kebersihan",
-    "gambar": null
+    "gambar": "img/lantai.jpg"
   },
   {
     "nama": "So Klin Liquid",
     "varian": "720ml",
     "kategori": "Alat Kebersihan",
-    "gambar": null
+    "gambar": "img/soklin liquid.jpg"
   },
   {
     "nama": "So Klin Liquid",
     "varian": "Sachet",
     "kategori": "Alat Kebersihan",
-    "gambar": null
+    "gambar": "img/soklin liquid.jpg"
   },
   {
     "nama": "So Klin Pemutih",
@@ -4822,61 +4834,61 @@ const productsData = [
     "nama": "Softex Laurier",
     "varian": "Maxi 8",
     "kategori": "Kosmetik",
-    "gambar": null
+    "gambar": "img/softex.jpg"
   },
   {
     "nama": "Softex Laurier",
     "varian": "Maxi 20",
     "kategori": "Kosmetik",
-    "gambar": null
+    "gambar": "img/softex.jpg"
   },
   {
     "nama": "Softex Laurier",
     "varian": "Maxi Wing 8",
     "kategori": "Kosmetik",
-    "gambar": null
+    "gambar": "img/softex.jpg"
   },
   {
     "nama": "Softex Laurier",
     "varian": "Maxi Wing 20",
     "kategori": "Kosmetik",
-    "gambar": null
+    "gambar": "img/softex.jpg"
   },
   {
     "nama": "Softex Laurier",
     "varian": "Night 30cm 8",
     "kategori": "Kosmetik",
-    "gambar": null
+    "gambar": "img/softex.jpg"
   },
   {
     "nama": "Softex Laurier",
     "varian": "Night 30cm 16",
     "kategori": "Kosmetik",
-    "gambar": null
+    "gambar": "img/softex.jpg"
   },
   {
     "nama": "Softex Laurier",
     "varian": "Night 35cm 6",
     "kategori": "Kosmetik",
-    "gambar": null
+    "gambar": "img/softex.jpg"
   },
   {
     "nama": "Softex Laurier",
     "varian": "Night 35cm 12",
     "kategori": "Kosmetik",
-    "gambar": null
+    "gambar": "img/softex.jpg"
   },
   {
     "nama": "Sosoft",
     "varian": "Sachet",
     "kategori": "Alat Kebersihan",
-    "gambar": null
+    "gambar": "img/sosoft.jpg"
   },
   {
     "nama": "Sosoft",
     "varian": "Botol 700ml",
     "kategori": "Alat Kebersihan",
-    "gambar": null
+    "gambar": "img/sosoft.jpg"
   },
   {
     "nama": "Spons bedak",
@@ -4936,19 +4948,19 @@ const productsData = [
     "nama": "Staples",
     "varian": "Kenko Kecil",
     "kategori": "Alat",
-    "gambar": null
+    "gambar": "img/staples.jpg"
   },
   {
     "nama": "Staples",
     "varian": "Kenko Besar",
     "kategori": "Alat",
-    "gambar": null
+    "gambar": "img/staples.jpg"
   },
   {
     "nama": "Staples",
     "varian": "Greeble Kecil",
     "kategori": "Alat",
-    "gambar": null
+    "gambar": "img/staples.jpg"
   },
   {
     "nama": "Stella gantung",
@@ -4984,13 +4996,13 @@ const productsData = [
     "nama": "Stella Matic",
     "varian": "Mesin+Refill",
     "kategori": "Alat Kebersihan",
-    "gambar": null
+    "gambar": "img/smatic.jpg"
   },
   {
     "nama": "Stella Matic",
     "varian": "Refill",
     "kategori": "Alat Kebersihan",
-    "gambar": null
+    "gambar": "img/smatic.jpg"
   },
   {
     "nama": "Sumber Ayu",
@@ -5038,31 +5050,31 @@ const productsData = [
     "nama": "Sunlight",
     "varian": "Refill 210ml",
     "kategori": "Alat Kebersihan",
-    "gambar": null
+    "gambar": "img/sunlight.jpg"
   },
   {
     "nama": "Sunlight",
     "varian": "Refill 400ml",
     "kategori": "Alat Kebersihan",
-    "gambar": null
+    "gambar": "img/sunlight.jpg"
   },
   {
     "nama": "Sunlight",
     "varian": "Refill 650ml",
     "kategori": "Alat Kebersihan",
-    "gambar": null
+    "gambar": "img/sunlight.jpg"
   },
   {
     "nama": "Sunlight",
     "varian": "Refill 910ml",
     "kategori": "Alat Kebersihan",
-    "gambar": null
+    "gambar": "img/sunlight.jpg"
   },
   {
     "nama": "Sunlight",
     "varian": "Botol 675ml",
     "kategori": "Alat Kebersihan",
-    "gambar": null
+    "gambar": "img/sunlight.jpg"
   },
   {
     "nama": "Sunscreen Azarine 40ml",
@@ -5092,13 +5104,13 @@ const productsData = [
     "nama": "Sunscreen Garnier",
     "varian": "SPF 35",
     "kategori": "Kosmetik",
-    "gambar": null
+    "gambar": "img/garspf.jpg"
   },
   {
     "nama": "Sunscreen Garnier",
     "varian": "SPF 50",
     "kategori": "Kosmetik",
-    "gambar": null
+    "gambar": "img/garspf.jpg"
   },
   {
     "nama": "Sunscreen Kahf",
@@ -5224,13 +5236,13 @@ const productsData = [
     "nama": "Tempat Bedak Bayi",
     "varian": "Isi 1",
     "kategori": "Baby Care",
-    "gambar": null
+    "gambar": "img/bdkbayi.jpg"
   },
   {
     "nama": "Tempat Bedak Bayi",
     "varian": "Isi 2",
     "kategori": "Baby Care",
-    "gambar": null
+    "gambar": "img/bdkbayi.jpg"
   },
   {
     "nama": "Thai",
@@ -5260,31 +5272,37 @@ const productsData = [
     "nama": "Tisu",
     "varian": "Jolly Kecil",
     "kategori": "Alat Kebersihan",
-    "gambar": null
+    "gambar": "img/tisu.jpg"
   },
   {
     "nama": "Tisu",
     "varian": "Paseo Kecil isi 6",
     "kategori": "Alat Kebersihan",
-    "gambar": null
+    "gambar": "img/tisu.jpg"
   },
   {
     "nama": "Tisu",
     "varian": "Paseo Bantal",
     "kategori": "Alat Kebersihan",
-    "gambar": null
+    "gambar": "img/tisu.jpg"
   },
   {
     "nama": "Tisu",
     "varian": "Montis Bantal",
     "kategori": "Alat Kebersihan",
-    "gambar": null
+    "gambar": "img/tisu.jpg"
   },
   {
     "nama": "Tisu",
     "varian": "Nice Bantal",
     "kategori": "Alat Kebersihan",
-    "gambar": null
+    "gambar": "img/tisu.jpg"
+  },
+  {
+    "nama": "Tisu",
+    "varian": "Jolly Bantal",
+    "kategori": "Alat Kebersihan",
+    "gambar": "img/tisu.jpg"
   },
   {
     "nama": "Tisu Basah Mitu",
@@ -5632,25 +5650,25 @@ const productsData = [
     "nama": "Wardah Crystal Secret cream",
     "varian": "Day 15g",
     "kategori": "Kosmetik",
-    "gambar": null
+    "gambar": "https://down-id.img.susercontent.com/file/id-11134207-7ra0t-md1cmvhtwxq0db"
   },
   {
     "nama": "Wardah Crystal Secret cream",
     "varian": "Night 15g",
     "kategori": "Kosmetik",
-    "gambar": null
+    "gambar": "https://down-id.img.susercontent.com/file/id-11134207-7ra0t-md1cmvhtwxq0db"
   },
   {
     "nama": "Wardah Crystal Secret cream",
     "varian": "Day 30g",
     "kategori": "Kosmetik",
-    "gambar": null
+    "gambar": "https://down-id.img.susercontent.com/file/id-11134207-7ra0t-md1cmvhtwxq0db"
   },
   {
     "nama": "Wardah Crystal Secret cream",
     "varian": "Night 30g",
     "kategori": "Kosmetik",
-    "gambar": null
+    "gambar": "https://down-id.img.susercontent.com/file/id-11134207-7ra0t-md1cmvhtwxq0db"
   },
   {
     "nama": "Wardah Crystal Secret foaming cleanser 100ml",
@@ -5704,43 +5722,43 @@ const productsData = [
     "nama": "Wardah Eye Expert",
     "varian": "The Volume Expert Mascara",
     "kategori": "Kosmetik",
-    "gambar": null
+    "gambar": "img/eyeexpert.jpg"
   },
   {
     "nama": "Wardah Eye Expert",
     "varian": "Perfectcurl Mascara",
     "kategori": "Kosmetik",
-    "gambar": null
+    "gambar": "img/eyeexpert.jpg"
   },
   {
     "nama": "Wardah Eye Expert",
     "varian": "Eyeshadow",
     "kategori": "Kosmetik",
-    "gambar": null
+    "gambar": "img/eyeexpert.jpg"
   },
   {
     "nama": "Wardah Eye Expert",
     "varian": "Liquid liner",
     "kategori": "Kosmetik",
-    "gambar": null
+    "gambar": "img/eyeexpert.jpg"
   },
   {
     "nama": "Wardah Eye Expert",
     "varian": "Optimum Liner",
     "kategori": "Kosmetik",
-    "gambar": null
+    "gambar": "img/eyeexpert.jpg"
   },
   {
     "nama": "Wardah Eye Expert",
     "varian": "Aqua Lash Mascara",
     "kategori": "Kosmetik",
-    "gambar": null
+    "gambar": "img/eyeexpert.jpg"
   },
   {
     "nama": "Wardah Eye Expert",
     "varian": "Eyeliner Pencil",
     "kategori": "Kosmetik",
-    "gambar": null
+    "gambar": "img/eyeexpert.jpg"
   },
   {
     "nama": "Wardah Face mist",
@@ -5860,19 +5878,19 @@ const productsData = [
     "nama": "Wardah Luminous",
     "varian": "Refill",
     "kategori": "Kosmetik",
-    "gambar": null
+    "gambar": "img/wlumin.jpg"
   },
   {
     "nama": "Wardah Luminous",
     "varian": "Two way cake",
     "kategori": "Kosmetik",
-    "gambar": null
+    "gambar": "img/wlumin.jpg"
   },
   {
     "nama": "Wardah Luminous",
     "varian": "Face Powder 30g",
     "kategori": "Kosmetik",
-    "gambar": null
+    "gambar": "img/wlumin.jpg"
   },
   {
     "nama": "Wardah Luminous Liquid Foundation 35ml",
@@ -5896,25 +5914,25 @@ const productsData = [
     "nama": "Wardah renew you cream",
     "varian": "Day 15g",
     "kategori": "Kosmetik",
-    "gambar": null
+    "gambar": "https://down-id.img.susercontent.com/file/id-11134207-7rasg-m10zbdvzswiseb"
   },
   {
     "nama": "Wardah renew you cream",
     "varian": "Night 15g",
     "kategori": "Kosmetik",
-    "gambar": null
+    "gambar": "https://down-id.img.susercontent.com/file/id-11134207-7rasg-m10zbdvzswiseb"
   },
   {
     "nama": "Wardah renew you cream",
     "varian": "Day 30g",
     "kategori": "Kosmetik",
-    "gambar": null
+    "gambar": "https://down-id.img.susercontent.com/file/id-11134207-7rasg-m10zbdvzswiseb"
   },
   {
     "nama": "Wardah renew you cream",
     "varian": "Night 30g",
     "kategori": "Kosmetik",
-    "gambar": null
+    "gambar": "https://down-id.img.susercontent.com/file/id-11134207-7rasg-m10zbdvzswiseb"
   },
   {
     "nama": "Wardah renew you facial wash 100ml",
@@ -5932,55 +5950,55 @@ const productsData = [
     "nama": "Wardah Scentsation",
     "varian": "Body mist",
     "kategori": "Parfum",
-    "gambar": null
+    "gambar": "img/wscent.jpg"
   },
   {
     "nama": "Wardah Scentsation",
     "varian": "Eau De Toilette",
     "kategori": "Parfum",
-    "gambar": null
+    "gambar": "img/wscent.jpg"
   },
   {
     "nama": "Wipol",
     "varian": "Refill 190ml",
     "kategori": "Alat Kebersihan",
-    "gambar": null
+    "gambar": "img/wipol.jpg"
   },
   {
     "nama": "Wipol",
     "varian": "Refill 390ml",
     "kategori": "Alat Kebersihan",
-    "gambar": null
+    "gambar": "img/wipol.jpg"
   },
   {
     "nama": "Wipol",
     "varian": "Botol 430ml",
     "kategori": "Alat Kebersihan",
-    "gambar": null
+    "gambar": "img/wipol.jpg"
   },
   {
     "nama": "Wipol",
     "varian": "Botol 730ml",
     "kategori": "Alat Kebersihan",
-    "gambar": null
+    "gambar": "img/wipol.jpg"
   },
   {
     "nama": "Xi Xiu Divane",
     "varian": "Mascara",
     "kategori": "Kosmetik",
-    "gambar": null
+    "gambar": "img/xi xiu.jpg"
   },
   {
     "nama": "Xi Xiu Divane",
     "varian": "Eyeliner",
     "kategori": "Kosmetik",
-    "gambar": null
+    "gambar": "img/xi xiu.jpg"
   },
   {
     "nama": "Xi Xiu Divane",
     "varian": "Mascara+Eyeliner",
     "kategori": "Kosmetik",
-    "gambar": null
+    "gambar": "img/xi xiu.jpg"
   },
   {
     "nama": "Zwitsal 2in1",
