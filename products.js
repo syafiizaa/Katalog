@@ -13,6 +13,12 @@
 
 const productsData = [
   {
+    "nama": "AHA Booster EZ White",
+    "varian": null,
+    "kategori": "Kosmetik",
+    "gambar": "https://down-id.img.susercontent.com/file/id-11134207-7ra0u-mdfqxcpd3zws4f"
+  },
+  {
     "nama": "AHA mimi Thailand",
     "varian": null,
     "kategori": "Kosmetik",
@@ -179,30 +185,6 @@ const productsData = [
     "varian": "Alkaline isi 6",
     "kategori": "Baterai",
     "gambar": null
-  },
-  {
-    "nama": "Bayclin",
-    "varian": "1 Liter",
-    "kategori": "Alat Kebersihan",
-    "gambar": "https://down-id.img.susercontent.com/file/id-11134207-7ra0n-mcknyuavoy7jd8"
-  },
-  {
-    "nama": "Bayclin",
-    "varian": "100ml",
-    "kategori": "Alat Kebersihan",
-    "gambar": "https://down-id.img.susercontent.com/file/id-11134207-7ra0n-mcknyuavoy7jd8"
-  },
-  {
-    "nama": "Bayclin",
-    "varian": "200ml",
-    "kategori": "Alat Kebersihan",
-    "gambar": "https://down-id.img.susercontent.com/file/id-11134207-7ra0n-mcknyuavoy7jd8"
-  },
-  {
-    "nama": "Bayclin",
-    "varian": "500ml",
-    "kategori": "Alat Kebersihan",
-    "gambar": "https://down-id.img.susercontent.com/file/id-11134207-7ra0n-mcknyuavoy7jd8"
   },
   {
     "nama": "Baygon",
@@ -409,6 +391,12 @@ const productsData = [
     "gambar": null
   },
   {
+    "nama": "Bedak Pixy",
+    "varian": "Weekend",
+    "kategori": "Kosmetik",
+    "gambar": null
+  },
+  {
     "nama": "Bedak Salicyl",
     "varian": null,
     "kategori": "Kosmetik",
@@ -443,6 +431,12 @@ const productsData = [
     "varian": "Merah G55",
     "kategori": "Kosmetik",
     "gambar": "https://raw.githubusercontent.com/syafiizaa/katalog/refs/heads/main/img/bedak%20skiva.jpg"
+  },
+  {
+    "nama": "Bedak Spalding",
+    "varian": null,
+    "kategori": "Kosmetik",
+    "gambar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS9_2cu6T_IYQaXg0yK8OoBxUOH3p16tP7QCgyouqBivQLxjz9Bt81R6NP3&s=10"
   },
   {
     "nama": "Bellagio Body Spray 80ml",
@@ -734,7 +728,13 @@ const productsData = [
   },
   {
     "nama": "Closeup",
-    "varian": null,
+    "varian": "65g",
+    "kategori": "Odol",
+    "gambar": "https://assets.unileversolutions.com/v1/139440620.png"
+  },
+  {
+    "nama": "Closeup",
+    "varian": "160g",
     "kategori": "Odol",
     "gambar": "https://assets.unileversolutions.com/v1/139440620.png"
   },
@@ -752,7 +752,7 @@ const productsData = [
   },
   {
     "nama": "Conditioner Pantene",
-    "varian": "70ml",
+    "varian": "Biotin 70ml",
     "kategori": "Shampoo",
     "gambar": "https://www.static-src.com/wcsstore/Indraprastha/images/catalog/full/catalog-image/MTA-54572660/pantene_pantene_conditioner_160ml_silky_-_damage_-_hair_fall_full01_e12j1axd.jpg"
   },
@@ -1112,7 +1112,7 @@ const productsData = [
   },
   {
     "nama": "Eskulin Kids 2in1",
-    "varian": "Refill",
+    "varian": "Refill 280ml",
     "kategori": "Sabun",
     "gambar": null
   },
@@ -1711,6 +1711,12 @@ const productsData = [
     "gambar": "https://id-test-11.slatic.net/p/0aab19a75378fdb2418d9dd1089e8e4e.jpg"
   },
   {
+    "nama": "Jas Hujan Plastik",
+    "varian": null,
+    "kategori": "Kosmetik",
+    "gambar": "https://filebroker-cdn.lazada.co.id/kf/S6f24eba0f62c442380b276d6579796d2i.jpg"
+  },
+  {
     "nama": "Jepit baju",
     "varian": "Biasa",
     "kategori": "Alat",
@@ -1766,6 +1772,12 @@ const productsData = [
   },
   {
     "nama": "Jhonsons 2IN1 body wash",
+    "varian": "500ml",
+    "kategori": "Baby Care",
+    "gambar": "https://assets.babyzania.com/image/cache/catalog/1/awrara4r6awr54a6-800x800.jpg"
+  },
+  {
+    "nama": "Jhonsons 2IN1 body wash",
     "varian": "Refill 400ml",
     "kategori": "Baby Care",
     "gambar": "https://assets.babyzania.com/image/cache/catalog/1/awrara4r6awr54a6-800x800.jpg"
@@ -1814,7 +1826,13 @@ const productsData = [
   },
   {
     "nama": "Kapas Muka",
-    "varian": "Modis",
+    "varian": "Modis Kecil",
+    "kategori": "Kosmetik",
+    "gambar": null
+  },
+  {
+    "nama": "Kapas Muka",
+    "varian": "Modis Besar",
     "kategori": "Kosmetik",
     "gambar": null
   },
@@ -1832,7 +1850,7 @@ const productsData = [
   },
   {
     "nama": "Kapas Muka",
-    "varian": "Selection B",
+    "varian": "Selection Besar",
     "kategori": "Kosmetik",
     "gambar": null
   },
@@ -1913,6 +1931,12 @@ const productsData = [
     "varian": "Fair Cheek",
     "kategori": "Kosmetik",
     "gambar": "https://filebroker-cdn.lazada.co.id/kf/Sccbdc41d90b9466893692e78597adca9N.jpg"
+  },
+  {
+    "nama": "Kips Rambut",
+    "varian": null,
+    "kategori": "Kosmetik",
+    "gambar": "https://www.static-src.com/wcsstore/Indraprastha/images/catalog/full/catalog-image/115/MTA-181577869/brd-44261_-perlembar-4-5cm-jepit-lidi-jepit-rambut-lidi-kep-lidi-hitam-jepit-salon_full01-3eaa33ee.jpg"
   },
   {
     "nama": "Kispray",
@@ -2227,6 +2251,12 @@ const productsData = [
     "gambar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRNt93o39yN-6aorIt7Sx3MBqDX_Y7jo6RFSwm1UdxtxbAZyPL5vEmibhY&s=10"
   },
   {
+    "nama": "Mama Lemon",
+    "varian": "Refill 690ml",
+    "kategori": "Alat Kebersihan",
+    "gambar": null
+  },
+  {
     "nama": "Manjakani",
     "varian": "50ml",
     "kategori": "Kosmetik",
@@ -2259,6 +2289,12 @@ const productsData = [
   {
     "nama": "Marina Natural",
     "varian": "95ml",
+    "kategori": "Kosmetik",
+    "gambar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQOnxHcli9ge6rm2UvBfQat4rpjIPwJu0uNrsOAiH_PUg&s=10"
+  },
+  {
+    "nama": "Marina Natural",
+    "varian": "250ml",
     "kategori": "Kosmetik",
     "gambar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQOnxHcli9ge6rm2UvBfQat4rpjIPwJu0uNrsOAiH_PUg&s=10"
   },
@@ -2623,6 +2659,18 @@ const productsData = [
     "gambar": "img/minyak zaitun.jpg"
   },
   {
+    "nama": "Molto Pewangi",
+    "varian": "Sachet",
+    "kategori": "Alat Kebersihan",
+    "gambar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRbM9J1P9W2uY63f62xe-FBzikPohOfoFMsqV3NR-bunA&s=10"
+  },
+  {
+    "nama": "Molto Pewangi",
+    "varian": "Refill 765ml",
+    "kategori": "Alat Kebersihan",
+    "gambar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRbM9J1P9W2uY63f62xe-FBzikPohOfoFMsqV3NR-bunA&s=10"
+  },
+  {
     "nama": "Morris Eau De Parfume",
     "varian": "60ml",
     "kategori": "Parfum",
@@ -2669,6 +2717,18 @@ const productsData = [
     "varian": null,
     "kategori": "Baby Care",
     "gambar": "https://img.lazcdn.com/g/p/7fd6f2a985590b7d4282de8da8f5a676.jpg_720x720q80.jpg"
+  },
+  {
+    "nama": "My Darling",
+    "varian": "Eyeliner",
+    "kategori": "Kosmetik",
+    "gambar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTDaUsfF0vsexerJEDgkmVuyySnM7FmZ2Wg7wGXj4Cf7CtvyoBPYjR3MK94&s=10"
+  },
+  {
+    "nama": "My Darling",
+    "varian": "Mascara",
+    "kategori": "Kosmetik",
+    "gambar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTDaUsfF0vsexerJEDgkmVuyySnM7FmZ2Wg7wGXj4Cf7CtvyoBPYjR3MK94&s=10"
   },
   {
     "nama": "N°CO EDP Hanasui 100ml",
@@ -2792,6 +2852,12 @@ const productsData = [
   },
   {
     "nama": "Odol Ciptadent",
+    "varian": "190g",
+    "kategori": "Odol",
+    "gambar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRpiHPn_T4W1hFf5O9Lmm1z8vdPk6U1WklBQjSGxdlGWw&s=10"
+  },
+  {
+    "nama": "Odol Ciptadent",
     "varian": "75g",
     "kategori": "Odol",
     "gambar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRpiHPn_T4W1hFf5O9Lmm1z8vdPk6U1WklBQjSGxdlGWw&s=10"
@@ -2823,6 +2889,12 @@ const productsData = [
   {
     "nama": "Odol Sensodyne",
     "varian": "40g",
+    "kategori": "Odol",
+    "gambar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQjE-fTNGmb7XjjAiGcsoMmIt0Guutshv9tOWA3H0QgqA&s=10"
+  },
+  {
+    "nama": "Odol Sensodyne",
+    "varian": "100g",
     "kategori": "Odol",
     "gambar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQjE-fTNGmb7XjjAiGcsoMmIt0Guutshv9tOWA3H0QgqA&s=10"
   },
@@ -2929,6 +3001,12 @@ const productsData = [
     "gambar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTF1v3w-rPFgpc2Ay95wtH4LDtOftY2NbvvRXctMSRaaw&s=10"
   },
   {
+    "nama": "Paku Payung/Picik",
+    "varian": null,
+    "kategori": "Alat",
+    "gambar": "https://down-id.img.susercontent.com/file/sg-11134201-22090-ruk5br631uhv0c"
+  },
+  {
     "nama": "Parfum Evangeline 100ml",
     "varian": "EDC Plastik",
     "kategori": "Parfum",
@@ -3013,6 +3091,30 @@ const productsData = [
     "gambar": "https://down-id.img.susercontent.com/file/id-11134207-7rasl-m3yrzyksj8zefb"
   },
   {
+    "nama": "Pemutih Bayclin",
+    "varian": "100ml",
+    "kategori": "Alat Kebersihan",
+    "gambar": "https://down-id.img.susercontent.com/file/id-11134207-7ra0n-mcknyuavoy7jd8"
+  },
+  {
+    "nama": "Pemutih Bayclin",
+    "varian": "200ml",
+    "kategori": "Alat Kebersihan",
+    "gambar": "https://down-id.img.susercontent.com/file/id-11134207-7ra0n-mcknyuavoy7jd8"
+  },
+  {
+    "nama": "Pemutih Bayclin",
+    "varian": "500ml",
+    "kategori": "Alat Kebersihan",
+    "gambar": "https://down-id.img.susercontent.com/file/id-11134207-7ra0n-mcknyuavoy7jd8"
+  },
+  {
+    "nama": "Pemutih Bayclin",
+    "varian": "1 Liter",
+    "kategori": "Alat Kebersihan",
+    "gambar": "https://down-id.img.susercontent.com/file/id-11134207-7ra0n-mcknyuavoy7jd8"
+  },
+  {
     "nama": "Peniti swan",
     "varian": null,
     "kategori": "Alat",
@@ -3073,6 +3175,36 @@ const productsData = [
     "gambar": "https://id-test-11.slatic.net/p/e31bc35c929669e31b716154dfc80c3c.jpg"
   },
   {
+    "nama": "Pepsodent",
+    "varian": "120g",
+    "kategori": "Odol",
+    "gambar": "https://id-test-11.slatic.net/p/e31bc35c929669e31b716154dfc80c3c.jpg"
+  },
+  {
+    "nama": "Pepsodent",
+    "varian": "190g",
+    "kategori": "Odol",
+    "gambar": "https://id-test-11.slatic.net/p/e31bc35c929669e31b716154dfc80c3c.jpg"
+  },
+  {
+    "nama": "Pepsodent",
+    "varian": "225g",
+    "kategori": "Odol",
+    "gambar": "https://id-test-11.slatic.net/p/e31bc35c929669e31b716154dfc80c3c.jpg"
+  },
+  {
+    "nama": "Pepsodent Action 123",
+    "varian": "75g",
+    "kategori": "Odol",
+    "gambar": "https://mentengfarma.com/cdn/shop/files/ginee_20260112175951454_5758670726.png?v=1768212019"
+  },
+  {
+    "nama": "Pepsodent Action 123",
+    "varian": "190g",
+    "kategori": "Odol",
+    "gambar": "https://mentengfarma.com/cdn/shop/files/ginee_20260112175951454_5758670726.png?v=1768212019"
+  },
+  {
     "nama": "Pepsodent Herbal",
     "varian": "190g",
     "kategori": "Odol",
@@ -3085,14 +3217,26 @@ const productsData = [
     "gambar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRGDVSEJwFxNq5EMhtrfdOLyswQcSFO5-68NrkOwRJ1NlfF6-aSlOJZvKGp&s=10"
   },
   {
+    "nama": "Pepsodent Herbal",
+    "varian": "120g",
+    "kategori": "Odol",
+    "gambar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRGDVSEJwFxNq5EMhtrfdOLyswQcSFO5-68NrkOwRJ1NlfF6-aSlOJZvKGp&s=10"
+  },
+  {
     "nama": "Pepsodent sensitive expert",
     "varian": null,
     "kategori": "Odol",
     "gambar": "https://img.lazcdn.com/g/p/ce1ea7118c0d7e3990da35762ad3b05c.png_720x720q80.png"
   },
   {
-    "nama": "Pepsodent Siwak 110g",
-    "varian": null,
+    "nama": "Pepsodent Siwak",
+    "varian": "65g",
+    "kategori": "Odol",
+    "gambar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQFznm7aEalaprBRnUN1IkroK9xdV1G1nk4IRBWD3pfpQ&s=10"
+  },
+  {
+    "nama": "Pepsodent Siwak",
+    "varian": "110g",
     "kategori": "Odol",
     "gambar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQFznm7aEalaprBRnUN1IkroK9xdV1G1nk4IRBWD3pfpQ&s=10"
   },
@@ -3175,10 +3319,16 @@ const productsData = [
     "gambar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRl0BhtxnKdD-v0TgiNCoWj4ZI0STvFYWJcRK_Q_sZYXg&s=10"
   },
   {
-    "nama": "Pixy Foundation Stick",
-    "varian": null,
+    "nama": "Pixy Foundation",
+    "varian": "Stick",
     "kategori": "Kosmetik",
-    "gambar": "https://img.lazcdn.com/g/p/b201bf9e87d2726c2402e2e05304fcbe.jpg_720x720q80.jpg"
+    "gambar": null
+  },
+  {
+    "nama": "Pixy Foundation",
+    "varian": "Liquid",
+    "kategori": "Kosmetik",
+    "gambar": null
   },
   {
     "nama": "Pixy Micellar Water",
@@ -3253,10 +3403,10 @@ const productsData = [
     "gambar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT7CbdisEnIX2mwIWkESXhIUwBVrpj7_9qJpEG06lS_ag&s=10"
   },
   {
-    "nama": "Ponds Vitamin micellar water",
+    "nama": "Ponds Niasorcinol micellar water 55ml",
     "varian": null,
     "kategori": "Kosmetik",
-    "gambar": "https://images.soco.id/b4705191-2297-4c7f-b299-32ef82685b1c-image-0-1733113760283"
+    "gambar": "https://www.static-src.com/wcsstore/Indraprastha/images/catalog/full/catalog-image/MTA-153741404/pond-s_ponds_micellar_water_brightening_niasorcinol_55ml_-_ponds_pembersih_wajah_full01_rws4ke52.jpg"
   },
   {
     "nama": "Popok Merries L",
@@ -3559,12 +3709,6 @@ const productsData = [
     "gambar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSbw4uTh_9Ihe_XtUHAmRd46YL8-HmyI02w7b9i7epwNw&s=10"
   },
   {
-    "nama": "Refill Molto Pewangi 780ml",
-    "varian": null,
-    "kategori": "Alat Kebersihan",
-    "gambar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRbM9J1P9W2uY63f62xe-FBzikPohOfoFMsqV3NR-bunA&s=10"
-  },
-  {
     "nama": "Refill Nuvo",
     "varian": "Mini",
     "kategori": "Sabun",
@@ -3601,25 +3745,13 @@ const productsData = [
     "gambar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRElmte5bD8Ey_EZ4nTckV-3TFaVr-qPcexIXdc-Nk2wA&s=10"
   },
   {
-    "nama": "Refill So klin lantai",
-    "varian": "345ml",
-    "kategori": "Alat Kebersihan",
-    "gambar": "https://static-tokodaring.tisera.id/prod/images/produk_gambar/688d806f7d18e.jpeg"
-  },
-  {
-    "nama": "Refill So klin lantai",
-    "varian": "780ml",
-    "kategori": "Alat Kebersihan",
-    "gambar": "https://static-tokodaring.tisera.id/prod/images/produk_gambar/688d806f7d18e.jpeg"
-  },
-  {
-    "nama": "Refill So klin pewangi 800ml",
+    "nama": "Refill So klin pewangi 780ml",
     "varian": null,
     "kategori": "Alat Kebersihan",
     "gambar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRRuNiZecI1tO25kjn9rCf0yI6pHmLK5aR3cdvaNjmtuw&s=10"
   },
   {
-    "nama": "Refill Super pell",
+    "nama": "Refill Super Pell 740ml",
     "varian": null,
     "kategori": "Alat Kebersihan",
     "gambar": "https://www.static-src.com/wcsstore/Indraprastha/images/catalog/full/catalog-image/105/MTA-155938533/br-m036969-05131_superpell-superpel-super-pel-refill-770ml_full03-596d34ab.jpg"
@@ -3635,18 +3767,6 @@ const productsData = [
     "varian": null,
     "kategori": "Obat Nyamuk",
     "gambar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmrjVPBhJZnxBC0-VGCFT21RdFaYulRkDeEbVoCHOAgg&s=10"
-  },
-  {
-    "nama": "Refill Wipol",
-    "varian": "200ml",
-    "kategori": "Alat Kebersihan",
-    "gambar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSqssf-mqwM_qwPKjcVTwc_dmZ4P6HBsXLRoELbMuzTLgVNBJJyKtAi6hof&s=10"
-  },
-  {
-    "nama": "Refill Wipol",
-    "varian": "410ml",
-    "kategori": "Alat Kebersihan",
-    "gambar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSqssf-mqwM_qwPKjcVTwc_dmZ4P6HBsXLRoELbMuzTLgVNBJJyKtAi6hof&s=10"
   },
   {
     "nama": "Refill Zen",
@@ -3701,6 +3821,30 @@ const productsData = [
     "varian": null,
     "kategori": "Deodorant",
     "gambar": "https://id-test-11.slatic.net/p/5c3fc737194d29c0e3aece1188de4d90.jpg"
+  },
+  {
+    "nama": "Rinso Cair",
+    "varian": "510ml",
+    "kategori": "Alat Kebersihan",
+    "gambar": null
+  },
+  {
+    "nama": "Rinso Cair",
+    "varian": "700ml",
+    "kategori": "Alat Kebersihan",
+    "gambar": null
+  },
+  {
+    "nama": "Rinso Cair",
+    "varian": "Sachet isi 6",
+    "kategori": "Alat Kebersihan",
+    "gambar": null
+  },
+  {
+    "nama": "Royale Sachet",
+    "varian": null,
+    "kategori": "Alat Kebersihan",
+    "gambar": "https://p16-oec-sg.ibyteimg.com/tos-alisg-i-aphluv4xwc-sg/a1a8cbc4761c4c41befa82ae18bc0b92~tplv-aphluv4xwc-resize-jpeg:700:0.jpeg"
   },
   {
     "nama": "Sabun batang",
@@ -3926,7 +4070,7 @@ const productsData = [
   },
   {
     "nama": "Sabun Mitu 2in1",
-    "varian": "Refill",
+    "varian": "Refill 200ml",
     "kategori": "Baby Care",
     "gambar": "https://www.static-src.com/wcsstore/Indraprastha/images/catalog/full/catalog-image/104/MTA-157155647/mitu_mitu_baby_fresh_-_clean_sabun_mandi_bayi_2in1_ph_balanced_kulit_sensitif_halal_full07_r1cr0nn8.jpg"
   },
@@ -4150,49 +4294,61 @@ const productsData = [
     "nama": "Semir",
     "varian": "Bigen",
     "kategori": "Kosmetik",
-    "gambar": "img/semir.jpg"
+    "gambar": null
   },
   {
     "nama": "Semir",
     "varian": "Garnier",
     "kategori": "Kosmetik",
-    "gambar": "img/semir.jpg"
+    "gambar": null
   },
   {
     "nama": "Semir",
     "varian": "Hi top",
     "kategori": "Kosmetik",
-    "gambar": "img/semir.jpg"
+    "gambar": null
   },
   {
     "nama": "Semir",
     "varian": "Miranda",
     "kategori": "Kosmetik",
-    "gambar": "img/semir.jpg"
+    "gambar": null
   },
   {
     "nama": "Semir",
     "varian": "NYU",
     "kategori": "Kosmetik",
-    "gambar": "img/semir.jpg"
+    "gambar": null
   },
   {
     "nama": "Semir",
     "varian": "Tancho Bubuk",
     "kategori": "Kosmetik",
-    "gambar": "img/semir.jpg"
+    "gambar": null
   },
   {
     "nama": "Semir",
     "varian": "Tancho Cair",
     "kategori": "Kosmetik",
-    "gambar": "img/semir.jpg"
+    "gambar": null
   },
   {
     "nama": "Semir",
     "varian": "Top Lady",
     "kategori": "Kosmetik",
-    "gambar": "img/semir.jpg"
+    "gambar": null
+  },
+  {
+    "nama": "Semir",
+    "varian": "Cultusia",
+    "kategori": "Kosmetik",
+    "gambar": null
+  },
+  {
+    "nama": "Semir",
+    "varian": "Mengkudu Bestway",
+    "kategori": "Kosmetik",
+    "gambar": null
   },
   {
     "nama": "Semir Sepatu Kiwi",
@@ -4603,22 +4759,40 @@ const productsData = [
     "gambar": "https://img.lazcdn.com/g/p/05d63414e0d058fdf2b816827b9ce166.jpg_960x960q80.jpg_.webp"
   },
   {
-    "nama": "So klin lantai botol",
-    "varian": "450ml",
+    "nama": "So klin lantai",
+    "varian": "Botol 400ml",
     "kategori": "Alat Kebersihan",
-    "gambar": "https://img.mbizmarket.co.id/products/thumbs/800x800/2023/03/07/084d60d7a987d097525b004a013ab30e.jpg"
+    "gambar": null
   },
   {
-    "nama": "So klin lantai botol",
-    "varian": "900ml",
+    "nama": "So klin lantai",
+    "varian": "Botol 800ml",
     "kategori": "Alat Kebersihan",
-    "gambar": "https://img.mbizmarket.co.id/products/thumbs/800x800/2023/03/07/084d60d7a987d097525b004a013ab30e.jpg"
+    "gambar": null
   },
   {
-    "nama": "So Klin Pemutih",
-    "varian": "1 Liter",
+    "nama": "So klin lantai",
+    "varian": "Refill 310ml",
     "kategori": "Alat Kebersihan",
-    "gambar": "https://img.lazcdn.com/g/p/f57dcce3d8f170496e7184d58f8f34bf.jpg_720x720q80.jpg"
+    "gambar": null
+  },
+  {
+    "nama": "So klin lantai",
+    "varian": "Refill 770ml",
+    "kategori": "Alat Kebersihan",
+    "gambar": null
+  },
+  {
+    "nama": "So Klin Liquid",
+    "varian": "720ml",
+    "kategori": "Alat Kebersihan",
+    "gambar": null
+  },
+  {
+    "nama": "So Klin Liquid",
+    "varian": "Sachet",
+    "kategori": "Alat Kebersihan",
+    "gambar": null
   },
   {
     "nama": "So Klin Pemutih",
@@ -4629,6 +4803,12 @@ const productsData = [
   {
     "nama": "So Klin Pemutih",
     "varian": "500ml",
+    "kategori": "Alat Kebersihan",
+    "gambar": "https://img.lazcdn.com/g/p/f57dcce3d8f170496e7184d58f8f34bf.jpg_720x720q80.jpg"
+  },
+  {
+    "nama": "So Klin Pemutih",
+    "varian": "1 Liter",
     "kategori": "Alat Kebersihan",
     "gambar": "https://img.lazcdn.com/g/p/f57dcce3d8f170496e7184d58f8f34bf.jpg_720x720q80.jpg"
   },
@@ -4856,15 +5036,33 @@ const productsData = [
   },
   {
     "nama": "Sunlight",
-    "varian": "210ml",
+    "varian": "Refill 210ml",
     "kategori": "Alat Kebersihan",
-    "gambar": "https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcT-tueiqU_ZKBiKBNFXvPoMOwF2_jXuKHDUPeXZQd1QDBVwu0mCkzlDcYC3os2Ul9-3MtoULLadLHl8igPjwgvOxkgJdZkUp2sOmva08h82&usqp=CAc"
+    "gambar": null
   },
   {
     "nama": "Sunlight",
-    "varian": "420ml",
+    "varian": "Refill 400ml",
     "kategori": "Alat Kebersihan",
-    "gambar": "https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcT-tueiqU_ZKBiKBNFXvPoMOwF2_jXuKHDUPeXZQd1QDBVwu0mCkzlDcYC3os2Ul9-3MtoULLadLHl8igPjwgvOxkgJdZkUp2sOmva08h82&usqp=CAc"
+    "gambar": null
+  },
+  {
+    "nama": "Sunlight",
+    "varian": "Refill 650ml",
+    "kategori": "Alat Kebersihan",
+    "gambar": null
+  },
+  {
+    "nama": "Sunlight",
+    "varian": "Refill 910ml",
+    "kategori": "Alat Kebersihan",
+    "gambar": null
+  },
+  {
+    "nama": "Sunlight",
+    "varian": "Botol 675ml",
+    "kategori": "Alat Kebersihan",
+    "gambar": null
   },
   {
     "nama": "Sunscreen Azarine 40ml",
@@ -5336,7 +5534,7 @@ const productsData = [
   },
   {
     "nama": "Vixal",
-    "varian": "470ml",
+    "varian": "360ml",
     "kategori": "Alat Kebersihan",
     "gambar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRsztQQTIXKph8KJpjsLruIZe9TcUadmEPJO8CkSnEbj1kiYdp0lRHysGZa&s=10"
   },
@@ -5504,7 +5702,7 @@ const productsData = [
   },
   {
     "nama": "Wardah Eye Expert",
-    "varian": "Expert Mascara",
+    "varian": "The Volume Expert Mascara",
     "kategori": "Kosmetik",
     "gambar": null
   },
@@ -5529,6 +5727,18 @@ const productsData = [
   {
     "nama": "Wardah Eye Expert",
     "varian": "Optimum Liner",
+    "kategori": "Kosmetik",
+    "gambar": null
+  },
+  {
+    "nama": "Wardah Eye Expert",
+    "varian": "Aqua Lash Mascara",
+    "kategori": "Kosmetik",
+    "gambar": null
+  },
+  {
+    "nama": "Wardah Eye Expert",
+    "varian": "Eyeliner Pencil",
     "kategori": "Kosmetik",
     "gambar": null
   },
@@ -5731,10 +5941,28 @@ const productsData = [
     "gambar": null
   },
   {
-    "nama": "Wipol botol 450ml",
-    "varian": null,
+    "nama": "Wipol",
+    "varian": "Refill 190ml",
     "kategori": "Alat Kebersihan",
-    "gambar": "https://media.monotaro.id/mid01/big/Alat%20%26%20Kebutuhan%20Kebersihan/Pembersih%20Lantai/Pembersih%20Serbaguna/Wipol%20Karbol%20Cemara/Wipol%20Karbol%20Cemara%20Bottle%20450ml%201pc/3jS031990127-2.jpg"
+    "gambar": null
+  },
+  {
+    "nama": "Wipol",
+    "varian": "Refill 390ml",
+    "kategori": "Alat Kebersihan",
+    "gambar": null
+  },
+  {
+    "nama": "Wipol",
+    "varian": "Botol 430ml",
+    "kategori": "Alat Kebersihan",
+    "gambar": null
+  },
+  {
+    "nama": "Wipol",
+    "varian": "Botol 730ml",
+    "kategori": "Alat Kebersihan",
+    "gambar": null
   },
   {
     "nama": "Xi Xiu Divane",
