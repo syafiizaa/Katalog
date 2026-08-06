@@ -643,7 +643,7 @@ const productsData = [
     "gambar": "https://id-test-11.slatic.net/p/f62faf3c655c9db8ad67864e1d5567bb.jpg"
   },
   {
-    "nama": "Cermin Penny Kecil",
+    "nama": "Cermin Penny",
     "varian": null,
     "kategori": "Alat",
     "gambar": "https://www.static-src.com/wcsstore/Indraprastha/images/catalog/full//93/MTA-26603435/penny_kaca_rias_duduk_-_cermin_gantung_penny_makeup_-_aesthetic_full03_3fd82e8c.jpg"
@@ -4196,7 +4196,7 @@ const productsData = [
   },
   {
     "nama": "Sabun Pepaya",
-    "varian": "RDL",
+    "varian": "RDL Asli",
     "kategori": "Sabun",
     "gambar": "https://raw.githubusercontent.com/syafiizaa/katalog/refs/heads/main/img/pepaya.jpg"
   },
@@ -4894,19 +4894,19 @@ const productsData = [
     "nama": "Spons bedak",
     "varian": "Candy",
     "kategori": "Kosmetik",
-    "gambar": null
+    "gambar": "img/spons bdk.jpg"
   },
   {
     "nama": "Spons bedak",
     "varian": "Fanbo isi 2",
     "kategori": "Kosmetik",
-    "gambar": null
+    "gambar": "img/spons bdk.jpg"
   },
   {
     "nama": "Spons bedak",
     "varian": "X- Pert",
     "kategori": "Kosmetik",
-    "gambar": null
+    "gambar": "img/spons bdk.jpg"
   },
   {
     "nama": "Spons Cuci piring",
