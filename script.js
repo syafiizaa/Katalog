@@ -24,6 +24,11 @@ const CONFIG = {
     CART_STORAGE_KEY: 'cart'
 };
 
+// Satuan yang bisa dipilih saat menambah produk ke keranjang.
+// Tambah/ubah di sini saja — tombol pilihannya dibuat otomatis.
+const UNITS = ['Pcs', 'Pak', 'Lusin'];
+const DEFAULT_UNIT = UNITS[0];
+
 // ============================================================
 // STATE MANAGEMENT
 // ============================================================
@@ -34,6 +39,7 @@ let selectedProduct = null;
 let selectedVariant = null;
 let viewMode = 'grid'; // 'grid' or 'list'
 let modalQty = 1;
+let modalUnit = DEFAULT_UNIT;
 let modalProduct = null;
 let modalVariant = null;
 
@@ -485,7 +491,7 @@ function checkoutWhatsApp() {
     cart.forEach((item, index) => {
         const variantText = item.variant ? ` - ${item.variant}` : '';
         const notesText = item.notes ? ` [${item.notes}]` : '';
-        message += `${index + 1}. ${item.nama}${variantText} (x${item.qty})${notesText}\n`;
+        message += `${index + 1}. ${item.nama}${variantText} (${item.qty} ${normalizeUnit(item.unit)})${notesText}\n`;
     });
     
     message += `\nWaktu pengambilan: ${pickupTime}`;
@@ -540,6 +546,11 @@ function loadCart() {
             cart = [];
         }
     }
+    if (!Array.isArray(cart)) cart = [];
+
+    // Keranjang yang tersimpan sebelum ada pilihan satuan belum punya field
+    // `unit` — isikan Pcs agar tampilan & pesan WhatsApp tetap konsisten.
+    cart.forEach(item => { item.unit = normalizeUnit(item.unit); });
 }
 
 function saveCart() {
@@ -625,6 +636,7 @@ function renderCart() {
                         <button class="qty-btn" onclick="updateQty(${index}, -1)" aria-label="Kurangi">&minus;</button>
                         <span class="qty-value">${item.qty}</span>
                         <button class="qty-btn" onclick="updateQty(${index}, 1)" aria-label="Tambah">+</button>
+                        <span class="cart-item-unit">${escapeHtml(normalizeUnit(item.unit))}</span>
                     </div>
                 </div>
                 <button class="cart-item-remove" onclick="removeFromCart(${index})" aria-label="Hapus">${ICONS.trash}</button>
@@ -679,11 +691,13 @@ function openAddCartModalWithData(productName, variant, imageUrl) {
     modalProduct = productName;
     modalVariant = variant;
     modalQty = 1;
-    
+    modalUnit = DEFAULT_UNIT;
+
     // Update modal content
     document.getElementById('addCartModalName').textContent = productName;
     document.getElementById('modalQtyDisplay').textContent = '1';
     document.getElementById('productNotes').value = '';
+    renderUnitOptions();
     
     // Update variant display
     const variantEl = document.getElementById('addCartModalVariant');
@@ -720,6 +734,7 @@ function closeAddCartModal() {
     modalProduct = null;
     modalVariant = null;
     modalQty = 1;
+    modalUnit = DEFAULT_UNIT;
 }
 
 function increaseModalQty() {
@@ -734,25 +749,53 @@ function decreaseModalQty() {
     }
 }
 
+// ---- Pilihan satuan (Pcs / Pak / Lusin) ----
+// Kembalikan satuan yang sah. Keranjang lama (sebelum fitur ini ada) tidak
+// punya field satuan, jadi apa pun yang tidak dikenal dianggap Pcs.
+function normalizeUnit(unit) {
+    if (!unit) return DEFAULT_UNIT;
+    const clean = String(unit).trim().toLowerCase();
+    return UNITS.find(u => u.toLowerCase() === clean) || DEFAULT_UNIT;
+}
+
+function renderUnitOptions() {
+    const container = document.getElementById('unitOptions');
+    if (!container) return;
+
+    container.innerHTML = UNITS.map(unit => `
+        <button type="button" class="unit-option${unit === modalUnit ? ' selected' : ''}" onclick="selectUnit('${escapeJs(unit)}')">
+            ${escapeHtml(unit)}
+        </button>
+    `).join('');
+}
+
+function selectUnit(unit) {
+    modalUnit = normalizeUnit(unit);
+    renderUnitOptions();
+}
+
 function confirmAddToCart() {
     if (!modalProduct) return;
     
     const notes = document.getElementById('productNotes').value.trim();
-    
-    // Add to cart with quantity and notes
-    addToCartWithDetails(modalProduct, modalVariant, modalQty, notes);
+
+    // Add to cart with quantity, unit and notes
+    addToCartWithDetails(modalProduct, modalVariant, modalQty, notes, modalUnit);
     closeAddCartModal();
 }
 
-function addToCartWithDetails(productName, variant, qty, notes) {
+function addToCartWithDetails(productName, variant, qty, notes, unit) {
     // Normalkan catatan: '' dan null dianggap sama (tanpa catatan)
     const cleanNotes = (notes && notes.trim()) ? notes.trim() : null;
+    const cleanUnit = normalizeUnit(unit);
 
-    // Gabungkan jika nama + varian + catatan sama.
-    // Varian berbeda (atau catatan berbeda) tetap menjadi baris terpisah.
+    // Gabungkan jika nama + varian + satuan + catatan sama.
+    // Varian, satuan, atau catatan berbeda tetap menjadi baris terpisah
+    // (2 pak ≠ 2 pcs, jadi tidak boleh dijumlahkan).
     const existingIndex = cart.findIndex(item =>
         item.nama === productName &&
         item.variant === variant &&
+        normalizeUnit(item.unit) === cleanUnit &&
         (item.notes || null) === cleanNotes
     );
 
@@ -763,15 +806,16 @@ function addToCartWithDetails(productName, variant, qty, notes) {
             nama: productName,
             variant: variant,
             qty: qty,
+            unit: cleanUnit,
             notes: cleanNotes
         });
     }
-    
+
     saveCart();
     renderCart();
-    
+
     const variantText = variant ? ` - ${variant}` : '';
-    showToast(`${productName}${variantText} (${qty}x) ditambahkan ke keranjang`);
+    showToast(`${productName}${variantText} (${qty} ${cleanUnit}) ditambahkan ke keranjang`);
 }
 
 // ============================================================
@@ -960,7 +1004,7 @@ const tutorialSteps = [
     {
         target: '.product-card',
         title: 'Tambah ke Keranjang',
-        desc: 'Tekan tombol keranjang untuk menambah produk. Anda bisa atur jumlah dan tambahkan catatan (warna/ukuran).',
+        desc: 'Tekan tombol keranjang untuk menambah produk. Anda bisa atur jumlah, pilih satuan (pcs/pak/lusin), dan tambahkan catatan (warna/ukuran).',
         position: 'bottom'
     },
     {

@@ -833,7 +833,7 @@ body:not(.admin-body) .back-to-top { bottom: 5.75rem; right: 1.6rem; }
 
 .qty-section { margin-bottom: 1.5rem; }
 
-.qty-label, .notes-label {
+.qty-label, .unit-label, .notes-label {
     font-weight: 600;
     font-size: 0.8rem;
     letter-spacing: 0.04em;
@@ -885,6 +885,39 @@ body:not(.admin-body) .back-to-top { bottom: 5.75rem; right: 1.6rem; }
     min-width: 48px;
     text-align: center;
     color: var(--ink);
+}
+
+/* Pilihan satuan: Pcs / Pak / Lusin */
+.unit-section { margin-bottom: 1.5rem; }
+
+.unit-options {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.unit-option {
+    flex: 1;
+    padding: 0.6rem 0.5rem;
+    background: var(--surface);
+    border: 1px solid var(--line-strong);
+    border-radius: 999px;
+    font-family: inherit;
+    font-size: 0.88rem;
+    font-weight: 500;
+    color: var(--ink-soft);
+    cursor: pointer;
+    transition: all 0.2s var(--ease);
+}
+
+.unit-option:hover {
+    border-color: var(--accent);
+    color: var(--accent-deep);
+}
+
+.unit-option.selected {
+    background: var(--ink);
+    color: #fff;
+    border-color: var(--ink);
 }
 
 .notes-section { margin-bottom: 0.5rem; }
@@ -1147,6 +1180,19 @@ body:not(.admin-body) .back-to-top { bottom: 5.75rem; right: 1.6rem; }
     min-width: 28px;
     text-align: center;
     font-size: 0.9rem;
+}
+
+.cart-item-unit {
+    margin-left: 0.15rem;
+    padding: 0.15rem 0.5rem;
+    border-radius: 999px;
+    background: var(--accent-soft);
+    color: var(--accent-deep);
+    font-size: 0.68rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    white-space: nowrap;
 }
 
 .cart-item-remove {

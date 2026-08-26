@@ -48,7 +48,7 @@
     justify-content: space-between;
     gap: 1rem;
 }
-.cmp-nav { display: flex; align-items: center; gap: 0.4rem; }
+.cmp-nav { display: flex; align-items: center; justify-content: flex-end; flex-wrap: wrap; gap: 0.4rem; }
 
 /* Info bar */
 .info-bar { background: var(--accent-tint); border-bottom: 1px solid var(--accent-soft); }

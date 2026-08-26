@@ -35,6 +35,8 @@ let catalogNameSet = new Set();
 let catalogNameList = []; // nama produk unik di katalog (untuk pencocokan mirip)
 let catalogVariantsByName = {}; // norm(nama) -> [varian katalog] (untuk pencocokan varian mirip)
 let posCategoryByName = {}; // norm(nama POS) -> nama kategori (untuk auto-isi kategori)
+let posUnits = [];        // { nama, varian } dari dump kasir (kosong = belum ada file .sql)
+let posFileName = '';     // nama file .sql yang terakhir dibandingkan (untuk ringkasan ekspor)
 let missingGroups = [];   // ada di kasir, tidak di katalog
 let onlyCatGroups = [];   // ada di katalog, tidak di kasir
 
@@ -308,11 +310,12 @@ function groupByName(units) {
 }
 
 function compare(sql) {
-    const posUnits = buildPosUnits(sql);
-    if (posUnits === null) {
+    const units = buildPosUnits(sql);
+    if (units === null) {
         showToast(`Tabel "${SCHEMA.productTable}" tidak ditemukan di file. Pastikan ini dump database kasir.`);
         return false;
     }
+    posUnits = units;
 
     const catKeys = new Set(catalogUnits.map(u => unitKey(u.nama, u.varian)));
     const posKeys = new Set(posUnits.map(u => unitKey(u.nama, u.varian)));
@@ -514,6 +517,7 @@ function handleFile(file) {
     reader.onload = e => {
         const ok = compare(e.target.result);
         if (ok) {
+            posFileName = file.name;
             document.getElementById('dropzoneSub').textContent =
                 `File kasir: ${file.name} — selesai dibandingkan.`;
             document.getElementById('resultsArea').scrollIntoView({ behavior: 'smooth', block: 'start' });
@@ -544,6 +548,206 @@ function copyMissing() {
 }
 
 // ============================================================
+// EKSPOR EXCEL (.xlsx)
+// ------------------------------------------------------------
+// Menulis satu workbook berisi seluruh data yang ada di halaman ini.
+// Sebelum file .sql dimuat: hanya Ringkasan + Katalog Lengkap.
+// Sesudah dibandingkan: ditambah Perlu Ditambah, Hanya di Katalog,
+// dan Data Kasir. Semua sheet diurutkan A→Z per nama produk.
+// ============================================================
+
+// Urutkan seperti manusia membaca: A→Z, angka tetap urut ("50ml" sebelum "100ml")
+const byText = (a, b) =>
+    String(a == null ? '' : a).localeCompare(String(b == null ? '' : b), 'id', { numeric: true, sensitivity: 'base' });
+
+// Ubah satu kelompok hasil banding menjadi baris datar (1 baris = 1 varian)
+function groupToExportRows(g, kind) {
+    const vinfo = (g.variantInfo && g.variantInfo.length)
+        ? g.variantInfo.slice()
+        : (g.variants || []).map(v => ({ name: v, maybe: null }));
+    vinfo.sort((a, b) => byText(a.name, b.name));
+
+    const pct = m => Math.round(m.score * 100) + '%';
+    const out = [];
+
+    const push = (varian, vm) => {
+        const catatan = [];
+        let status;
+        if (g.isNewProduct && g.maybe) {
+            status = 'Mungkin sama (nama)';
+            catatan.push(`nama mirip: ${g.maybe.name} (${pct(g.maybe)})`);
+        } else if (vm) {
+            status = 'Mungkin sama (varian)';
+        } else if (!g.isNewProduct) {
+            status = 'Varian baru';
+        } else {
+            status = kind === 'missing' ? 'Produk baru' : 'Tak ada di kasir';
+        }
+        if (vm) catatan.push(`varian mirip: ${vm.name} (${pct(vm)})`);
+        out.push({ nama: g.nama, varian, status, catatan: catatan.join(' · ') });
+    };
+
+    vinfo.forEach(vi => push(vi.name, vi.maybe));
+    if (g.hasNoVariantUnit || vinfo.length === 0) push('(tanpa varian)', null);
+    return out;
+}
+
+function buildExportSheets() {
+    const S = XLSX_STYLE;
+    const flat = (typeof productsData !== 'undefined') ? productsData : [];
+    const compared = posUnits.length > 0;
+    const sheets = [];
+
+    // ---- Sheet: Ringkasan ----
+    const stamp = new Date().toLocaleString('id-ID', { dateStyle: 'full', timeStyle: 'short' });
+    const info = [
+        ['Tanggal ekspor', stamp],
+        ['Sumber data katalog', 'products.js'],
+        ['File database kasir', compared ? (posFileName || 'file .sql') : 'Belum dimuat'],
+        ['Produk unik di katalog', new Set(catalogUnits.map(u => norm(u.nama))).size],
+        ['Unit di katalog (nama + varian)', catalogUnits.length]
+    ];
+    if (compared) {
+        const cNew = missingGroups.filter(g => g.isNewProduct && !g.suspect).length;
+        const cMaybe = missingGroups.filter(g => g.suspect).length;
+        const cVar = missingGroups.filter(g => !g.isNewProduct && !g.suspect).length;
+        info.push(
+            ['Unit di kasir (nama + varian)', posUnits.length],
+            ['Perlu ditambah ke katalog — produk', missingGroups.length],
+            ['Perlu ditambah — produk baru', cNew],
+            ['Perlu ditambah — varian baru', cVar],
+            ['Perlu ditambah — mungkin sama', cMaybe],
+            ['Hanya di katalog — produk', onlyCatGroups.length]
+        );
+    }
+    sheets.push({
+        name: 'Ringkasan',
+        cols: [40, 40],
+        header: ['Keterangan', 'Nilai'],
+        rows: info.map(([k, v]) => [{ v: k, s: S.KEY }, { v: v, s: S.VALUE }])
+    });
+
+    // ---- Sheet: Perlu Ditambah (ada di kasir, belum di katalog) ----
+    if (compared) {
+        const rows = [];
+        missingGroups.slice().sort((a, b) => byText(a.nama, b.nama)).forEach(g => {
+            groupToExportRows(g, 'missing').forEach(r => {
+                rows.push([
+                    { v: rows.length + 1, s: S.NUM },
+                    r.nama,
+                    r.varian,
+                    g.kategori || '',
+                    r.status,
+                    { v: r.catatan, s: S.MUTED },
+                    { v: g.added ? 'Sudah dikirim' : '', s: S.NUM }
+                ]);
+            });
+        });
+        sheets.push({
+            name: 'Perlu Ditambah',
+            cols: [6, 42, 26, 20, 22, 48, 16],
+            header: ['No', 'Nama Produk', 'Varian', 'Kategori (Kasir)', 'Status', 'Catatan Kemiripan', 'Kirim ke Admin'],
+            rows
+        });
+    }
+
+    // ---- Sheet: Hanya di Katalog ----
+    if (compared) {
+        const katByName = {};
+        flat.forEach(r => {
+            const k = norm(r.nama);
+            if (!katByName[k] && r.kategori) katByName[k] = r.kategori;
+        });
+        const rows = [];
+        onlyCatGroups.slice().sort((a, b) => byText(a.nama, b.nama)).forEach(g => {
+            groupToExportRows(g, 'onlycat').forEach(r => {
+                rows.push([
+                    { v: rows.length + 1, s: S.NUM },
+                    r.nama,
+                    r.varian,
+                    katByName[norm(r.nama)] || '',
+                    r.status,
+                    { v: r.catatan, s: S.MUTED }
+                ]);
+            });
+        });
+        sheets.push({
+            name: 'Hanya di Katalog',
+            cols: [6, 42, 26, 20, 24, 48],
+            header: ['No', 'Nama Produk', 'Varian', 'Kategori (Katalog)', 'Status', 'Catatan Kemiripan'],
+            rows
+        });
+    }
+
+    // ---- Sheet: Katalog Lengkap ----
+    const posKeys = new Set(posUnits.map(u => unitKey(u.nama, u.varian)));
+    const catHeader = ['No', 'Nama Produk', 'Varian', 'Kategori', 'Foto', 'Link Foto'];
+    const catCols = [6, 42, 26, 20, 12, 60];
+    if (compared) { catHeader.push('Ada di Kasir'); catCols.push(14); }
+
+    const catRows = flat.slice()
+        .sort((a, b) => byText(a.nama, b.nama) || byText(a.varian, b.varian))
+        .map((r, i) => {
+            const row = [
+                { v: i + 1, s: S.NUM },
+                r.nama,
+                r.varian || '(tanpa varian)',
+                r.kategori || '',
+                { v: r.gambar ? 'Ada' : 'Belum ada', s: S.NUM },
+                { v: r.gambar || '', s: S.MUTED }
+            ];
+            if (compared) {
+                row.push({ v: posKeys.has(unitKey(r.nama, r.varian)) ? 'Ada' : 'Tidak ada', s: S.NUM });
+            }
+            return row;
+        });
+    sheets.push({ name: 'Katalog Lengkap', cols: catCols, header: catHeader, rows: catRows });
+
+    // ---- Sheet: Data Kasir ----
+    if (compared) {
+        const catKeys = new Set(catalogUnits.map(u => unitKey(u.nama, u.varian)));
+        const rows = posUnits.slice()
+            .sort((a, b) => byText(a.nama, b.nama) || byText(a.varian, b.varian))
+            .map((u, i) => [
+                { v: i + 1, s: S.NUM },
+                u.nama,
+                u.varian || '(tanpa varian)',
+                posCategoryByName[norm(u.nama)] || '',
+                { v: catKeys.has(unitKey(u.nama, u.varian)) ? 'Ada' : 'Belum ada', s: S.NUM }
+            ]);
+        sheets.push({
+            name: 'Data Kasir',
+            cols: [6, 42, 26, 20, 16],
+            header: ['No', 'Nama Produk', 'Varian', 'Kategori (Kasir)', 'Ada di Katalog'],
+            rows
+        });
+    }
+
+    return sheets;
+}
+
+function exportExcel() {
+    const compared = posUnits.length > 0;
+    const d = new Date();
+    const pad = n => String(n).padStart(2, '0');
+    const tanggal = `${d.getFullYear()}-${pad(d.getMonth() + 1)}-${pad(d.getDate())}`;
+    const filename = compared
+        ? `Katalog-vs-Kasir_${tanggal}.xlsx`
+        : `Katalog_${tanggal}.xlsx`;
+
+    try {
+        const sheets = buildExportSheets();
+        downloadXlsx(filename, sheets);
+        showToast(compared
+            ? `${filename} diunduh — ${sheets.length} sheet.`
+            : `${filename} diunduh (isi katalog saja — muat file .sql dulu untuk ikut mengekspor hasil perbandingan).`);
+    } catch (err) {
+        console.error(err);
+        showToast('Gagal membuat file Excel.');
+    }
+}
+
+// ============================================================
 // INIT
 // ============================================================
 document.addEventListener('DOMContentLoaded', () => {
@@ -570,6 +774,7 @@ document.addEventListener('DOMContentLoaded', () => {
     document.getElementById('searchInput').addEventListener('input', renderResults);
     document.getElementById('hideMaybe').addEventListener('change', renderResults);
     document.getElementById('copyMissingBtn').addEventListener('click', copyMissing);
+    document.getElementById('exportExcelBtn').addEventListener('click', exportExcel);
 
     // Pilih & kirim ke admin
     document.getElementById('missingList').addEventListener('change', (e) => {
