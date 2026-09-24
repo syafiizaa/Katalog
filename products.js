@@ -274,13 +274,19 @@ const productsData = [
     "nama": "Bedak ketiak MBK",
     "varian": "Putih",
     "kategori": "Kosmetik",
-    "gambar": "https://img.lazcdn.com/g/p/b5f38c522f1d1920a3b487e93e1b9978.jpg_720x720q80.jpg"
+    "gambar": "img/bedak mbk.png"
   },
   {
     "nama": "Bedak ketiak MBK",
     "varian": "Silver",
     "kategori": "Kosmetik",
-    "gambar": "https://img.lazcdn.com/g/p/b5f38c522f1d1920a3b487e93e1b9978.jpg_720x720q80.jpg"
+    "gambar": "img/bedak mbk.png"
+  },
+  {
+    "nama": "Bedak ketiak MBK",
+    "varian": "Roll On",
+    "kategori": "Kosmetik",
+    "gambar": "img/bedak mbk.png"
   },
   {
     "nama": "Bedak Marcks",
@@ -481,24 +487,6 @@ const productsData = [
     "gambar": "https://www.static-src.com/wcsstore/Indraprastha/images/catalog/full/catalog-image/MTA-97778116/implora_implora_cheek_blossom_blush_on_coral_peach_full02_sr5jd2ha.jpg"
   },
   {
-    "nama": "Botol dot Cussons",
-    "varian": "240ml",
-    "kategori": "Baby Care",
-    "gambar": "https://id-live-01.slatic.net/p/80fcb7b998d91f012ae9a21b8f49d8d5.jpg"
-  },
-  {
-    "nama": "Botol dot Cussons",
-    "varian": "120ml",
-    "kategori": "Baby Care",
-    "gambar": "https://id-live-01.slatic.net/p/80fcb7b998d91f012ae9a21b8f49d8d5.jpg"
-  },
-  {
-    "nama": "Botol dot Cussons",
-    "varian": "50ml",
-    "kategori": "Baby Care",
-    "gambar": "https://id-live-01.slatic.net/p/80fcb7b998d91f012ae9a21b8f49d8d5.jpg"
-  },
-  {
     "nama": "Botol dot Huki",
     "varian": "120ml",
     "kategori": "Baby Care",
@@ -626,13 +614,43 @@ const productsData = [
   },
   {
     "nama": "Cermin Kayu",
-    "varian": "No. 3",
+    "varian": "Ukuran 8x13",
     "kategori": "Alat",
     "gambar": "https://down-id.img.susercontent.com/file/id-11134207-7rasl-m2omim0nnf11a1@resize_w450_nl.webp"
   },
   {
     "nama": "Cermin Kayu",
-    "varian": "No. 4",
+    "varian": "Ukuran 10x15",
+    "kategori": "Alat",
+    "gambar": "https://down-id.img.susercontent.com/file/id-11134207-7rasl-m2omim0nnf11a1@resize_w450_nl.webp"
+  },
+  {
+    "nama": "Cermin Kayu",
+    "varian": "Ukuran 12x17",
+    "kategori": "Alat",
+    "gambar": "https://down-id.img.susercontent.com/file/id-11134207-7rasl-m2omim0nnf11a1@resize_w450_nl.webp"
+  },
+  {
+    "nama": "Cermin Kayu",
+    "varian": "Ukuran 15x20",
+    "kategori": "Alat",
+    "gambar": "https://down-id.img.susercontent.com/file/id-11134207-7rasl-m2omim0nnf11a1@resize_w450_nl.webp"
+  },
+  {
+    "nama": "Cermin Kayu",
+    "varian": "Ukuran 21x25",
+    "kategori": "Alat",
+    "gambar": "https://down-id.img.susercontent.com/file/id-11134207-7rasl-m2omim0nnf11a1@resize_w450_nl.webp"
+  },
+  {
+    "nama": "Cermin Kayu",
+    "varian": "Ukuran 25x37",
+    "kategori": "Alat",
+    "gambar": "https://down-id.img.susercontent.com/file/id-11134207-7rasl-m2omim0nnf11a1@resize_w450_nl.webp"
+  },
+  {
+    "nama": "Cermin Kayu",
+    "varian": "Jumbo 30x54",
     "kategori": "Alat",
     "gambar": "https://down-id.img.susercontent.com/file/id-11134207-7rasl-m2omim0nnf11a1@resize_w450_nl.webp"
   },
@@ -760,13 +778,13 @@ const productsData = [
     "nama": "Conditioner Rejoice",
     "varian": "150ml",
     "kategori": "Shampoo",
-    "gambar": "https://c.alfagift.id/product/1/A6446990001107_A6446990001107_20230801113811583_base.jpg"
+    "gambar": "https://id-live-01.slatic.net/p/b7330ca34dcc889ea3e5fc835b3c9f75.jpg"
   },
   {
     "nama": "Conditioner Rejoice",
     "varian": "70ml",
     "kategori": "Shampoo",
-    "gambar": "https://c.alfagift.id/product/1/A6446990001107_A6446990001107_20230801113811583_base.jpg"
+    "gambar": "https://id-live-01.slatic.net/p/b7330ca34dcc889ea3e5fc835b3c9f75.jpg"
   },
   {
     "nama": "Conditioner Sunsilk 160ml",
