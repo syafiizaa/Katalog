@@ -1153,6 +1153,12 @@ const productsData = [
     "gambar": "https://img.lazcdn.com/g/p/d928a3c3ad83da7b169e3e1e06daba54.jpg_720x720q80.jpg_.webp"
   },
   {
+    "nama": "Eskulin Shower Gel 250ml",
+    "varian": null,
+    "kategori": "Kosmetik",
+    "gambar": "https://www.static-src.com/wcsstore/Indraprastha/images/catalog/full/catalog-image/106/MTA-177761194/eskulin_eskulin-kids-shower-gel-princess-250ml-sabun-anak_full01.jpg"
+  },
+  {
     "nama": "Eskulin Splash cologne 125ml",
     "varian": null,
     "kategori": "Parfum",
@@ -2929,6 +2935,12 @@ const productsData = [
     "gambar": "https://d1d8o7q9jg8pjk.cloudfront.net/p/lg_66a08ee7b8129.jpeg"
   },
   {
+    "nama": "OMG Facial Wash",
+    "varian": null,
+    "kategori": "Kosmetik",
+    "gambar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ0JwFulpYXUMb3nhJK0eQCU_3H4CByD_n0h25ElnpB0YRa_7okmgK8iYk&s=10"
+  },
+  {
     "nama": "OMG Sunscreen SPF 50",
     "varian": null,
     "kategori": "Kosmetik",
@@ -3281,6 +3293,12 @@ const productsData = [
     "varian": "30g",
     "kategori": "Parfum",
     "gambar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRX4Tq--EP2kYv4AB-4Dcqo8kHNdYiJqxkBuIKNFi9vqQ&s=10"
+  },
+  {
+    "nama": "Pigeon Facial Wash",
+    "varian": null,
+    "kategori": "Kosmetik",
+    "gambar": "https://www.static-src.com/wcsstore/Indraprastha/images/catalog/full/catalog-image/104/MTA-183046945/no-brand_pigeon-teens-facial-foam-daily-mild-cleansing-100gr-434694-_full01.webp"
   },
   {
     "nama": "Pisau Cukur Gillette",
@@ -5143,14 +5161,14 @@ const productsData = [
     "gambar": "https://www.static-src.com/wcsstore/Indraprastha/images/catalog/full//catalog-image/109/MTA-94893309/_brd-20220_madame-gie-madame-protect-me-sunscreen-spf-30-pa-60ml_full01.jpg"
   },
   {
-    "nama": "Sunscreen OMG SPF 50",
-    "varian": null,
+    "nama": "Sunscreen Pigeon",
+    "varian": "30ml",
     "kategori": "Kosmetik",
-    "gambar": "https://down-id.img.susercontent.com/file/id-11134207-7ra0t-mdiqdi3kbfdb04"
+    "gambar": "https://down-id.img.susercontent.com/file/sg-11134201-23020-pisnrg907mnv82"
   },
   {
     "nama": "Sunscreen Pigeon",
-    "varian": null,
+    "varian": "60ml",
     "kategori": "Kosmetik",
     "gambar": "https://down-id.img.susercontent.com/file/sg-11134201-23020-pisnrg907mnv82"
   },
@@ -6043,6 +6061,12 @@ const productsData = [
     "gambar": "https://www.static-src.com/wcsstore/Indraprastha/images/catalog/full//95/MTA-79351232/zwitsal_perawatan_bayi_-_zwitsal_baby_bath_minyak_telon_full31_ht59infg.jpg"
   },
   {
+    "nama": "Zwitsal Classic Baby Bath 300ml",
+    "varian": null,
+    "kategori": "Kosmetik",
+    "gambar": "https://down-id.img.susercontent.com/file/237fda712a7763e2aa71499ec75bea5c"
+  },
+  {
     "nama": "Zwitsal Hair Lotion",
     "varian": "100ml",
     "kategori": "Baby Care",
@@ -6055,10 +6079,16 @@ const productsData = [
     "gambar": "https://down-id.img.susercontent.com/file/sg-11134301-821d7-mh19o0k4ufwp6b"
   },
   {
-    "nama": "Zwitsal Kids Shampoo 180ml",
-    "varian": null,
+    "nama": "Zwitsal Kids Shampoo",
+    "varian": "180ml",
     "kategori": "Shampoo",
-    "gambar": "https://www.static-src.com/wcsstore/Indraprastha/images/catalog/full/catalog-image/103/MTA-153749901/br-m036969-05210_zwitsal-kids-shampoo-180ml-seri-spongebob_full02-8c9e1dfe.jpg"
+    "gambar": "https://down-id.img.susercontent.com/file/267466b742322c6db4d3b8cb6f60ad42"
+  },
+  {
+    "nama": "Zwitsal Kids Shampoo",
+    "varian": "Pump 280ml",
+    "kategori": "Shampoo",
+    "gambar": "https://down-id.img.susercontent.com/file/267466b742322c6db4d3b8cb6f60ad42"
   },
   {
     "nama": "Zwitsal Shampoo 100ml",
