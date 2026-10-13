@@ -1123,6 +1123,18 @@ const productsData = [
     "gambar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR5Ij1dLBViat4stFAoOfMnKZU401cT5C8ydvc3uEFlSg&s=10"
   },
   {
+    "nama": "Eskulin Kids",
+    "varian": "Shampoo 200ml",
+    "kategori": "Shampoo",
+    "gambar": "img/eskulin kids.png"
+  },
+  {
+    "nama": "Eskulin Kids",
+    "varian": "Shower Gel 250ml",
+    "kategori": "Shampoo",
+    "gambar": "img/eskulin kids.png"
+  },
+  {
     "nama": "Eskulin Kids 2in1",
     "varian": "Botol 280ml",
     "kategori": "Sabun",
@@ -1135,12 +1147,6 @@ const productsData = [
     "gambar": "https://down-id.img.susercontent.com/file/sg-11134201-8225f-mhj2pmuumvpk1f"
   },
   {
-    "nama": "Eskulin Kids Shampoo 200ml",
-    "varian": null,
-    "kategori": "Shampoo",
-    "gambar": "https://id-test-11.slatic.net/p/262811fe280dc794c8c6c13edd026b63.jpg"
-  },
-  {
     "nama": "Eskulin kids spray cologne",
     "varian": null,
     "kategori": "Parfum",
@@ -1151,12 +1157,6 @@ const productsData = [
     "varian": null,
     "kategori": "Parfum",
     "gambar": "https://img.lazcdn.com/g/p/d928a3c3ad83da7b169e3e1e06daba54.jpg_720x720q80.jpg_.webp"
-  },
-  {
-    "nama": "Eskulin Shower Gel 250ml",
-    "varian": null,
-    "kategori": "Kosmetik",
-    "gambar": "https://www.static-src.com/wcsstore/Indraprastha/images/catalog/full/catalog-image/106/MTA-177761194/eskulin_eskulin-kids-shower-gel-princess-250ml-sabun-anak_full01.jpg"
   },
   {
     "nama": "Eskulin Splash cologne 125ml",
