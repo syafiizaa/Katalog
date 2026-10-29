@@ -458,13 +458,25 @@ const productsData = [
   },
   {
     "nama": "Benang jahit Extra",
-    "varian": "1 pak",
+    "varian": "Hitam 1 pak isi [3 lusin]",
     "kategori": "Alat",
     "gambar": "https://d1d8o7q9jg8pjk.cloudfront.net/p/lg_640bf105ebd0d.jpg"
   },
   {
     "nama": "Benang jahit Extra",
-    "varian": "Satuan",
+    "varian": "Hitam Satuan",
+    "kategori": "Alat",
+    "gambar": "https://d1d8o7q9jg8pjk.cloudfront.net/p/lg_640bf105ebd0d.jpg"
+  },
+  {
+    "nama": "Benang jahit Extra",
+    "varian": "Putih 1 pak isi [3 lusin]",
+    "kategori": "Alat",
+    "gambar": "https://d1d8o7q9jg8pjk.cloudfront.net/p/lg_640bf105ebd0d.jpg"
+  },
+  {
+    "nama": "Benang jahit Extra",
+    "varian": "Putih Satuan",
     "kategori": "Alat",
     "gambar": "https://d1d8o7q9jg8pjk.cloudfront.net/p/lg_640bf105ebd0d.jpg"
   },
@@ -583,7 +595,7 @@ const productsData = [
     "gambar": "https://images.tokopedia.net/img/cache/700/o3syd0/1997/1/1/c4b15b57547a47978616f50bdd7ec715~.jpeg"
   },
   {
-    "nama": "Casablanca Femme Perfumed",
+    "nama": "Casablanca Femme Body Spray",
     "varian": null,
     "kategori": "Parfum",
     "gambar": "https://id-test-11.slatic.net/p/00145ac4328f5c9eef1d99556772e2f5.jpg"
@@ -4235,12 +4247,6 @@ const productsData = [
     "varian": "RDL Asli",
     "kategori": "Sabun",
     "gambar": "https://raw.githubusercontent.com/syafiizaa/katalog/refs/heads/main/img/pepaya.jpg"
-  },
-  {
-    "nama": "Sabun pepaya Dolphin 250ml",
-    "varian": null,
-    "kategori": "Kosmetik",
-    "gambar": "https://id-test-11.slatic.net/p/89c6068b0da7c664f3bb5be01fd8b43d.jpg"
   },
   {
     "nama": "Sabun Ponds 100ml",
